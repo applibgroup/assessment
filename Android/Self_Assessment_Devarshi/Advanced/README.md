@@ -1,3 +1,4 @@
+
 # Assessment-BEGINNER
 ## TOPIC
 ## 1. Create a News Feed Application which gives a user regularly-updated news from the internet.
@@ -10,4 +11,11 @@ iii. Linear Layout with RecyclerView to display/load the feeds.
 iv. Main page with the Feed and Detailed page when clicked on
 an individual feed.
  UI is purely your choice, but ensure we have two screens, one for the feed and
-second screen to display the details of the feed.
+second screen to display the details of the feed.![Screenshot_1621631391](https://user-images.githubusercontent.com/45622444/119203401-94e55500-bab0-11eb-8946-db249812facf.png)
+
+
+
+<div style="float: center">
+<img alt="screenshot" height="450px" src="https://user-images.githubusercontent.com/45622444/119203431-a4649e00-bab0-11eb-9cd1-86f22c568af3.png"/>
+<img alt="screenshot" height="450px" src="https://user-images.githubusercontent.com/45622444/119203435-a4fd3480-bab0-11eb-949d-1eb03a2b84ff.png"/>
+</div>
