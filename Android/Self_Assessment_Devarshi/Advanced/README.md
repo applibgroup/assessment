@@ -11,7 +11,7 @@ iii. Linear Layout with RecyclerView to display/load the feeds.
 iv. Main page with the Feed and Detailed page when clicked on
 an individual feed.
  UI is purely your choice, but ensure we have two screens, one for the feed and
-second screen to display the details of the feed.![Screenshot_1621631391](https://user-images.githubusercontent.com/45622444/119203401-94e55500-bab0-11eb-8946-db249812facf.png)
+second screen to display the details of the feed.
 
 
 
