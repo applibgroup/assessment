@@ -9,6 +9,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -19,7 +20,7 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity
 {
     RequestQueue queue;
-    String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=8987e832944046e2b543ec9baee0feb9";
+    String url = "https://jsonplaceholder.typicode.com/posts";
 
 
     @Override
@@ -29,10 +30,10 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         queue = MySingleton.getInstance(this.getApplicationContext()).getRequestQueue();
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, response ->
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, response ->
         {
             Log.d("ABC", "Hi");
-            //                Log.d("ABC", response.getJSONArray("articles"));
+                            Log.d("ABCD", response.toString());
         }, new Response.ErrorListener()
         {
             @Override
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity
                 Log.d("ABC", error.toString());
             }
         });
-        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
+        MySingleton.getInstance(this).addToRequestQueue(jsonArrayRequest);
 
 //        queue.add(jsonObjectRequest);
     }
