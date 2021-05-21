@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "30759324090",
+    "project_id": "one-stop-login",
+    "storage_bucket": "one-stop-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30759324090:android:6aeec363ad19c7dc96b583",
+        "android_client_info": {
+          "package_name": "com.example.onestoplogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30759324090-lp832q5otb4ei0rupodkoieoatqeq7mh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onestoplogin",
+            "certificate_hash": "3afbd148c0d95e4969811803c4e7624ac06dbadb"
+          }
+        },
+        {
+          "client_id": "30759324090-jo190jkp4367t9eshr59j4dk0pp3kcie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeDPswkzkGUMa2zlhbX7uFMi3acO98uIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30759324090-jo190jkp4367t9eshr59j4dk0pp3kcie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
