@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity
 {
     RequestQueue queue;
     String url = "https://raw.githubusercontent.com/curiousily/simple-quiz/master/script/statements-data.json";
-
-
+    private TextView news;
+    private String headlines = "";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -33,17 +34,23 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
 
-
+        news = findViewById(R.id.news);
         NewsApiClient newsApiClient = new NewsApiClient("8987e832944046e2b543ec9baee0feb9");
 
 // /v2/everything
         newsApiClient.getEverything(
                 new EverythingRequest.Builder()
-                        .q("trump")
+                        .q("india")
                         .build(),
                 new NewsApiClient.ArticlesResponseCallback() {
                     @Override
                     public void onSuccess(ArticleResponse response) {
+                        for (int i = 0; i <response.getArticles().size() ; i++)
+                        {
+                            headlines = response.getArticles().get(i).getTitle() + "\n\n";
+                            news.append(headlines);
+                        }
+//                        headlines = headlines + response.getArticles().get(0).getTitle() + "\n";
                         Log.d("ABC",response.getArticles().get(0).getTitle());
                     }
 
@@ -54,6 +61,7 @@ public class MainActivity extends AppCompatActivity
                 }
         );
 
+        
 //        queue = MySingleton.getInstance(this.getApplicationContext()).getRequestQueue();
 //        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, response ->
 //        {
