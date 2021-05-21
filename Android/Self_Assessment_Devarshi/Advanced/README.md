@@ -1,5 +1,5 @@
 
-# Assessment-BEGINNER
+# Assessment-ADVANCED
 ## TOPIC
 ## 1. Create a News Feed Application which gives a user regularly-updated news from the internet.
 a. You can use any News API which is a well maintained API which
