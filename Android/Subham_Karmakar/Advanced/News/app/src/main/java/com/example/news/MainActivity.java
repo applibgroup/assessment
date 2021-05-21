@@ -9,13 +9,16 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity
 {
-
-
+    RequestQueue queue;
     String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=8987e832944046e2b543ec9baee0feb9";
 
 
@@ -24,23 +27,22 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RequestQueue queue = Volley.newRequestQueue(this);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>()
+
+        queue = MySingleton.getInstance(this.getApplicationContext()).getRequestQueue();
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, response ->
         {
-            @Override
-            public void onResponse(String response)
-            {
-                Log.d("ABC", "Resp" + response);
-            }
+            Log.d("ABC", "Hi");
+            //                Log.d("ABC", response.getJSONArray("articles"));
         }, new Response.ErrorListener()
         {
             @Override
             public void onErrorResponse(VolleyError error)
             {
-                Log.d("ABC", "Error");
+                Log.d("ABC", error.toString());
             }
         });
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
 
-        queue.add(stringRequest);
+//        queue.add(jsonObjectRequest);
     }
 }
