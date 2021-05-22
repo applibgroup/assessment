@@ -3,22 +3,25 @@ package com.example.news.model;
 public class Post
 {
     private String author;
-    private String publishedAt;
-    private String content;
-    private String title;
     private String description;
+    private String publishedAt;
+    private String title;
+    private String url;
+    private String urlToImage;
+
 
     public Post()
     {
     }
 
-    public Post(String author, String publishedAt, String content, String title, String description)
+    public Post(String author, String description, String publishedAt, String title, String url, String urlToImage)
     {
         this.author = author;
-        this.publishedAt = publishedAt;
-        this.content = content;
-        this.title = title;
         this.description = description;
+        this.publishedAt = publishedAt;
+        this.title = title;
+        this.url = url;
+        this.urlToImage = urlToImage;
     }
 
     public String getAuthor()
@@ -31,6 +34,16 @@ public class Post
         this.author = author;
     }
 
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
     public String getPublishedAt()
     {
         return publishedAt;
@@ -39,16 +52,6 @@ public class Post
     public void setPublishedAt(String publishedAt)
     {
         this.publishedAt = publishedAt;
-    }
-
-    public String getContent()
-    {
-        return content;
-    }
-
-    public void setContent(String content)
-    {
-        this.content = content;
     }
 
     public String getTitle()
@@ -61,13 +64,23 @@ public class Post
         this.title = title;
     }
 
-    public String getDescription()
+    public String getUrl()
     {
-        return description;
+        return url;
     }
 
-    public void setDescription(String description)
+    public void setUrl(String url)
     {
-        this.description = description;
+        this.url = url;
+    }
+
+    public String getUrlToImage()
+    {
+        return urlToImage;
+    }
+
+    public void setUrlToImage(String urlToImage)
+    {
+        this.urlToImage = urlToImage;
     }
 }

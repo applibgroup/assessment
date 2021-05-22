@@ -45,14 +45,6 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        postList.add(new Post("aa","aa","aa", "aa", "a"));
-        postList.add(new Post("aa","aa","aa", "aa", "abb"));
-
-
-        recyclerViewAdapter = new RecyclerViewAdapter(postList, MainActivity.this);
-        recyclerView.setAdapter(recyclerViewAdapter);
-
-//        news = findViewById(R.id.news);
         NewsApiClient newsApiClient = new NewsApiClient("8987e832944046e2b543ec9baee0feb9");
 
         newsApiClient.getEverything(
@@ -64,13 +56,17 @@ public class MainActivity extends AppCompatActivity
                     public void onSuccess(ArticleResponse response) {
                         for (int i = 0; i <response.getArticles().size() ; i++)
                         {
-
-                            headlines = response.getArticles().get(i).getTitle() + "\n";
-//                            headlines = response.getArticles().get(i).getDescription() + "\n\n";
-//                            news.append(headlines);
+                            postList.add(new Post(
+                                    response.getArticles().get(i).getAuthor(),
+                                    response.getArticles().get(i).getDescription(),
+                                    response.getArticles().get(i).getPublishedAt(),
+                                    response.getArticles().get(i).getTitle(),
+                                    response.getArticles().get(i).getUrl(),
+                                    response.getArticles().get(i).getUrlToImage()
+                            ));
+                            recyclerViewAdapter = new RecyclerViewAdapter(postList, MainActivity.this);
+                            recyclerView.setAdapter(recyclerViewAdapter);
                         }
-//                        headlines = headlines + response.getArticles().get(0).getTitle() + "\n";
-                        Log.d("ABC",response.getArticles().get(0).getTitle());
                     }
 
                     @Override
@@ -79,6 +75,8 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
         );
+
+
 
     }
 }
