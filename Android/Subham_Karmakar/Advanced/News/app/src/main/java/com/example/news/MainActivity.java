@@ -23,8 +23,6 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity
 {
-    RequestQueue queue;
-    String url = "https://raw.githubusercontent.com/curiousily/simple-quiz/master/script/statements-data.json";
     private TextView news;
     private String headlines = "";
     @Override
@@ -34,10 +32,10 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
 
-        news = findViewById(R.id.news);
+//        news = findViewById(R.id.news);
         NewsApiClient newsApiClient = new NewsApiClient("8987e832944046e2b543ec9baee0feb9");
 
-// /v2/everything
+
         newsApiClient.getEverything(
                 new EverythingRequest.Builder()
                         .q("india")
@@ -47,8 +45,9 @@ public class MainActivity extends AppCompatActivity
                     public void onSuccess(ArticleResponse response) {
                         for (int i = 0; i <response.getArticles().size() ; i++)
                         {
-                            headlines = response.getArticles().get(i).getTitle() + "\n\n";
-                            news.append(headlines);
+                            headlines = response.getArticles().get(i).getTitle() + "\n";
+//                            headlines = response.getArticles().get(i).getDescription() + "\n\n";
+//                            news.append(headlines);
                         }
 //                        headlines = headlines + response.getArticles().get(0).getTitle() + "\n";
                         Log.d("ABC",response.getArticles().get(0).getTitle());
@@ -61,23 +60,5 @@ public class MainActivity extends AppCompatActivity
                 }
         );
 
-        
-//        queue = MySingleton.getInstance(this.getApplicationContext()).getRequestQueue();
-//        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, response ->
-//        {
-//            Log.d("ABC", "Hi");
-//            System.out.println("Hi Bye");
-////                            Log.d("ABC", response.getJSONArray("articles"));
-//        }, new Response.ErrorListener()
-//        {
-//            @Override
-//            public void onErrorResponse(VolleyError error)
-//            {
-//                Log.d("ABC", error.toString());
-//            }
-//        });
-//        MySingleton.getInstance(this).addToRequestQueue(jsonArrayRequest);
-
-//        queue.add(jsonObjectRequest);
     }
 }
