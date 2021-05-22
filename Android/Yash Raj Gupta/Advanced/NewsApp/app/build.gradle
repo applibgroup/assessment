@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.newsapp"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Dagger
+    def dagger_version = "2.22"
+
+    // Dagger2 core
+    implementation "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Dagger Android
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    // Material
+    implementation "com.google.android.material:material:1.3.0"
+
+    // Glide
+    def glide_version = "4.11.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+    // ViewModel and LiveData
+    def lifecycle_version = '2.2.0-alpha03'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // RxJava
+    def rxjava_version = '2.1.1'
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+
+    // ReactiveStreams support for LiveData
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+
+    // CardView
+    def cardview_version = "1.0.0"
+    implementation "androidx.cardview:cardview:$cardview_version"
+
+    // Material.io
+    def material_version = "1.1.0"
+    implementation "com.google.android.material:material:$material_version"
+
+    // Gson TODO: Remove after migration to retrofit
+    def gson_version = "2.8.6"
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    // Retrofit
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+
+    // Retrofit gson converter
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+}
