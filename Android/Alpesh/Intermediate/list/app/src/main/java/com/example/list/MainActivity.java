@@ -2,9 +2,14 @@ package com.example.list;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                                 adapter.notifyDataSetChanged();
                                 editTextTask.setText(null);
                                 editTextDate.setText(null);
-                                editTextTimebuy clothes.setText(null);
+                                editTextTime.setText(null);
                             }
                         });
             }
@@ -104,5 +109,45 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver, new IntentFilter("msg"));
     }
+/*
+    @Override
+    protected void onRestart() {
+        super.onResume();
+        try {
+           
+
+            Intent intent = getIntent();
+            String newTask = intent.getStringExtra("newTask");
+            String newDate = intent.getStringExtra("newDate");
+            String newTime = intent.getStringExtra("newTime");
+
+            final EditText editTextTask = findViewById(R.id.editTextTask);
+            final EditText editTextTime = findViewById(R.id.editTextTime);
+            final EditText editTextDate = findViewById(R.id.editTextDate);
+            editTextTask.setText(newTask);
+            editTextDate.setText(newDate);
+            editTextTime.setText(newTime);
+        }
+        catch (Exception e){
+            Toast.makeText(MainActivity.this, "Error Getting intent", Toast.LENGTH_SHORT).show();
+        }
+    }*/
+    public BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Get extra data included in the Intent
+            final EditText editTextTask = findViewById(R.id.editTextTask);
+            final EditText editTextTime = findViewById(R.id.editTextTime);
+            final EditText editTextDate = findViewById(R.id.editTextDate);
+            String newTask = intent.getStringExtra("newTask");
+            String newDate = intent.getStringExtra("newDate");
+            String newTime = intent.getStringExtra("newTime");
+            //Toast.makeText(MainActivity.this,ItemName +" "+qty ,Toast.LENGTH_SHORT).show();
+            editTextTask.setText(newTask);
+            editTextDate.setText(newDate);
+            editTextTime.setText(newTime);
+        }
+    };
 }

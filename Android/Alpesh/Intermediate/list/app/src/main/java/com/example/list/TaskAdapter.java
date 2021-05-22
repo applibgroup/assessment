@@ -1,6 +1,7 @@
 package com.example.list;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -67,12 +69,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
         CheckBox task;
         ImageView deleteBtn;
+        ImageView updateb;
         TextView date;
         TextView time;
         public TaskViewHolder(@NonNull View itemView) {
             super(itemView);
             task = itemView.findViewById(R.id.checkBoxTask);
             deleteBtn = itemView.findViewById(R.id.deleteTaskBtn);
+            updateb = itemView.findViewById(R.id.updatebtn);
             date = itemView.findViewById(R.id.date);
             time = itemView.findViewById(R.id.time);
 
@@ -89,7 +93,46 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                             .update("taskDone",isChecked);
                 }
             });
+            updateb.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v) {
+                final int currentPosition =  getAdapterPosition();
+                models taskModel = taskModelList.get(currentPosition);
 
+                String taskId = taskModel.getTaskId();
+
+
+                    String newTask = taskModel.getTask().toString();
+                    String newDate = taskModel.getDate().toString();
+                    String newTime = taskModel.getTime().toString();
+
+                db.collection("todoCollection")
+                        .document(taskId).delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                taskModelList.remove(currentPosition);
+                                notifyDataSetChanged();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(context, "Failed to delete the task.", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                ;
+
+
+                    Intent intent = new Intent("msg");
+                    intent.putExtra("newTask",newTask);
+                    intent.putExtra("newDate",newDate);
+                    intent.putExtra("newTime",newTime);
+                    LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
+                    //context.startActivity(intent);
+            }
+            });
             deleteBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
