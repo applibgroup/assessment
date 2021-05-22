@@ -1,8 +1,8 @@
 package com.example.todolist.Adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +14,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.todolist.DialBox;
 import com.example.todolist.DocumentId.TaskModel;
 import com.example.todolist.MainActivity;
 import com.example.todolist.R;
@@ -36,6 +36,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         this.taskModelList = taskModelList;
         this.db = db;
     }
+
 
     @NonNull
     @Override
@@ -90,29 +91,18 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                 }
             });
 
+            updateTaskbtn=itemView.findViewById(R.id.updateTaskBtn);
             updateTaskbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final int currentPosition =  getAdapterPosition();
-                    TaskModel taskModel = taskModelList.get(currentPosition);
-                    String val= currentPosition+"";
-                    String temp = taskModel.getTaskId();
-                    Intent nn=new Intent(context, DialBox.class);
-                    nn.putExtra("CurrentTaskId",temp);
-                    nn.putExtra("second",val);
-                    context.startActivity(nn);
-                }
-            });
 
-
-//            db=FirebaseFirestore.getInstance();
-            deleteBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
                     final int currentPosition =  getAdapterPosition();
                     TaskModel taskModel = taskModelList.get(currentPosition);
 
                     String taskId = taskModel.getTaskId();
+                    String prev=taskModel.getTask();
+
+                    sendMessage(prev);
 
                     db.collection("todoCollection")
                             .document(taskId).delete()
@@ -130,7 +120,44 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                                 }
                             });
                 }
+
+                private void sendMessage(String msg) {
+                    Log.d("sender", "Broadcasting message");
+                    Intent intent = new Intent("custom-event-name");
+                    // You can also include some extra data.
+                    intent.putExtra("message", msg);
+                    LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
+                }
+            });
+
+//            db=FirebaseFirestore.getInstance();
+            deleteBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final int currentPosition =  getAdapterPosition();
+                    TaskModel taskModel = taskModelList.get(currentPosition);
+
+                    String taskId = taskModel.getTaskId();
+
+                    db.collection("todoCollection")
+                            .document(taskId).delete()
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    taskModelList.remove(currentPosition);
+                                    notifyDataSetChanged();
+                                    Toast.makeText(context,"Task deleted",Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(context,"Failed to delete the task.",Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                }
             });
         }
     }
+
 }

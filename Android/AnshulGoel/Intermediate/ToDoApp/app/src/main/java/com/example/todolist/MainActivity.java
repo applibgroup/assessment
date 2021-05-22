@@ -2,15 +2,18 @@ package com.example.todolist;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -34,17 +37,36 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    FirebaseFirestore db= FirebaseFirestore.getInstance();;
+    FirebaseFirestore db= FirebaseFirestore.getInstance();
     List<TaskModel> taskModelList;
     TaskAdapter adapter;
+    EditText editTextTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText editTextTask = findViewById(R.id.editTextTask);
+        editTextTask = findViewById(R.id.editTextTask);
         Button addTaskBtn = findViewById(R.id.addTaskBtn);
+//
+//        ImageView updateTaskbtn= findViewById(R.id.updateTaskBtn);
+//        updateTaskbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                String newTask = editTextTask.getText().toString();
+//
+//                if(newTask.isEmpty()){
+//                    Toast.makeText(MainActivity.this, "Fields Empty,Please add task first!", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                openDialog(v);
+//            }
+//        });
+        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
+                new IntentFilter("custom-event-name"));
 
         taskModelList = new ArrayList<>();
 
@@ -57,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 String newTask = editTextTask.getText().toString();
 
                 if(newTask.isEmpty()){
-                    Toast.makeText(MainActivity.this, "Fields Empty,Please add task first!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Empty Task,Please enter valid task!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -76,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                                 taskModelList.add(taskModel);
                                 adapter.notifyDataSetChanged();
                                 editTextTask.setText(null);
+                                Toast.makeText(MainActivity.this,"Task added",Toast.LENGTH_SHORT).show();
                             }
                         });
             }
@@ -113,4 +136,22 @@ public class MainActivity extends AppCompatActivity {
                 });
 
     }
+    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Get extra data included in the Intent
+            String message = intent.getStringExtra("message");
+            Log.d("receiver", "Got message: " + message);
+            editTextTask.setText(message);
+            Toast.makeText(MainActivity.this,"You can update the task now",Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    @Override
+    protected void onDestroy() {
+        // Unregister since the activity is about to be closed.
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
+        super.onDestroy();
+    }
+
 }
