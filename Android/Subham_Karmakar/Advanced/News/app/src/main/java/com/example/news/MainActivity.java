@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
         NewsApiClient newsApiClient = new NewsApiClient("8987e832944046e2b543ec9baee0feb9");
 
         Toast.makeText(MainActivity.this,"Fetching...", Toast.LENGTH_SHORT).show();
-
         newsApiClient.getEverything(
                 new EverythingRequest.Builder()
                         .q("india")
@@ -82,19 +81,47 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
         );
 
 
-
     }
 
     @Override
     public void onPostClick(int position)
     {
         Intent intent = new Intent(MainActivity.this, ShowNews.class);
-        intent.putExtra("author", postList.get(position).getAuthor());
-        intent.putExtra("description", postList.get(position).getDescription());
-        intent.putExtra("publishedAt", postList.get(position).getPublishedAt());
-        intent.putExtra("title", postList.get(position).getTitle());
-        intent.putExtra("url", postList.get(position).getUrl());
-        intent.putExtra("urlToImage", postList.get(position).getUrlToImage());
+
+        if(postList.get(position).getAuthor() != null)
+            intent.putExtra("author", postList.get(position).getAuthor().toString());
+        else
+            intent.putExtra("author", "");
+
+        if(postList.get(position).getDescription() != null)
+            intent.putExtra("description", postList.get(position).getDescription().toString());
+        else
+            intent.putExtra("description", "");
+
+        if(postList.get(position).getPublishedAt() != null)
+            intent.putExtra("publishedAt", postList.get(position).getPublishedAt().toString());
+        else
+            intent.putExtra("publishedAt", "");
+
+        if(postList.get(position).getTitle() != null)
+            intent.putExtra("title", postList.get(position).getTitle().toString());
+        else
+            intent.putExtra("title", "");
+
+        if(postList.get(position).getUrl() != null)
+            intent.putExtra("url", postList.get(position).getUrl().toString());
+        else
+            intent.putExtra("url", "");
+
+        if(postList.get(position).getUrlToImage() != null)
+            intent.putExtra("urlToImage", postList.get(position).getUrlToImage().toString());
+        else
+            intent.putExtra("urlToImage", "");
+//        intent.putExtra("description", postList.get(position).getDescription().toString());
+//        intent.putExtra("publishedAt", postList.get(position).getPublishedAt().toString());
+//        intent.putExtra("title", postList.get(position).getTitle().toString());
+//        intent.putExtra("url", postList.get(position).getUrl().toString());
+//        intent.putExtra("urlToImage", postList.get(position).getUrlToImage().toString());
         startActivity(intent);
     }
 }
