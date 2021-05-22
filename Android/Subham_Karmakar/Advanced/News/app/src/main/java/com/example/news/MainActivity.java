@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -27,10 +29,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.OnNewsPostClickListener
 {
-    private TextView news;
-    private String headlines = "";
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
     private ArrayList<Post> postList = new ArrayList<>();
@@ -44,8 +44,12 @@ public class MainActivity extends AppCompatActivity
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerViewAdapter = new RecyclerViewAdapter(postList, MainActivity.this, this);
+
 
         NewsApiClient newsApiClient = new NewsApiClient("8987e832944046e2b543ec9baee0feb9");
+
+        Toast.makeText(MainActivity.this,"Fetching...", Toast.LENGTH_SHORT).show();
 
         newsApiClient.getEverything(
                 new EverythingRequest.Builder()
@@ -54,6 +58,7 @@ public class MainActivity extends AppCompatActivity
                 new NewsApiClient.ArticlesResponseCallback() {
                     @Override
                     public void onSuccess(ArticleResponse response) {
+
                         for (int i = 0; i <response.getArticles().size() ; i++)
                         {
                             postList.add(new Post(
@@ -64,7 +69,7 @@ public class MainActivity extends AppCompatActivity
                                     response.getArticles().get(i).getUrl(),
                                     response.getArticles().get(i).getUrlToImage()
                             ));
-                            recyclerViewAdapter = new RecyclerViewAdapter(postList, MainActivity.this);
+
                             recyclerView.setAdapter(recyclerViewAdapter);
                         }
                     }
@@ -78,5 +83,18 @@ public class MainActivity extends AppCompatActivity
 
 
 
+    }
+
+    @Override
+    public void onPostClick(int position)
+    {
+        Intent intent = new Intent(MainActivity.this, ShowNews.class);
+        intent.putExtra("author", postList.get(position).getAuthor());
+        intent.putExtra("description", postList.get(position).getDescription());
+        intent.putExtra("publishedAt", postList.get(position).getPublishedAt());
+        intent.putExtra("title", postList.get(position).getTitle());
+        intent.putExtra("url", postList.get(position).getUrl());
+        intent.putExtra("urlToImage", postList.get(position).getUrlToImage());
+        startActivity(intent);
     }
 }
