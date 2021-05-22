@@ -29,11 +29,11 @@ public class ShowNews extends AppCompatActivity
 
         Intent intent = getIntent();
 
-        author.setText(intent.getStringExtra("author"));
+        author.append(intent.getStringExtra("author"));
         description.setText(intent.getStringExtra("description"));
-        publishedAt.setText(intent.getStringExtra("publishedAt"));
+        publishedAt.append(intent.getStringExtra("publishedAt"));
         title.setText(intent.getStringExtra("title"));
-        url.setText(intent.getStringExtra("url"));
-        image.setText(intent.getStringExtra("urlToImage"));
+        url.append(intent.getStringExtra("url"));
+        image.append(intent.getStringExtra("urlToImage"));
     }
 }

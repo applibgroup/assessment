@@ -34,13 +34,21 @@
                 android:id="@+id/post_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center"
+                android:fontFamily="@font/alfa_slab_one"
+                android:maxLines="4"
+                android:text="TextView"
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/post_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center"
+                android:fontFamily="@font/balthazar"
+                android:maxLines="4"
+                android:text="TextView"
+                android:textSize="16dp" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
