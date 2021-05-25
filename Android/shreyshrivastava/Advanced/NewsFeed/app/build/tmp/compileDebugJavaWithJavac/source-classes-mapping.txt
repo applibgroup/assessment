@@ -1,0 +1,17 @@
+com/example/news/BuildConfig.java
+ com.example.news.BuildConfig
+com/example/news/model/Post.java
+ com.example.news.model.Post
+com/example/news/MySingleton.java
+ com.example.news.MySingleton
+ com.example.news.MySingleton$1
+com/example/news/adapter/RecyclerViewAdapter.java
+ com.example.news.adapter.RecyclerViewAdapter
+ com.example.news.adapter.RecyclerViewAdapter$OnNewsPostClickListener
+ com.example.news.adapter.RecyclerViewAdapter$ViewHolder
+com/example/news/MainActivity.java
+ com.example.news.MainActivity
+ com.example.news.MainActivity$1
+com/example/news/ShowNews.java
+ com.example.news.ImageLoadTask
+ com.example.news.ShowNews

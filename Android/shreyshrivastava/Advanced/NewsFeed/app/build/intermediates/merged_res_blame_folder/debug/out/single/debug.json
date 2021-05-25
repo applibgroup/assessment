@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon_news.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-mdpi\\icon_news.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_splash_icon.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xhdpi\\splash_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_share.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable\\ic_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_splash_icon.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxxhdpi\\splash_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_icon_news.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-hdpi\\icon_news.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\layout_news_card.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\layout\\news_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_no_result.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-hdpi\\no_result.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_splash_icon.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxhdpi\\splash_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_splash_icon.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-hdpi\\splash_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_no_result.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xhdpi\\no_result.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_oops.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxxhdpi\\oops.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon_news.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xhdpi\\icon_news.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_oops.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-hdpi\\oops.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_show_news.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\layout\\activity_show_news.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_oops.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xhdpi\\oops.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\font_alfa_slab_one.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\font\\alfa_slab_one.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_shadow.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable\\bottom_shadow.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_date.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable\\ic_date.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_no_result.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxhdpi\\no_result.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_oops.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxhdpi\\oops.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_oops.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-mdpi\\oops.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_icon_news.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxhdpi\\icon_news.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top_shadow.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable\\top_shadow.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_icon_news.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxxhdpi\\icon_news.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\font_balthazar.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\font\\balthazar.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_no_result.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-xxxhdpi\\no_result.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_white.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable\\round_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_no_result.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-mdpi\\no_result.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_splash_icon.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\assessment\\Android\\Subham_Karmakar\\Advanced\\News\\app\\src\\main\\res\\drawable-mdpi\\splash_icon.png"
+    }
+]
