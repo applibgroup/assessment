@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestLogin</string>
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">167598595319037</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb167598595319037</string>
+    <!-- Twitter consumer key and secret -->
+    <string name="twitter_consumer_key" translatable="false">Z83VnZaMmjkskIBzeamxBG0ey</string>
+    <string name="twitter_consumer_secret" translatable="false">1VFwi91hSRohA23NFPW9hYqGUsvndwF0HoXy5Z7unGSHAPJlq6</string>
+</resources>
