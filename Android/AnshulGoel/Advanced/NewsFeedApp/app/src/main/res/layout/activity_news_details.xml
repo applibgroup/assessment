@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout tools:context=".view.NewsDetailsActivity"
+    android:background="@color/purple_200"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ProgressBar
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:id="@+id/progress_bar_news_details"/>
+
+    <WebView
+        android:background="@color/purple_200"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:layout_width="match_parent"
+        android:id="@+id/web_view_news_details"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
