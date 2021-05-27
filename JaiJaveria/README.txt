@@ -1,4 +1,4 @@
-## Beginner: Splash Screen ##
+# Beginner: Splash Screen 
 
 I have created a splash screen around the precautions one needs to take in the pandemic.
 
