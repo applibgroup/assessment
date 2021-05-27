@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.multidex.MultiDex;
+import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
@@ -39,12 +40,13 @@ public class MainActivity extends AppCompatActivity    {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView=findViewById(R.id.recyclerView);
         button=findViewById(R.id.add_task);
-        recyclerView.setHasFixedSize(true);
+//        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         firestore=FirebaseFirestore.getInstance();
         list= new ArrayList<>();
@@ -58,7 +60,41 @@ public class MainActivity extends AppCompatActivity    {
         recyclerView.setAdapter(adapter);
         showData();
     }
+    public static Comparator<ToDoListModel> sortOnDateAndTime= new Comparator<ToDoListModel>() {
+        @Override
+        public int compare(ToDoListModel o1, ToDoListModel o2) {
+            String d1= o1.getTaskDate();
 
+            String d2=o2.getTaskDate();
+            if (d1.equals(d2))
+            {
+                return o1.getTaskTime().compareTo(o2.getTaskTime());
+
+            }
+            else
+            {
+//                String[] a1=d1.split("-");
+//                String[] a2=d2.split("-");
+//                int year1= Integer.parseInt(a1[2]);
+//                int year2= Integer.parseInt(a2[2]);
+//                if (year1!=year2)
+//                {
+//                    return (year1<year2) ? -1: 1;
+//                }
+//                int month1= Integer.parseInt(a1[1]);
+//                int month2= Integer.parseInt(a2[1])
+//                if (month2!=month1)
+//                {
+//                    return (month1<month2) ? -1: 1;
+//                }
+//                int day1=Integer.parseInt(a1[0]);
+//                int day2=Integer.parseInt(a2[0]);
+//                return (day1<day2) ? -1: 1;
+                return d1.compareTo(d2);
+            }
+
+        }
+    };
     private void showData()
     {
         firestore.collection("task").addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -66,28 +102,26 @@ public class MainActivity extends AppCompatActivity    {
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
                 for (DocumentChange documentChange : queryDocumentSnapshots.getDocumentChanges())
                 {
+                    String id=documentChange.getDocument().getId();
+                    ToDoListModel toDoListModel=documentChange.getDocument().toObject(ToDoListModel.class).withID(id);
+
+                    Log.d("ShowData MainActivity", "docChange type: "+documentChange.getType());
                     if (documentChange.getType()== DocumentChange.Type.ADDED)
                     {
-                        String id=documentChange.getDocument().getId();
-                        ToDoListModel toDoListModel=documentChange.getDocument().toObject(ToDoListModel.class).withID(id);
-                        list.add(toDoListModel);
-                        adapter.notifyDataSetChanged();
+//                        ToDoListModel toDoListModel=documentChange.getDocument().toObject(ToDoListModel.class).withID(id);
+                        if (toDoListModel.getTaskTime()!=null)
+                        {
+                            list.add(toDoListModel);
+                            adapter.notifyDataSetChanged();
+                        }
                     }
+//                    else if (documentChange.getType()== DocumentChange.Type.MODIFIED)
+//                    {
+//                        list.set(p,toDoListModel);
+//                    }
                 }
 //                Collections.reverse(list);
-                Comparator<ToDoListModel> sortOnDateAndTime= new Comparator<ToDoListModel>() {
-                    @Override
-                    public int compare(ToDoListModel o1, ToDoListModel o2) {
-                        String d1= o1.getTaskDate();
-                        String d2=o2.getTaskDate();
-                        if (d1.equals(d2))
-                        {
-                            return o1.getTaskTime().compareTo(o2.getTaskTime());
 
-                        }
-                        return d1.compareTo(d2);
-                    }
-                };
 //                public int sort()
                 Collections.sort(list,sortOnDateAndTime);
             }
