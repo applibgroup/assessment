@@ -7,7 +7,7 @@ Libraries used:
 2. Picasso - I have also added an image from a URL into the app using Picasso, just for beautification effect.
 
 Screenshot when app starts
-![Screenshot_20210529-140207_Barcode Scanner](https://user-images.githubusercontent.com/46132930/120063843-d2387c80-c086-11eb-94f2-0f2056979886.jpg)
+![Screenshot_20210529-140207_Barcode Scanner](https://user-images.githubusercontent.com/46132930/120063843-d2387c80-c086-11eb-94f2-0f2056979886.jpg =250x250)
 
 When the SCAN QR CODE button is clicked
 ![Screenshot_20210529-140248_Barcode Scanner](https://user-images.githubusercontent.com/46132930/120063852-e0869880-c086-11eb-8c3f-12fea7af5ad6.jpg)
