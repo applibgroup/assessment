@@ -1,0 +1,59 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.androidsplashscreenassignment"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:5:5-24:19
+12        android:allowBackup="true"
+12-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.5.0] C:\Users\Jamesh\.gradle\caches\transforms-2\files-2.1\07adfc08fe16d3453ab9291511ec05fe\core-1.5.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:extractNativeLibs="false"
+16        android:icon="@mipmap/ic_launcher"
+16-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:7:9-43
+17        android:label="@string/app_name"
+17-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:8:9-41
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:9:9-54
+19        android:supportsRtl="true"
+19-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:10:9-35
+20        android:testOnly="true"
+21        android:theme="@style/Theme.AndroidSplashScreenAssignment" >
+21-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:11:9-67
+22        <activity
+22-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:12:9-15:95
+23            android:name="com.example.androidsplashscreenassignment.HomeScreen"
+23-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:13:13-39
+24            android:label="@string/title_activity_home_screen"
+24-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:14:13-63
+25            android:theme="@style/Theme.AndroidSplashScreenAssignment.NoActionBar" />
+25-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:15:13-83
+26        <activity
+26-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:16:9-23:20
+27            android:name="com.example.androidsplashscreenassignment.ScreenSlidePagerActivity"
+27-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:16:19-59
+28            android:theme="@style/Theme.AndroidSplashScreenAssignment.NoActionBar" >
+28-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:17:13-83
+29            <intent-filter>
+29-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:18:13-22:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:19:17-69
+30-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:19:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:21:17-77
+32-->D:\AndroidStudioProjects\AndroidSplashScreenAssignment\app\src\main\AndroidManifest.xml:21:27-74
+33            </intent-filter>
+34        </activity>
+35    </application>
+36
+37</manifest>

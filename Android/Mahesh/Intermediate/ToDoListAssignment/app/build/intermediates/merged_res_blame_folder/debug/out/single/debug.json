@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\layout_new_task.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\layout\\new_task.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_logo.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\drawable\\ic_logo.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_edit.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\drawable\\ic_baseline_edit.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\layout_task_layout.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\layout\\task_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_24.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_delete.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\drawable\\ic_baseline_delete.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AndroidStudioProjects\\ToDoListAssignment\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    }
+]

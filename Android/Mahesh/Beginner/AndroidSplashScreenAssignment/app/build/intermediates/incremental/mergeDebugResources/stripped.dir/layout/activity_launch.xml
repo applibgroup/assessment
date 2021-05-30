@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_gradient">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/splashTitle"
+                style="?android:textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="64dp"
+                android:text="@string/lorem_ipsum"
+                android:textAlignment="textStart"
+                android:textColor="#C7DFD6"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <ImageView
+                android:id="@+id/leafImageView"
+                android:layout_width="257dp"
+                android:layout_height="256dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="Leaf Splash Screen Image"
+                android:scaleType="centerInside"
+                android:scaleX="3"
+                android:scaleY="3"
+                android:src="@drawable/ic_leaf_vector_asset"
+                />
+
+            <TextView
+                android:id="@+id/splashText1"
+                style="?android:textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="16dp"
+                android:text="@string/lorem_ipsum"
+                android:textColor="#EBFAF7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/nextButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickNext"
+                android:text="Next"
+                android:textColor="#9A7EF1E6" />
+
+            <Button
+                android:id="@+id/backButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:insetLeft="10dp"
+                android:onClick="onClickBack"
+                android:text="Back"
+                android:textColor="#9A7EF1E6" />
+
+            <Button
+                android:id="@+id/skipButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:insetLeft="10dp"
+                android:onClick="onClickSkip"
+                android:text="Skip"
+                android:textColor="#9A7EF1E6" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
