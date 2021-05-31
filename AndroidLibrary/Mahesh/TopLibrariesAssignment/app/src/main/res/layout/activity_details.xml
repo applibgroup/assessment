@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/detailsPageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Details Page Title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="24dp"/>
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/detailsPageImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="Image relevant to corresponding Location" />
+    <TextView
+        android:id="@+id/detailsPageDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
