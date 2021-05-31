@@ -2,7 +2,9 @@ package com.example.onestoplogin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.onestoplogin.databinding.ActivityPhoneLoginBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -26,31 +29,22 @@ import java.util.concurrent.TimeUnit;
 
 public class PhoneLogin extends AppCompatActivity
 {
+    private ActivityPhoneLoginBinding binding;
     private FirebaseAuth mAuth;
 
-    private TextView phoneNo;
-    private TextView otpText;
-    private Button sendButton;
-    private Button verifyOtp;
-    private TextView info;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phone_login);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_phone_login);
 
         mAuth = FirebaseAuth.getInstance();
 
-        phoneNo = findViewById(R.id.phone_no);
-        sendButton = findViewById(R.id.otp);
-        otpText = findViewById(R.id.verify_otp);
-        verifyOtp = findViewById(R.id.verify);
-        info = findViewById(R.id.info_otp);
-
-        info.setVisibility(View.GONE);
-        otpText.setVisibility(View.GONE);
-        verifyOtp.setVisibility(View.GONE);
+        binding.infoOtp.setVisibility(View.GONE);
+        binding.verifyOtp.setVisibility(View.GONE);
+        binding.verify.setVisibility(View.GONE);
     }
 
     @Override
@@ -73,23 +67,23 @@ public class PhoneLogin extends AppCompatActivity
 
         }
 
-        sendButton.setOnClickListener(new View.OnClickListener()
+        binding.otp.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                if(phoneNo.getText().length() != 10)
+                if(binding.phoneNo.getText().length() != 10)
                 {
                     Toast.makeText(PhoneLogin.this,"Please enter a valid Phone Number!", Toast.LENGTH_SHORT).show();
 
                 }
                 else
                 {
-                    info.setVisibility(View.VISIBLE);
-                    otpText.setVisibility(View.VISIBLE);
-                    verifyOtp.setVisibility(View.VISIBLE);
+                    binding.infoOtp.setVisibility(View.VISIBLE);
+                    binding.verifyOtp.setVisibility(View.VISIBLE);
+                    binding.verify.setVisibility(View.VISIBLE);
                     PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                            "+91" + phoneNo.getText().toString(),
+                            "+91" + binding.phoneNo.getText().toString(),
                             60,
                             TimeUnit.SECONDS,
                             PhoneLogin.this,
@@ -104,7 +98,7 @@ public class PhoneLogin extends AppCompatActivity
                                 @Override
                                 public void onVerificationFailed(@NonNull @org.jetbrains.annotations.NotNull FirebaseException e)
                                 {
-                                    sendButton.setVisibility(View.GONE);
+                                    binding.otp.setVisibility(View.GONE);
                                 }
 
                                 @Override
@@ -112,12 +106,12 @@ public class PhoneLogin extends AppCompatActivity
                                 {
 
 
-                                    verifyOtp.setOnClickListener(new View.OnClickListener()
+                                    binding.verify.setOnClickListener(new View.OnClickListener()
                                     {
                                         @Override
                                         public void onClick(View v)
                                         {
-                                            if(otpText.getText().length()<6)
+                                            if(binding.verifyOtp.getText().length()<6)
                                             {
                                                 Toast.makeText(PhoneLogin.this,"Enter a valid OTP", Toast.LENGTH_SHORT).show();
 
@@ -125,7 +119,7 @@ public class PhoneLogin extends AppCompatActivity
                                             else
                                             {
                                                 Toast.makeText(PhoneLogin.this,"Verifying... Please wait!", Toast.LENGTH_SHORT).show();
-                                                PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(s, otpText.getText().toString());
+                                                PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(s, binding.verifyOtp.getText().toString());
                                                 FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential)
                                                         .addOnCompleteListener(new OnCompleteListener<AuthResult>()
                                                         {

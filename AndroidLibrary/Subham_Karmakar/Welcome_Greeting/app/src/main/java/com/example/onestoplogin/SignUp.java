@@ -3,6 +3,7 @@ package com.example.onestoplogin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.onestoplogin.databinding.ActivitySignUpBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,22 +23,16 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignUp extends AppCompatActivity
 {
+    private ActivitySignUpBinding binding;
     private FirebaseAuth mAuth;
-
-    private TextView email;
-    private TextView password;
-    private TextView verify;
-    private Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up);
 
         mAuth = FirebaseAuth.getInstance();
-
-
     }
 
     @Override
@@ -44,10 +40,6 @@ public class SignUp extends AppCompatActivity
     {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        email = findViewById(R.id.email_signup);
-        password = findViewById(R.id.email_password);
-        verify = findViewById(R.id.email_verify_password);
-        signup = findViewById(R.id.signup_email);
 
         if(currentUser != null)
         {
@@ -58,23 +50,23 @@ public class SignUp extends AppCompatActivity
 
         }
 
-        signup.setOnClickListener(new View.OnClickListener()
+        binding.signupEmail.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                if(email.getText().toString().isEmpty() || password.getText().toString().isEmpty() || verify.getText().toString().isEmpty())
+                if(binding.emailSignup.getText().toString().isEmpty() || binding.emailPassword.getText().toString().isEmpty() || binding.emailVerifyPassword.getText().toString().isEmpty())
                 {
                     Toast.makeText(SignUp.this,"One or more fields empty", Toast.LENGTH_SHORT).show();
                 }
-                else if(password.getText().toString().length() < 8)
+                else if(binding.emailPassword.getText().toString().length() < 8)
                 {
                     Toast.makeText(SignUp.this,"Password needs to be atleast 8 characters", Toast.LENGTH_SHORT).show();
                 }
-                else if(password.getText().toString().equals(verify.getText().toString()))
+                else if(binding.emailPassword.getText().toString().equals(binding.emailVerifyPassword.getText().toString()))
                 {
                     Toast.makeText(SignUp.this,"Verifying... Please wait!", Toast.LENGTH_SHORT).show();
-                    mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                    mAuth.createUserWithEmailAndPassword(binding.emailSignup.getText().toString(), binding.emailPassword.getText().toString())
                             .addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {

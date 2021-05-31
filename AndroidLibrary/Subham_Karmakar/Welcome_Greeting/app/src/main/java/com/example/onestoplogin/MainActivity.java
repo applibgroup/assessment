@@ -3,6 +3,7 @@ package com.example.onestoplogin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.onestoplogin.databinding.ActivityMainBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -35,18 +37,11 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity
 {
+    private ActivityMainBinding binding;
     private static final int RC_SIGN_IN = 1;
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-
-
-    private TextView name;
-    private TextView password;
-    private Button signup;
-    private Button signin;
-    private SignInButton google;
-    private Button phone;
 
 
     @SuppressLint("RestrictedApi")
@@ -54,7 +49,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         // Configure sign-in to request the user's ID, email address, and basic
@@ -79,13 +75,6 @@ public class MainActivity extends AppCompatActivity
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        name = findViewById(R.id.name);
-        password = findViewById(R.id.password);
-        signin = findViewById(R.id.signin);
-        signup = findViewById((R.id.signup));
-        google = findViewById(R.id.google);
-        phone = findViewById(R.id.phone);
-
         // Check for existing Google Sign In account, if the user is already signed in
     // the GoogleSignInAccount will be non-null.
 
@@ -99,12 +88,12 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-        signin.setOnClickListener(new View.OnClickListener()
+        binding.signin.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                if(name.getText().toString().isEmpty() || password.getText().toString().isEmpty())
+                if(binding.name.getText().toString().isEmpty() || binding.password.getText().toString().isEmpty())
                 {
                     Toast.makeText(MainActivity.this,"One or more fields empty", Toast.LENGTH_SHORT).show();
 
@@ -112,7 +101,7 @@ public class MainActivity extends AppCompatActivity
                 else
                 {
                     Toast.makeText(MainActivity.this,"Verifying... Please wait!", Toast.LENGTH_SHORT).show();
-                    mAuth.signInWithEmailAndPassword(name.getText().toString().trim(), password.getText().toString())
+                    mAuth.signInWithEmailAndPassword(binding.name.getText().toString().trim(), binding.password.getText().toString())
                             .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -134,7 +123,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        signup.setOnClickListener(new View.OnClickListener()
+        binding.signup.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -145,7 +134,7 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-        google.setOnClickListener(new View.OnClickListener()
+        binding.google.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -157,7 +146,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        phone.setOnClickListener(new View.OnClickListener()
+        binding.phone.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
