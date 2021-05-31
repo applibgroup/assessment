@@ -3,3 +3,4 @@ I have made a news app where one can check the latest headlines relating to busi
 Usage Instructions 
 
 On the main screen one sees general headlines. The top left corner has a navigation drawer where one could change the news categories. Clicking on a particular news opens the full news article on chrome insde the app itself. There is also a share option which when clicked generates the corresponding QR code.
+![NewsNowScreenShot](https://raw.githubusercontent.com/JaiJaveria/assessment/main/AndroidLibrary/JaiJaveria/NewsNowScreenShot.png)
