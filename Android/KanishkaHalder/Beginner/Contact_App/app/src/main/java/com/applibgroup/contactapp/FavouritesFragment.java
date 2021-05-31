@@ -91,10 +91,10 @@ public class FavouritesFragment extends Fragment {
     }
 
     public static void setFavQueue(User user){
-        if(!favQueue.contains(user)){
+        if(favQueue.stream().noneMatch(user1 -> user.getUid() == user.getUid())){
             favQueue.add(user);
         } else {
-            favQueue.remove(user);
+            favQueue.removeIf(user1 -> user1.getUid() == user.getUid());
             favQueue.add(user);
         }
         if(favQueue.size()>4)
