@@ -18,7 +18,13 @@ The Libraries used in this app:
 The screenshots are attached below:
 
 <img src="https://user-images.githubusercontent.com/50767716/120183435-4f055b00-c22d-11eb-93d3-ff391af2a0ee.png" width="200" height="400"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/50767716/120183439-50368800-c22d-11eb-9427-2dc22ea58b90.png" width="200" height="400"/>
-<br />
+<br /><br /><br />
 <img src="https://user-images.githubusercontent.com/50767716/120183443-5167b500-c22d-11eb-9c91-261fc0700ed4.png" width="200" height="400"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/50767716/120183444-52004b80-c22d-11eb-93f5-e4b5ddd4dd0d.png" width="200" height="400"/>
+<br /><br /><br />
 
+To view the app:
+- Clone the repository
+- Open the Welcome_Greeting folder with Android Studio
+- Wait for the background sync and tasks to happen
+- Run the app with the Emulator or Connected Device
 
