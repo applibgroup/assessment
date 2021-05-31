@@ -71,10 +71,6 @@ public class MainActivity extends AppCompatActivity implements ViewAdapter.OnVie
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
 
-//        Location location = new Location("");
-//        location.setLatitude(-33.8670522);
-//        location.setLongitude(151.1957362);
-
 
     }
 
