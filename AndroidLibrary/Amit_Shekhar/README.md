@@ -4,7 +4,7 @@ This is an assignment submission on top android library usage.
 
 ## Demonstration
 
-<img src="/readme_assets/1.gif" width="250"/> <img src="/readme_assets/2.gif" width="250"/> 
+<img src="readme_assets/1.gif" width="250"/> <img src="readme_assets/2.gif" width="250"/> 
 
 ## Libraries
 
