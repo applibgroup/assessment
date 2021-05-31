@@ -19,17 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--            <CheckBox-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="40dp"-->
-            <!--                android:background="@color/teal_200"-->
-            <!--                android:text="Task1"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintHorizontal_bias="0.5"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent">-->
-            <!--                -->
-            <!--            </CheckBox>-->
+
             <TextView
                 android:id="@+id/xtaskname"
                 android:layout_width="match_parent"
@@ -55,16 +45,6 @@
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="20dp"-->
-<!--                android:layout_marginEnd="25dp"-->
-<!--                android:layout_marginRight="25dp"-->
-<!--                android:gravity="center_vertical"-->
-<!--                android:text="6:00 pm"-->
-<!--                android:textSize="15dp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
