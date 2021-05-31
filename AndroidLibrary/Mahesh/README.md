@@ -8,9 +8,15 @@ The Application is a mockup of a toursim app that displays interesting places to
 * In the absence of a dedicated location API, a mock API was created and hosted in Github pages: https://elaitenstile.github.io/touristapi-test/
 
 Screenshots of functionality:
-![Screenshot1](/images/screen1.png)
+
+![Screenshot1](/AndroidLibrary/Mahesh/images/screen1.png)
+
 This screenshot shows the first screen of the Application, where the user can browse through cities and different locations inside the city.
-![Screenshot2](/images/screen2.png)
+
+![Screenshot2](/AndroidLibrary/Mahesh/images/screen2.png)
+
 This screenshot shows the second screen of the Application, where detailed information is given about a location.
-![Screenshot3](/images/screen3.png)
+
+![Screenshot3](/AndroidLibrary/Mahesh/images/screen3.png)
+
 This screenshot shows the API endpoint from which some information was retrieved. As it is hosted on Github pages for testing, no API key or security is added.
