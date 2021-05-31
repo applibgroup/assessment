@@ -17,4 +17,6 @@ With Picasso, the app is able to parse images over https and also allows caching
 With ViewBinding, the app performance is further improved as this allows to map the widgets to the activities, and it doesn't require to find the views by ID everytime an activity is launched.
 
 The screenshots are attached below:
-<img width=“964” alt=“java 8 and prio java 8  array review example” src=“https://github.com/jaimehernan95/arrayReview-java/blob/master/images/%20arrayExample.png 125”>
+
+![Home Page](https://drive.google.com/file/d/123Z0SOHU-DfK3owjqFeSq0F5bcQWrVtb/view?usp=sharing)
+
