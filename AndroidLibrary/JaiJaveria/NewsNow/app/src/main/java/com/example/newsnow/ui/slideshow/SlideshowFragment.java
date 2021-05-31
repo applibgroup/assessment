@@ -53,7 +53,7 @@ public class SlideshowFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.d("SFrag","inside onViewCreated");
-        ProgressBar pb =view.findViewById(R.id.progressBarS);
+        View pb =view.findViewById(R.id.animation_viewS);
         pb.setVisibility(View.VISIBLE);
         final RecyclerView recyclerView =  view.findViewById(R.id.recycler_slideshow);
         NewsAdapter newsAdapter=new NewsAdapter(this.getContext());

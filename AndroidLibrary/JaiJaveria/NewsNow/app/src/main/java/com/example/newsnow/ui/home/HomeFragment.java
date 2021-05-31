@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.d("HFrag","inside onViewCreated");
-        ProgressBar pb =view.findViewById(R.id.progressBarH);
+        View pb =view.findViewById(R.id.animation_viewH);
         pb.setVisibility(View.VISIBLE);
         final RecyclerView recyclerView =  view.findViewById(R.id.recycler_home);
         NewsAdapter newsAdapter=new NewsAdapter(this.getContext());

@@ -58,7 +58,7 @@ public class GalleryFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.d("GFrag", "inside onViewCreated");
-        ProgressBar pb = view.findViewById(R.id.progressBarG);
+        View pb = view.findViewById(R.id.animation_viewG);
         pb.setVisibility(View.VISIBLE);
         final RecyclerView recyclerView = view.findViewById(R.id.recycler_gallery);
         NewsAdapter newsAdapter = new NewsAdapter(this.getContext());
@@ -95,14 +95,14 @@ public class GalleryFragment extends Fragment {
                 }
                 newsAdapter.getNewsList(l);
                 Log.d("getCallbackFunc", "calling news adapter notify dataset changed.");
-                ProgressBar pb = view.findViewById(R.id.progressBarG);
+                View pb = view.findViewById(R.id.animation_viewG);
                 if (pb == null) {
-                    pb = view.findViewById(R.id.progressBarH);
+                    pb = view.findViewById(R.id.animation_viewH);
                 }
                 if (pb == null) {
-                    pb = view.findViewById(R.id.progressBarS);
+                    pb = view.findViewById(R.id.animation_viewS);
                 }
-                pb.setVisibility(View.INVISIBLE);
+                pb.setVisibility(View.GONE);
                 newsAdapter.notifyDataSetChanged();
             }
 
