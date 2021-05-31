@@ -13,3 +13,11 @@ I have made a ToDo App where you could add/edit and delete tasks/events that are
 Usage Instructions 
 
 On the main screen you can see a list of tasks that are upcoming along with their date and time. U can add more tasks by clicking on the bottom right button 'ADD TASK'. During this you can also provide a description for the same which is visible after clicking on a task in the task list. Clicking on the same also pops up another window where one can update or delete the particular task.
+
+Advanced: News App
+
+I have made a news app where one can check the latest headlines relating to business or entertainment or general news related to India.
+
+Usage Instructions 
+
+On the main screen one sees general headlines. The top left corner has a navigation drawer where one could change the news categories. Clicking on a particular news opens the full news article on chrome insde the app itself.
