@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewsFeedAssignment</string>
+    <string name="image_relevant_to_corresponding_news_article">Image relevant to corresponding news article.</string>
+    <string name="read_in_detail">Read in detail</string>
+</resources>

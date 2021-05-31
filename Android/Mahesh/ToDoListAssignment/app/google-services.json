@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "859911752850",
+    "project_id": "todolistassignment-852e3",
+    "storage_bucket": "todolistassignment-852e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859911752850:android:975bcba94ec79cffa3ea4b",
+        "android_client_info": {
+          "package_name": "com.example.todolistassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859911752850-rhg0sl9vsdlr02mvon86fvb522s11r4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGB6QxEc8vDwS0um1vy7P40YqJtf1mac8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859911752850-rhg0sl9vsdlr02mvon86fvb522s11r4q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
