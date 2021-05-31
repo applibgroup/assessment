@@ -53,14 +53,22 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<Example>() {
             @Override
             public void onResponse(Call<Example> call, Response<Example> response) {
-                tempText.setText("Temperature "+response.body().getMain().getTemp()+"°C");
-                descriptionText.setText("Feels Like "+response.body().getMain().getFeels_like()+"°C");
-                humidityText.setText("Humidity: "+response.body().getMain().getHumidity()+"%");
+                if (response.isSuccessful()){
+                    tempText.setText("Temperature "+response.body().getMain().getTemp()+"°C");
+                    descriptionText.setText("Feels Like "+response.body().getMain().getFeels_like()+"°C");
+                    humidityText.setText("Humidity: "+response.body().getMain().getHumidity()+"%");
+                }
+                else{
+                    tempText.setText("Data Not Found!!");
+                    descriptionText.setText("");
+                    humidityText.setText("");
+                }
+
             }
 
             @Override
             public void onFailure(Call<Example> call, Throwable t) {
-
+                t.printStackTrace();
             }
         });
     }
