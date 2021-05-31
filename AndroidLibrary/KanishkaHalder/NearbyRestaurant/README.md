@@ -14,3 +14,6 @@ The libraries used in the implementation:
 
 # Screenshots:
 
+![image1](https://github.com/KanishkaHalder1771/assessment/blob/main/AndroidLibrary/KanishkaHalder/NearbyRestaurant/screenshots/ListPage.jpg?raw=true)
+![image2](https://github.com/KanishkaHalder1771/assessment/blob/main/AndroidLibrary/KanishkaHalder/NearbyRestaurant/screenshots/DetailPage_1.jpg?raw=true)
+![image2](https://github.com/KanishkaHalder1771/assessment/blob/main/AndroidLibrary/KanishkaHalder/NearbyRestaurant/screenshots/DetailPage_2.jpg?raw=true)
