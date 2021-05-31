@@ -18,7 +18,10 @@ With ViewBinding, the app performance is further improved as this allows to map 
 
 The screenshots are attached below:
 
-![Home Page](https://drive.google.com/file/d/123Z0SOHU-DfK3owjqFeSq0F5bcQWrVtb/view?usp=sharing)
-![Sign Up Page](https://www.google.co.in/url?sa=i&url=https%3A%2F%2Fstocksnap.io%2Fsearch%2Fnature&psig=AOvVaw2XQU7WBc0pfglCtVKJJhb9&ust=1622545014419000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCVn6vh8_ACFQAAAAAdAAAAABAD)
-![After Logging In](https://www.google.co.in/url?sa=i&url=https%3A%2F%2Fstocksnap.io%2Fsearch%2Fnature&psig=AOvVaw2XQU7WBc0pfglCtVKJJhb9&ust=1622545014419000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCVn6vh8_ACFQAAAAAdAAAAABAD)
+![Screenshot_20210531-161038](https://user-images.githubusercontent.com/50767716/120183435-4f055b00-c22d-11eb-93d3-ff391af2a0ee.png)
+![Screenshot_20210531-161058](https://user-images.githubusercontent.com/50767716/120183439-50368800-c22d-11eb-9427-2dc22ea58b90.png)
+![Screenshot_20210531-161122](https://user-images.githubusercontent.com/50767716/120183443-5167b500-c22d-11eb-9c91-261fc0700ed4.png)
+![Screenshot_20210531-161130](https://user-images.githubusercontent.com/50767716/120183444-52004b80-c22d-11eb-93f5-e4b5ddd4dd0d.png)
+![Screenshot_20210531-161140](https://user-images.githubusercontent.com/50767716/120183447-5298e200-c22d-11eb-82a7-ffed1b11c450.png)
+
 
