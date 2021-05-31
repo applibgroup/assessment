@@ -1,0 +1,4 @@
+#Mon May 31 14:50:58 IST 2021
+base.0=C\:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

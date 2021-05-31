@@ -1,0 +1,31 @@
+com/example/gravityview/databinding/ActivityMainBinding.java
+ com.example.gravityview.databinding.ActivityMainBinding
+com/example/gravityview/MainActivity.java
+ com.example.gravityview.MainActivity
+com/example/gravityview/ItemData.java
+ com.example.gravityview.ItemData
+com/example/gravityview/databinding/ActivityHomeBinding.java
+ com.example.gravityview.databinding.ActivityHomeBinding
+com/example/gravityview/BuildConfig.java
+ com.example.gravityview.BuildConfig
+com/example/gravityview/FirstFragment.java
+ com.example.gravityview.FirstFragment
+ com.example.gravityview.FirstFragment$1
+com/example/gravityview/databinding/MapListItemBinding.java
+ com.example.gravityview.databinding.MapListItemBinding
+com/example/gravityview/SecondFragment.java
+ com.example.gravityview.SecondFragment
+ com.example.gravityview.SecondFragment$1
+com/example/gravityview/databinding/FragmentSecondBinding.java
+ com.example.gravityview.databinding.FragmentSecondBinding
+com/example/gravityview/databinding/ContentHomeBinding.java
+ com.example.gravityview.databinding.ContentHomeBinding
+com/example/gravityview/databinding/FragmentFirstBinding.java
+ com.example.gravityview.databinding.FragmentFirstBinding
+com/example/gravityview/HomeActivity.java
+ com.example.gravityview.HomeActivity
+com/example/gravityview/HomeAdapter.java
+ com.example.gravityview.HomeAdapter
+ com.example.gravityview.HomeAdapter$HomeAdapterHolder
+ com.example.gravityview.HomeAdapter$HomeAdapterHolder$1
+ com.example.gravityview.HomeAdapter$OnItemClickListener
