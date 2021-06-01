@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NavNewsApp">
         <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".Detailed"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
