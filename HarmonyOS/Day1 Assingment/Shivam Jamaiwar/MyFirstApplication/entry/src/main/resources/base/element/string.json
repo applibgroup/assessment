@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "MyFirstApplication"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "secondability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "loginability_login",
+      "value": "Login Ability"
+    },
+    {
+      "name": "mainability_button_login",
+      "value": "Login"
+    },
+    {
+      "name": "mainability_button_signup",
+      "value": "Signup"
+    },
+    {
+      "name": "signupability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "signupability_SignupAbility",
+      "value": "Signup Ability"
+    }
+  ]
+}
