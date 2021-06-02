@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".multilogin">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="255dp"
+        android:layout_height="287dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginLeft="87dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <EditText
+            android:id="@+id/email_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter new email"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/password_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Set password"
+            android:inputType="textPersonName|textPassword" />
+
+        <EditText
+            android:id="@+id/password1_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="same password again"
+            android:inputType="textPersonName" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Register"/>
+
+        <Button
+            android:id="@+id/cb_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Register"
+            android:text="Button" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="155dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginLeft="151dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginRight="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/email_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
