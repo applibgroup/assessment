@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_headline"
+            android:title="Top Headlines"/>
+        <item android:id="@+id/nav_business"
+            android:title="Business"/>
+        <item android:id="@+id/nav_Sport"
+            android:title="Sports"/>
+        <item android:id="@+id/nav_tech"
+            android:title="Technology"/>
+    </group>
+
+</menu>
