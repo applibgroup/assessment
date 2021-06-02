@@ -1,0 +1,8 @@
+com/example/splashscreen/BuildConfig.java
+ com.example.splashscreen.BuildConfig
+com/example/splashscreen/MainActivity.java
+ com.example.splashscreen.MainActivity
+com/example/splashscreen/activity_second.java
+ com.example.splashscreen.activity_second
+com/example/splashscreen/activity_third.java
+ com.example.splashscreen.activity_third
