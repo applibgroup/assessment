@@ -1,0 +1,29 @@
+android/example/libusage/model/RecyclerData.java
+ android.example.libusage.model.RecyclerData
+android/example/libusage/dag/RetroModule.java
+ android.example.libusage.dag.RetroModule
+android/example/libusage/dag/RetroServiceInterface.java
+ android.example.libusage.dag.RetroServiceInterface
+android/example/libusage/MyApplication.java
+ android.example.libusage.MyApplication
+android/example/libusage/databinding/RecyclerviewRowBinding.java
+ android.example.libusage.databinding.RecyclerviewRowBinding
+android/example/libusage/MainActivityViewModel.java
+ android.example.libusage.MainActivityViewModel
+ android.example.libusage.MainActivityViewModel$1
+android/example/libusage/dag/RetroComponent.java
+ android.example.libusage.dag.RetroComponent
+android/example/libusage/MainActivity.java
+ android.example.libusage.MainActivity
+ android.example.libusage.MainActivity$1
+android/example/libusage/BuildConfig.java
+ android.example.libusage.BuildConfig
+android/example/libusage/databinding/ActivityMainBinding.java
+ android.example.libusage.databinding.ActivityMainBinding
+android/example/libusage/model/RecyclerList.java
+ android.example.libusage.model.RecyclerList
+android/example/libusage/model/Owner.java
+ android.example.libusage.model.Owner
+android/example/libusage/RecyclerViewAdapter.java
+ android.example.libusage.RecyclerViewAdapter
+ android.example.libusage.RecyclerViewAdapter$MyViewHolder

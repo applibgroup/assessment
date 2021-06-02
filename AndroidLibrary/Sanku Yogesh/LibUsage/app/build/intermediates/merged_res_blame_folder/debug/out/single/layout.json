@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\intern_work\\androidnotes\\Assessment\\Sanku_Yogesh\\Rough\\LibUsage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\intern_work\\androidnotes\\Assessment\\Sanku_Yogesh\\Rough\\LibUsage\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\intern_work\\androidnotes\\Assessment\\Sanku_Yogesh\\Rough\\LibUsage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\recyclerview_row.xml",
+        "source": "D:\\intern_work\\androidnotes\\Assessment\\Sanku_Yogesh\\Rough\\LibUsage\\app\\src\\main\\res\\layout\\recyclerview_row.xml"
+    }
+]
