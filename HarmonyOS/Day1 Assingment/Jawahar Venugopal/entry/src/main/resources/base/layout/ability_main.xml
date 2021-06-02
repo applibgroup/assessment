@@ -4,7 +4,6 @@
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:alignment="center"
-    ohos:theme="Theme_theme_hide_title_bar"
     ohos:orientation="vertical">
 
     <Image
@@ -13,25 +12,25 @@
         ohos:image_src="$media:applib_icon"
         ohos:scale_mode="zoom_center"/>
 
-    <Button
+    <com.applib.jawahar_venugopal.hmosassignment.customview.CustomButton
         ohos:id="$+id:signup_button"
-        ohos:height="match_content"
+        ohos:height="50vp"
         ohos:width="150vp"
-        ohos:background_element="$graphic:background_text_button"
-        ohos:padding="12vp"
-        ohos:text="Signup"
-        ohos:text_size="15vp"
+        ohos:button_color="#FF3F7FFF"
+        ohos:button_text="Signup"
+        ohos:button_text_color="#FFFFFFFF"
+        ohos:button_text_size="45"
         ohos:top_margin="25vp"/>
 
 
-    <Button
+    <com.applib.jawahar_venugopal.hmosassignment.customview.CustomButton
         ohos:id="$+id:login_button"
-        ohos:height="match_content"
+        ohos:height="50vp"
         ohos:width="150vp"
-        ohos:background_element="$graphic:background_text_button"
-        ohos:padding="12vp"
-        ohos:text="Login"
-        ohos:text_size="15vp"
+        ohos:button_color="#FF3F7FFF"
+        ohos:button_text="Login"
+        ohos:button_text_color="#FFFFFFFF"
+        ohos:button_text_size="45"
         ohos:top_margin="12vp"/>
 
 </DirectionalLayout>
