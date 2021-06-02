@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:textview1"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="SignupAbility"
+        ohos:text_color="$ohos:color:id_color_activated"
+        ohos:text_size="40vp"/>
+</DependentLayout>
