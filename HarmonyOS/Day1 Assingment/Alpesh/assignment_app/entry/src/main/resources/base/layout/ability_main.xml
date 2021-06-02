@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:id="$+id:img"
+        ohos:height="100vp"
+        ohos:center_in_parent="true"
+        ohos:width="100vp"
+        ohos:image_src="$media:email"
+
+        ></Image>
+    <Button
+        ohos:id="$+id:login_btn"
+        ohos:height="match_content"
+        ohos:width="100fp"
+        ohos:text="Login"
+        ohos:top_margin="20fp"
+        ohos:text_size="20fp"
+        ohos:below="$id:signup_btn"
+        ohos:background_element="$ohos:color:id_color_activated_end_dark"
+        ohos:top_padding="20"
+        ohos:bottom_padding="20"
+        ohos:end_padding="20"
+        ohos:left_padding="20"
+        ohos:center_in_parent="true"
+        ohos:focus_border_enable="true"
+        ohos:focus_border_width="10"
+        ></Button>
+    <Button
+        ohos:id="$+id:signup_btn"
+        ohos:below="$id:img"
+        ohos:height="match_content"
+        ohos:top_margin="10fp"
+        ohos:width="100fp"
+        ohos:center_in_parent="true"
+        ohos:text="Signup"
+        ohos:text_size="20fp"
+        ohos:background_element="$ohos:color:id_color_activated_end_dark"
+        ohos:top_padding="20"
+        ohos:bottom_padding="20"
+        ohos:end_padding="20"
+        ohos:left_padding="20"
+        ></Button>
+
+
+</DependentLayout>

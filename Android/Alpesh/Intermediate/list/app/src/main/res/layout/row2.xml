@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idRLContact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="#FFEB3B">
+
+    <!--image view for displaying the first letter of contact-->
+
+    <!--text view for displaying user name-->
+    <TextView
+        android:id="@+id/task2"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:background="#FF5722"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/date2"
+        android:layout_width="88dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/task2"
+        android:background="#FF5722"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="88dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/task2"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/date2"
+        android:background="#FF5722"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E4DB88">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="60dp"
+        android:layout_height="44dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingTop="7dp"
+        android:text="Time:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTask" />
+
+    <ImageView
+        android:id="@+id/updatebtn"
+        android:layout_width="53dp"
+        android:layout_height="84dp"
+
+        android:background="@android:drawable/ic_menu_edit"
+        app:layout_constraintEnd_toStartOf="@+id/deleteTaskBtn"
+        app:layout_constraintTop_toTopOf="@id/checkBoxTask" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTask"
+        android:layout_width="0dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="12dp"
+        android:checked="true"
+        android:fontFamily="sans-serif"
+        android:paddingStart="0dp"
+        android:text="Task name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/updatebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/deleteTaskBtn"
+        android:layout_width="53dp"
+        android:layout_height="84dp"
+        android:src="@android:drawable/ic_menu_delete"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/checkBoxTask" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="85dp"
+        android:layout_height="44dp"
+        android:background="#009688"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="10dp"
+        android:paddingTop="7dp"
+        android:text="not set"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTask" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="12dp"
+        android:background="#009688"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="10dp"
+        android:paddingTop="7dp"
+        android:text="0000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTask" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="60dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingTop="7dp"
+        android:text="Date:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTask" />
+
+    <View
+        android:id="@+id/viewz"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
