@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="center"
+    >
+    <Text
+        ohos:id="$+id:xSignup"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:text="Signup"
+        ohos:text_alignment="center"/>
+    <TextField
+        ohos:id="$+id:xFirstName"
+        ohos:height="match_content"
+        ohos:width="200fp"
+        ohos:hint="First Name"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:left_padding="15fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="15fp"
+        ohos:bottom_padding="5fp"
+        ohos:text_alignment="center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:top_margin="30fp"
+        />
+    <Text
+        ohos:id="$+id:xFirstNameError"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="13fp"
+        ohos:text="*Wrong first name. No numbers allowed"
+        ohos:text_alignment="center"
+        ohos:visibility="hide"
+        ohos:text_color="red"/>
+    <TextField
+        ohos:id="$+id:xlastName"
+        ohos:height="match_content"
+        ohos:width="200fp"
+        ohos:hint="Last Name"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:left_padding="15fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="15fp"
+        ohos:bottom_padding="5fp"
+        ohos:text_alignment="center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:top_margin="30fp"
+        />
+    <Text
+        ohos:id="$+id:xLastNameError"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="13fp"
+        ohos:text="*Wrong last name. No numbers allowed"
+        ohos:text_alignment="center"
+        ohos:visibility="hide"
+        ohos:text_color="red"/>
+    <TextField
+        ohos:id="$+id:xEmailId"
+        ohos:height="match_content"
+        ohos:width="200fp"
+        ohos:hint="Email Id"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:left_padding="15fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="15fp"
+        ohos:bottom_padding="5fp"
+        ohos:text_alignment="center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:top_margin="30fp"
+        />
+    <Text
+        ohos:id="$+id:xEmailIdError"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="13fp"
+        ohos:text="Wrong Email id format. Must have one @ and '.' in that order and no numeral after '.'"
+        ohos:text_alignment="center"
+        ohos:visibility="hide"
+        ohos:text_color="red"
+        ohos:multiple_lines="true"
+        ohos:left_padding="15fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="15fp"
+        ohos:bottom_padding="5fp"
+        />
+    <TextField
+        ohos:id="$+id:xMobileNo"
+        ohos:height="match_content"
+        ohos:width="200fp"
+        ohos:hint="Mobile Number"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:left_padding="15fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="15fp"
+        ohos:bottom_padding="5fp"
+        ohos:text_alignment="center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:top_margin="30fp"
+        />
+    <Text
+        ohos:id="$+id:xMobileError"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="13fp"
+        ohos:text="*Wrong Mobile Number. Only numbers allowed"
+        ohos:text_alignment="center"
+        ohos:visibility="hide"
+        ohos:text_color="red"/>
+    <Button
+        ohos:id="$+id:xSignupSubmit"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Create an Account"
+        ohos:text_alignment="center"
+        ohos:left_padding="10fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="10fp"
+        ohos:bottom_padding="5fp"
+        ohos:background_element="$graphic:background_button"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:top_margin="50fp"
+        />
+
+</DirectionalLayout>
