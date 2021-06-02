@@ -4,5 +4,10 @@ Usage Instructions
 
 On the main screen one sees general headlines. The top left corner has a navigation drawer where one could change the news categories. Clicking on a particular news opens the full news article on chrome insde the app itself. There is also a share option which when clicked generates the corresponding QR code.
 
+A screenshot of the main screen containing news articles.  
 
 ![NewsNowScreenShot](https://raw.githubusercontent.com/JaiJaveria/assessment/main/AndroidLibrary/JaiJaveria/NewsNowScreenShot.png)
+
+A screenshot of the menu screen containing news categories.  
+
+![NewsNowMenuScreenshot](https://raw.githubusercontent.com/JaiJaveria/assessment/main/AndroidLibrary/JaiJaveria/NewsNowMenuScreenshot.png)
