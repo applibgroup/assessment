@@ -37,7 +37,7 @@
         ohos:visibility="hide"
         ohos:text_color="red"/>
     <TextField
-        ohos:id="$+id:xlastName"
+        ohos:id="$+id:xLastName"
         ohos:height="match_content"
         ohos:width="200fp"
         ohos:hint="Last Name"
@@ -55,7 +55,7 @@
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:text_size="13fp"
-        ohos:text="*Wrong last name. No numbers allowed"
+        ohos:text="*Wrong last name. Only Alphabets allowed"
         ohos:text_alignment="center"
         ohos:visibility="hide"
         ohos:text_color="red"/>
@@ -89,6 +89,36 @@
         ohos:bottom_padding="5fp"
         />
     <TextField
+        ohos:id="$+id:xPassword"
+        ohos:height="match_content"
+        ohos:width="200fp"
+        ohos:hint="Enter Password"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:left_padding="15fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="15fp"
+        ohos:bottom_padding="5fp"
+        ohos:text_alignment="center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:top_margin="30fp"
+        ohos:text_input_type="pattern_password"
+        />
+    <Text
+        ohos:id="$+id:xPasswordError"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="13fp"
+        ohos:text="Password must be of atleast 8 characters"
+        ohos:text_alignment="center"
+        ohos:visibility="hide"
+        ohos:text_color="red"
+        ohos:multiple_lines="true"
+        ohos:left_padding="15fp"
+        ohos:top_padding="5fp"
+        ohos:right_padding="15fp"
+        ohos:bottom_padding="5fp"
+        />
+    <TextField
         ohos:id="$+id:xMobileNo"
         ohos:height="match_content"
         ohos:width="200fp"
@@ -101,16 +131,78 @@
         ohos:text_alignment="center"
         ohos:background_element="$graphic:background_text_field"
         ohos:top_margin="30fp"
+        ohos:text_input_type="pattern_number"
         />
     <Text
         ohos:id="$+id:xMobileError"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:text_size="13fp"
-        ohos:text="*Wrong Mobile Number. Only numbers allowed"
+        ohos:text="*Wrong Mobile Number. Exactly 10 numbers allowed "
         ohos:text_alignment="center"
         ohos:visibility="hide"
         ohos:text_color="red"/>
+    <Text
+        ohos:id="$+id:xGender"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="$ohos:float:id_text_size_headline9"
+        ohos:text="Gender "
+        ohos:text_alignment="center"
+        ohos:top_margin="30fp"
+        />
+        <RadioContainer
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:component_description="Gender"
+            ohos:orientation="horizontal"
+            ohos:top_margin="15fp"
+            ohos:layout_alignment="center"
+            ohos:alignment="center"
+            ohos:scrollbar_overlap_enabled="false"
+            >
+            <RadioButton
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Male"
+                ohos:text_size="15fp"
+                ohos:right_margin="5fp"
+                ohos:scrollbar_overlap_enabled="false"
+                ohos:background_element="$graphic:background_radio_button"
+                ohos:right_padding="8fp"
+                />
+            <RadioButton
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Female"
+                ohos:text_size="15fp"
+                ohos:right_margin="5fp"
+                ohos:background_element="$graphic:background_radio_button"
+                ohos:right_padding="8fp"
+
+                />
+            <RadioButton
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Non Binary"
+                ohos:text_size="15fp"
+                ohos:right_margin="5fp"
+                ohos:scrollbar_overlap_enabled="false"
+                ohos:background_element="$graphic:background_radio_button"
+                ohos:right_padding="8fp"
+                />
+            <RadioButton
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Other"
+                ohos:text_size="15fp"
+                ohos:right_margin="5fp"
+                ohos:scrollbar_overlap_enabled="false"
+                ohos:background_element="$graphic:background_radio_button"
+                ohos:right_padding="8fp"
+
+                />
+        </RadioContainer>
     <Button
         ohos:id="$+id:xSignupSubmit"
         ohos:height="match_content"
@@ -127,3 +219,4 @@
         />
 
 </DirectionalLayout>
+
