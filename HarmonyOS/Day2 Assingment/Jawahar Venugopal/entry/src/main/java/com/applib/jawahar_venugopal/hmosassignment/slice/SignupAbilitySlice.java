@@ -60,7 +60,6 @@ public class SignupAbilitySlice extends AbilitySlice implements Component.FocusC
         mEmailField.setFocusChangedListener(this);
         mPasswordField.setFocusChangedListener(this);
         mMobileField.setFocusChangedListener(this);
-
     }
 
     private void validateAndSignup() {

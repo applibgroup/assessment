@@ -27,17 +27,18 @@
         ohos:right_margin="20vp"
         ohos:text_alignment="vertical_center"
         ohos:text_color="#FF000000"
+        ohos:text_input_type="pattern_text"
         ohos:text_size="15fp"/>
 
     <Text
         ohos:id="$+id:first_name_error"
         ohos:height="match_content"
-        ohos:visibility="hide"
         ohos:width="match_parent"
         ohos:left_margin="15vp"
         ohos:text="Invalid First Name - Cannot be alphanumeric"
         ohos:text_color="$ohos:color:id_color_badge_red"
-        ohos:text_size="12fp"/>
+        ohos:text_size="12fp"
+        ohos:visibility="hide"/>
 
     <TextField
         ohos:id="$+id:last_name"
@@ -51,6 +52,7 @@
         ohos:right_margin="20vp"
         ohos:text_alignment="vertical_center"
         ohos:text_color="#FF000000"
+        ohos:text_input_type="pattern_text"
         ohos:text_size="15fp"
         ohos:top_margin="10vp"/>
 
@@ -58,11 +60,11 @@
         ohos:id="$+id:last_name_error"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:visibility="hide"
         ohos:left_margin="15vp"
         ohos:text="Invalid Last Name - Cannot be alphanumeric"
         ohos:text_color="$ohos:color:id_color_badge_red"
-        ohos:text_size="12fp"/>
+        ohos:text_size="12fp"
+        ohos:visibility="hide"/>
 
     <TextField
         ohos:id="$+id:email"
@@ -83,11 +85,11 @@
         ohos:id="$+id:email_error"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:visibility="hide"
         ohos:left_margin="15vp"
         ohos:text="Invalid email format"
         ohos:text_color="$ohos:color:id_color_badge_red"
-        ohos:text_size="12fp"/>
+        ohos:text_size="12fp"
+        ohos:visibility="hide"/>
 
     <TextField
         ohos:id="$+id:password"
@@ -101,6 +103,7 @@
         ohos:right_margin="20vp"
         ohos:text_alignment="vertical_center"
         ohos:text_color="#FF000000"
+        ohos:text_input_type="pattern_password"
         ohos:text_size="15fp"
         ohos:top_margin="10vp"/>
 
@@ -108,11 +111,11 @@
         ohos:id="$+id:password_error"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:visibility="hide"
         ohos:left_margin="15vp"
         ohos:text="Weak Password - Must contain atleast 5 characters"
         ohos:text_color="$ohos:color:id_color_badge_red"
-        ohos:text_size="12fp"/>
+        ohos:text_size="12fp"
+        ohos:visibility="hide"/>
 
     <TextField
         ohos:id="$+id:mobile"
@@ -126,6 +129,7 @@
         ohos:right_margin="20vp"
         ohos:text_alignment="vertical_center"
         ohos:text_color="#FF000000"
+        ohos:text_input_type="pattern_number"
         ohos:text_size="15fp"
         ohos:top_margin="10vp"/>
 
@@ -133,11 +137,11 @@
         ohos:id="$+id:mobile_error"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:visibility="hide"
         ohos:left_margin="15vp"
         ohos:text="Invalid Mobile number Format"
         ohos:text_color="$ohos:color:id_color_badge_red"
-        ohos:text_size="12fp"/>
+        ohos:text_size="12fp"
+        ohos:visibility="hide"/>
 
     <Text
         ohos:height="match_content"
@@ -159,8 +163,8 @@
         <RadioButton
             ohos:height="50vp"
             ohos:width="match_content"
-            ohos:marked="true"
             ohos:check_element="$graphic:background_radio_button"
+            ohos:marked="true"
             ohos:text="Male"
             ohos:text_size="20fp"/>
 
