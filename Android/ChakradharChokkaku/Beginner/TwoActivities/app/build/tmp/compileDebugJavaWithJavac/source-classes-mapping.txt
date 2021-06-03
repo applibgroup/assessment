@@ -1,0 +1,8 @@
+com/example/twoactivities/BuildConfig.java
+ com.example.twoactivities.BuildConfig
+com/example/twoactivities/MainActivity.java
+ com.example.twoactivities.MainActivity
+com/example/twoactivities/SecondActivity.java
+ com.example.twoactivities.SecondActivity
+com/example/twoactivities/ThirdActivity.java
+ com.example.twoactivities.ThirdActivity
