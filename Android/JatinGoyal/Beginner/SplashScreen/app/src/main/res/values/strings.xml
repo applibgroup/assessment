@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SplashScreen3</string>
+    <string name="landscape_image1">Landscape image 1</string>
+    <string name="landscape_image2">Landscape image 2</string>
+    <string name="landscape_image3">Landscape image 3</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="back">BACK</string>
+</resources>
