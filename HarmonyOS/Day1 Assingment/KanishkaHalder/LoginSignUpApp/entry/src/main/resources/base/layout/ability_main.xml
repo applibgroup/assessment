@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="center">
+
+    <Image
+        ohos:id="$+id:image_main_slice"
+        ohos:height="150vp"
+        ohos:width="150vp"
+        ohos:scale_mode="stretch"
+        ohos:image_src="$media:icon"
+        ohos:margin="20vp"
+        />
+
+
+    <Button
+        ohos:id="$+id:button_login_main_slice"
+        ohos:layout_alignment="center"
+        ohos:height="match_content"
+        ohos:width="120vp"
+        ohos:text="$string:login_button_text"
+        ohos:text_size="20fp"
+        ohos:text_color="#FFFFFF"
+        ohos:background_element="#000000"
+        ohos:left_padding="20vp"
+        ohos:right_padding="20vp"
+        ohos:bottom_padding="10vp"
+        ohos:top_padding="10vp"
+        ohos:margin="20vp"
+        />
+
+    <Button
+        ohos:id="$+id:button_signup_main_slice"
+        ohos:layout_alignment="center"
+        ohos:height="match_content"
+        ohos:width="120vp"
+        ohos:text="$string:signup_button_text"
+        ohos:text_size="20fp"
+        ohos:text_color="#FFFFFF"
+        ohos:background_element="#000000"
+        ohos:left_padding="20vp"
+        ohos:right_padding="20vp"
+        ohos:bottom_padding="10vp"
+        ohos:top_padding="10vp"
+        ohos:margin="20vp"
+        />
+
+</DirectionalLayout>
