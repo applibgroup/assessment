@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,7 +12,7 @@
         android:layout_height="@dimen/_180sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:src="@mipmap/ic_launcher"
-        />
+        android:contentDescription="@string/image_main" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,16 +26,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="resize"
-            android:textSize="@dimen/_10sdp" />
+            android:text="@string/resize"
+            android:textSize="@dimen/_10sdp"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="SpUsage" />
 
         <Button
             android:id="@+id/centrecrop"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="centrecrop"
-            android:textSize="@dimen/_10sdp" />
+            android:text="@string/centrecrop"
+            android:textSize="@dimen/_10sdp"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="SpUsage" />
 
 
         <Button
@@ -44,8 +47,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="enlarge"
-            android:textSize="@dimen/_10sdp" />
+            android:text="@string/enlarge"
+            android:textSize="@dimen/_10sdp"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="SpUsage" />
 
 
     </LinearLayout>
@@ -61,16 +66,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="rotate left"
-            android:textSize="@dimen/_10sdp" />
+            android:text="@string/rotate_left"
+            android:textSize="@dimen/_10sdp"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="SpUsage" />
 
         <Button
             android:id="@+id/rotate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="rotate right"
-            android:textSize="@dimen/_10sdp" />
+            android:text="@string/rotate_right"
+            android:textSize="@dimen/_10sdp"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="SpUsage" />
 
     </LinearLayout>
 

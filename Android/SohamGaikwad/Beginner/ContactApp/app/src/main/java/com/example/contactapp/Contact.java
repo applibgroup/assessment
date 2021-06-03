@@ -4,16 +4,12 @@ import androidx.annotation.DrawableRes;
 
 public class Contact {
     private String name;
-    private String number;
-    private String email;
+    private final String number;
+    private final String email;
     private @DrawableRes int image;
 
     public int getImage() {
         return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
     }
 
     public Contact(String name, String number, String email, int image) {
@@ -35,15 +31,8 @@ public class Contact {
         return number;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }

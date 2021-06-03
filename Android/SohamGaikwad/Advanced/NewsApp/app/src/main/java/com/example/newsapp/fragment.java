@@ -1,6 +1,5 @@
 package com.example.newsapp;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,11 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.koushikdutta.async.future.FutureCallback;
-import com.koushikdutta.ion.Ion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +26,6 @@ public class fragment extends Fragment {
     ArrayList<ModelItems> items = new ArrayList <>();
     ItemAdapter adapter;
 
-    Context context;
     int pos;
     public fragment() {
 
@@ -61,8 +54,6 @@ public class fragment extends Fragment {
 
 
         final APIInterface apiService = APIClient.getClient().create(APIInterface.class);
-//        Call<ResponseModel> call = apiService.getLatestNews("techcrunch", "5eeb6819372040debac189a57e85faa1");
-//        Call<ResponseModel> call = apiService.getCountryNews("in", "5eeb6819372040debac189a57e85faa1");
         Call<ResponseModel> call;
         if (pos == 0) {
             call = apiService.getCountryNews("in", "5eeb6819372040debac189a57e85faa1");
@@ -73,7 +64,7 @@ public class fragment extends Fragment {
 
         call.enqueue(new Callback<ResponseModel>() {
             @Override
-            public void onResponse(Call<ResponseModel>call, Response<ResponseModel> response) {
+            public void onResponse(@NonNull Call<ResponseModel>call,@NonNull Response<ResponseModel> response) {
                 assert response.body() != null;
                 if(response.body().getStatus().equals("ok")) {
                     Log.d("main", "success");
@@ -91,7 +82,7 @@ public class fragment extends Fragment {
                 }
             }
             @Override
-            public void onFailure(Call<ResponseModel>call, Throwable t) {
+            public void onFailure(@NonNull Call<ResponseModel>call,@NonNull Throwable t) {
                 Log.e("out", t.toString());
             }
         });

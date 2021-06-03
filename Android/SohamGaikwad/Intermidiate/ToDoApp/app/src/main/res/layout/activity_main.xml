@@ -15,20 +15,21 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/addTaskBtn"
         android:layout_marginTop="20sp"
-        android:hint="Add New Task"
-        android:layout_marginLeft="2sp"
-        />
+        android:hint="@string/add_new_task"
+        android:layout_marginStart="2sp"
+        android:autofillHints="Task"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/addTaskBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#48BA44"
-        android:text="save"
+        android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="@id/editTextTask"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/editTextTask"
-        app:strokeColor="#D56565" />
+        android:strokeColor="#D56565" />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0sp"

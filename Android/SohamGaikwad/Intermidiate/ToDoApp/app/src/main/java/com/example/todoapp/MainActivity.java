@@ -1,26 +1,20 @@
 package com.example.todoapp;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,35 +32,29 @@ public class MainActivity extends AppCompatActivity {
 
         taskModelList = new ArrayList<>();
 
-        addTaskBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        addTaskBtn.setOnClickListener(v -> {
 
-                String newTask = editTextTask.getText().toString();
+            String newTask = editTextTask.getText().toString();
 
-                if(newTask.isEmpty()){
-                    Toast.makeText(MainActivity.this, "Please add task first.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                final TaskModel taskModel = new TaskModel();
-
-                taskModel.setTaskDone(false);
-                taskModel.setTask(newTask);
-
-                db.collection("todoCollection")
-                        .add(taskModel)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                            @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                String taskId = documentReference.getId();
-                                taskModel.setTaskId(taskId);
-                                taskModelList.add(taskModel);
-                                adapter.notifyDataSetChanged();
-                                editTextTask.setText(null);
-                            }
-                        });
+            if(newTask.isEmpty()){
+                Toast.makeText(MainActivity.this, "Please add task first.", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            final TaskModel taskModel = new TaskModel();
+
+            taskModel.setTaskDone(false);
+            taskModel.setTask(newTask);
+
+            db.collection("todoCollection")
+                    .add(taskModel)
+                    .addOnSuccessListener(documentReference -> {
+                        String taskId = documentReference.getId();
+                        taskModel.setTaskId(taskId);
+                        taskModelList.add(taskModel);
+                        adapter.notifyDataSetChanged();
+                        editTextTask.setText(null);
+                    });
         });
 
         RecyclerView taskRecyclerView  = findViewById(R.id.taskRecyclerView);
@@ -76,22 +64,19 @@ public class MainActivity extends AppCompatActivity {
 
         db.collection("todoCollection")
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                .addOnCompleteListener(task -> {
 
-                        if(task.isSuccessful()){
+                    if(task.isSuccessful()){
 
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                TaskModel taskModel = document.toObject(TaskModel.class);
-                                taskModelList.add(taskModel);
-                            }
-                            adapter.notifyDataSetChanged();
-
-                        }else{
-                            Toast.makeText(MainActivity.this, "Error Getting task list.", Toast.LENGTH_SHORT).show();
-
+                        for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
+                            TaskModel taskModel = document.toObject(TaskModel.class);
+                            taskModelList.add(taskModel);
                         }
+                        adapter.notifyDataSetChanged();
+
+                    }else{
+                        Toast.makeText(MainActivity.this, "Error Getting task list.", Toast.LENGTH_SHORT).show();
+
                     }
                 });
     }

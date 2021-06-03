@@ -2,7 +2,6 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="27dp"
@@ -15,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#000000"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
     <TextView
@@ -37,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
 
-        />
+        android:contentDescription="@string/image" />
 
     <Button
         android:id="@+id/details"
@@ -45,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:backgroundTint="#000000"
-        android:text="Read more"
+        android:text="@string/read_more"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 

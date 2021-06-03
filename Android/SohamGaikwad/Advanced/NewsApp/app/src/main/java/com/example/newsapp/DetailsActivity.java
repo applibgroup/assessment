@@ -24,6 +24,7 @@ public class DetailsActivity extends AppCompatActivity {
         editWeb.loadUrl(url);
 
         ActionBar bar = getSupportActionBar();
+        assert bar != null;
         bar.setTitle("News");
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("blue")));
 

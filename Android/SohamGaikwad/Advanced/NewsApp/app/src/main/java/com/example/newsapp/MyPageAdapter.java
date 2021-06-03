@@ -1,5 +1,6 @@
 package com.example.newsapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -9,18 +10,17 @@ public class MyPageAdapter extends FragmentStatePagerAdapter {
 
 
 
-    public MyPageAdapter(FragmentManager fm) {
+    public MyPageAdapter(FragmentManager fm, int behaviour) {
 
-        super(fm);
+        super(fm, behaviour);
 
     }
 
 
+    @NonNull
     @Override
     public Fragment getItem(int i) {
-        // Log.e("pra"," "+i);
-        fragment frag = new fragment(i);
-        return frag;
+        return new fragment(i);
     }
 
     @Override
