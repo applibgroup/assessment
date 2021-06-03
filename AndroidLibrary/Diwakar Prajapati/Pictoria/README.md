@@ -28,7 +28,7 @@ It fetches the url of images using an API and then shows it in a RecyclerView us
 - Used for displaying the images using the URL.
 
 3. **Lottie** - 3.7.0
-- Used for snimating the Splash Screen.
+- Used for animating the Splash Screen.
 
 ## API
 
