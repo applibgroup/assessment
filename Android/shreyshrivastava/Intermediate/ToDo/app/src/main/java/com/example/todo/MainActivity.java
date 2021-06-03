@@ -32,12 +32,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
 
-        final EditText editTextTask = findViewById(R.id.editText);
+        EditText editTextTask = findViewById(R.id.editText);
         Button addTaskBtn = findViewById(R.id.button);
 
         taskModelList = new ArrayList<>();
@@ -75,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView taskRecyclerView  = findViewById(R.id.recycle);
         taskRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new TaskAdapter(this, taskModelList, db);
+        adapter = new TaskAdapter(this, taskModelList, db, editTextTask);
         taskRecyclerView.setAdapter(adapter);
 
         db.collection("todoCollection")
