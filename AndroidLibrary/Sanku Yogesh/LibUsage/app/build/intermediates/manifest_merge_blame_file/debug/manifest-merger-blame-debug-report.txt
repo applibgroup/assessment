@@ -1,0 +1,64 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="android.example.libusage"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:6:5-21:19
+14        android:name="android.example.libusage.MyApplication"
+14-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:8:9-38
+15        android:allowBackup="true"
+15-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:7:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.5.0] C:\Users\SANKU YOGESH\.gradle\caches\transforms-2\files-2.1\e4e60fa01183f8bb008117a464bbdf63\core-1.5.0\AndroidManifest.xml:24:18-86
+17        android:debuggable="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:9:9-43
+19        android:label="@string/app_name"
+19-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:10:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:11:9-54
+21        android:supportsRtl="true"
+21-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:12:9-35
+22        android:testOnly="true"
+23        android:theme="@style/Theme.LibUsage" >
+23-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:13:9-46
+24        <activity android:name="android.example.libusage.MainActivity" >
+24-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:14:9-20:20
+24-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:14:19-47
+25            <intent-filter>
+25-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:15:13-19:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:16:17-69
+26-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:16:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:18:17-77
+28-->D:\intern_work\androidnotes\Assessment\Sanku_Yogesh\Rough\LibUsage\app\src\main\AndroidManifest.xml:18:27-74
+29            </intent-filter>
+30        </activity>
+31
+32        <provider
+32-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\SANKU YOGESH\.gradle\caches\transforms-2\files-2.1\2d25f95281113cadc6574ee6a3fb22e3\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+33            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+33-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\SANKU YOGESH\.gradle\caches\transforms-2\files-2.1\2d25f95281113cadc6574ee6a3fb22e3\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+34            android:authorities="android.example.libusage.lifecycle-process"
+34-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\SANKU YOGESH\.gradle\caches\transforms-2\files-2.1\2d25f95281113cadc6574ee6a3fb22e3\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+35            android:exported="false"
+35-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\SANKU YOGESH\.gradle\caches\transforms-2\files-2.1\2d25f95281113cadc6574ee6a3fb22e3\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+36            android:multiprocess="true" />
+36-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\SANKU YOGESH\.gradle\caches\transforms-2\files-2.1\2d25f95281113cadc6574ee6a3fb22e3\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+37    </application>
+38
+39</manifest>
