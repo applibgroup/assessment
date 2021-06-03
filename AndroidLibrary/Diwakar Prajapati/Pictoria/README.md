@@ -3,7 +3,7 @@ Pictoria is a basic android application for searching high quality images and vi
 
 ## Demonstration
 
-<img src="/readme_assets/1.gif" width="250"/> <img src="/readme_assets/2.gif" width="250"/> <img src="/readme_assets/3.gif" width="250"/>
+<img src="readme_assets/1.gif" width="250"/> <img src="/readme_assets/2.gif" width="250"/> <img src="/readme_assets/3.gif" width="250"/>
 
 ## Features
 
