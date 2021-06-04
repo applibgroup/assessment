@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 public class WelcomePage extends AppCompatActivity {
 
@@ -16,15 +17,12 @@ public class WelcomePage extends AppCompatActivity {
         
 
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.hide();
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(WelcomePage.this, MainActivity.class));
-                finish();
-            }
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            startActivity(new Intent(WelcomePage.this, MainActivity.class));
+            finish();
         }, 4000);
     }
 }

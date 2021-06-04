@@ -17,26 +17,26 @@ public class SliderAdapter extends PagerAdapter {
     Context context;
     LayoutInflater layoutInflater;
 
-    public SliderAdapter(Context context){
+    public SliderAdapter(@NonNull Context context){
         this.context = context;
     }
 
-    public int[] slide_images = {
+    private final int[] slide_images = {
             R.drawable.delivery,
             R.drawable.service,
             R.drawable.food_menu
     };
 
-    public String[] slide_headings = {
-            "Fastest Food\nDelivery",
-            "Find best restaurant\nservice",
-            "Browse all menu and\norder food"
+    private final int[] slide_headings = {
+            R.string.slide_headings_1,
+            R.string.slide_headings_2,
+            R.string.slide_headings_3
     };
 
-    public String[] slide_desc = {
-            "Your order will be immediately collected\nand sent by our best and fastest food\ndelivery courier",
-            "You can find best restaurant service,\ndelicious food, best professional chef\nservice",
-            "Browse the menu and order food directly\nform the application, yups, you can find\nyour food easily"
+    private final int[] slide_desc = {
+            R.string.slide_desc_1,
+            R.string.slide_desc_2,
+            R.string.slide_desc_3
     };
 
     @Override
@@ -45,12 +45,12 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
+    public boolean isViewFromObject(@NonNull View view,@NonNull Object object) {
         return view == (RelativeLayout) object;
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container,@NonNull int position) {
 
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slide_layout, container, false);
@@ -69,7 +69,7 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object){
+    public void destroyItem(@NonNull ViewGroup container, @NonNull int position, @NonNull Object object){
         container.removeView((RelativeLayout)object);
     }
 }

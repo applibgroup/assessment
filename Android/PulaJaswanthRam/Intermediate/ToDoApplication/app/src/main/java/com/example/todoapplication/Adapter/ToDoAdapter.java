@@ -1,12 +1,12 @@
 package com.example.todoapplication.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,8 +22,8 @@ import java.util.List;
 
 public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> {
 
-    private List<ToDoModel> toDoModelList;
-    private MainActivity activity;
+    private final List<ToDoModel> toDoModelList;
+    private final MainActivity activity;
     private FirebaseFirestore firebaseFirestore;
 
     public ToDoAdapter(MainActivity mainActivity, List<ToDoModel> toDoModelList){
@@ -60,6 +60,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         addTask.show(activity.getSupportFragmentManager(), addTask.getTag());
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull  ToDoAdapter.MyViewHolder holder, int position) {
 
@@ -69,15 +70,12 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
 
         holder.mCheckBox.setChecked(toBoolean(toDoModel.getStatus()));
 
-        holder.mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
-                    firebaseFirestore.collection("task").document(toDoModel.TaskId).update("status", 1);
+        holder.mCheckBox.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b){
+                firebaseFirestore.collection("task").document(toDoModel.TaskId).update("status", 1);
 
-                }else {
-                    firebaseFirestore.collection("task").document(toDoModel.TaskId).update("status", 0);
-                }
+            }else {
+                firebaseFirestore.collection("task").document(toDoModel.TaskId).update("status", 0);
             }
         });
     }
@@ -95,7 +93,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         return activity;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView mDueDate;
         CheckBox mCheckBox;

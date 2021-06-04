@@ -1,9 +1,10 @@
 package com.example.splashscreen;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -25,15 +26,15 @@ public class MainActivity extends AppCompatActivity {
     private SliderAdapter sliderAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@NonNull Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSlide = (ViewPager) findViewById(R.id.slide);
-        mDots = (LinearLayout) findViewById(R.id.dots);
+        mSlide = findViewById(R.id.slide);
+        mDots = findViewById(R.id.dots);
 
-        nBtn = (Button) findViewById(R.id.nextBtn);
-        bBtn = (Button) findViewById(R.id.backBtn);
+        nBtn = findViewById(R.id.nextBtn);
+        bBtn = findViewById(R.id.backBtn);
 
         sliderAdapter = new SliderAdapter(this);
 
@@ -46,18 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
         mSlide.addOnPageChangeListener(viewListener);
 
-        nBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mSlide.setCurrentItem(currentPage+1);
-            }
-        });
-        bBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mSlide.setCurrentItem(currentPage-1);
-            }
-        });
+        nBtn.setOnClickListener((View view) -> mSlide.setCurrentItem(currentPage+1));
+
+        bBtn.setOnClickListener((View view) -> mSlide.setCurrentItem(currentPage-1));
+
     }
 
     public void addDots(int position){
@@ -84,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        @SuppressLint("SetTextI18n")
         @Override
         public void onPageSelected(int position) {
             addDots(position);
