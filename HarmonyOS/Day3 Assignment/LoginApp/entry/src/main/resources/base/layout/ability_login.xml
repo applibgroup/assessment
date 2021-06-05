@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="center">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="40vp"
+        ohos:text="Login"
+        ohos:bottom_margin="20"
+        />
+
+    <TextField
+        ohos:id="$+id:login_email"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Email"
+        ohos:text_size="22vp"
+        ohos:background_element="#fceea7"
+        ohos:left_margin="30"
+        ohos:right_margin="30"
+        ohos:left_padding="20"
+        ohos:bottom_margin="30"
+        />
+
+    <TextField
+        ohos:id="$+id:login_password"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Password"
+        ohos:text_size="22vp"
+        ohos:background_element="#fceea7"
+        ohos:left_margin="30"
+        ohos:right_margin="30"
+        ohos:left_padding="20"
+        ohos:bottom_margin="30"
+        />
+
+
+    <Button
+        ohos:id="$+id:login_btn"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Login"
+        ohos:text_size="20vp"
+        ohos:background_element="#e0e0e0"
+        />
+
+    <Text
+        ohos:id="$+id:login_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="15vp"
+        ohos:text_color="#FF0000"
+        />
+
+
+</DirectionalLayout>
