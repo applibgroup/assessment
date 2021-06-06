@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:id="$+id:img"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:image_src="$media:people"
+        ohos:top_margin="100vp"
+        ohos:left_margin="35vp"
+        />
+    <Button
+        ohos:id="$+id:signup"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:top_margin="500vp"
+        ohos:left_margin="125vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="Sign Up"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:text_size="30fp"
+        />
+
+    <Button
+        ohos:id="$+id:login"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:top_margin="550vp"
+        ohos:left_margin="125vp"
+        ohos:layout_alignment="center"
+        ohos:text="Log In"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:text_size="30fp"
+        />
+
+<!--    <Text-->
+<!--        ohos:id="$+id:text"-->
+<!--        ohos:height="match_parent"-->
+<!--        ohos:width="match_parent"-->
+<!--        ohos:text="$string:mainability_HelloWorld"-->
+<!--        ohos:text_alignment="center"-->
+<!--        ohos:text_size="30fp"-->
+<!--        />-->
+
+
+
+</DependentLayout>
