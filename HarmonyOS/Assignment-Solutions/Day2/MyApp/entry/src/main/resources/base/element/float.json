@@ -1,0 +1,100 @@
+{
+  "float": [
+    {
+      "name": "signup_start_margin",
+      "value": "10vp"
+    },
+    {
+      "name": "signup_end_margin",
+      "value": "10vp"
+    },
+    {
+      "name": "signup_bottom_margin",
+      "value": "20vp"
+    },
+    {
+      "name": "signup_page_header_top_margin",
+      "value": "50vp"
+    },
+    {
+      "name": "signup_page_header_width",
+      "value": "100vp"
+    },
+    {
+      "name": "signup_page_header_height",
+      "value": "100vp"
+    },
+    {
+      "name": "signup_page_field_height",
+      "value": "30vp"
+    },
+    {
+      "name": "signup_page_field_text_size",
+      "value": "20vp"
+    },
+    {
+      "name": "signup_page_error_text_size",
+      "value": "15vp"
+    },
+    {
+      "name": "signup_page_radio_container_text_size",
+      "value": "30vp"
+    },
+    {
+      "name": "signup_page_field_top_margin",
+      "value": "20vp"
+    },
+    {
+      "name": "signup_page_first_name_top_margin",
+      "value": "40vp"
+    },
+    {
+      "name": "signup_page_field_padding",
+      "value": "3vp"
+    },
+    {
+      "name": "signup_page_submit_btn_padding",
+      "value": "5vp"
+    },
+    {
+      "name": "signup_page_submit_btn_text_size",
+      "value": "30vp"
+    },
+    {
+      "name": "signup_page_submit_btn_width",
+      "value": "200vp"
+    },
+    {
+      "name": "radio_container_top_margin",
+      "value": "10vp"
+    },
+    {
+      "name": "main_page_field_width",
+      "value": "200vp"
+    },
+    {
+      "name": "main_page_field_height",
+      "value": "200vp"
+    },
+    {
+      "name": "main_page_field_padding",
+      "value": "5vp"
+    },
+    {
+      "name": "main_page_login_top_margin",
+      "value": "70vp"
+    },
+    {
+      "name": "main_page_text_size",
+      "value": "20vp"
+    },
+    {
+      "name": "main_page_signup_top_margin",
+      "value": "40vp"
+    },
+    {
+      "name": "main_page_image_top_margin",
+      "value": "100vp"
+    }
+  ]
+}
