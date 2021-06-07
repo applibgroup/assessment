@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "LoginApp"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "persondataability_description",
+      "value": "hap sample empty provider"
+    },
+    {
+      "name": "sign_up",
+      "value": "Sign Up"
+    },
+    {
+      "name": "login",
+      "value": "Login"
+    }
+  ]
+}
