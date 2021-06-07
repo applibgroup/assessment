@@ -20,7 +20,8 @@
         />
 
     <Text
-        ohos:height="match_content"
+        ohos:id="$+id:first_name_error"
+        ohos:height="10fp"
         ohos:width="match_parent"
         ohos:text=""
         ohos:layout_alignment="center"
@@ -47,7 +48,8 @@
         />
 
     <Text
-        ohos:height="match_content"
+        ohos:id="$+id:last_name_error"
+        ohos:height="10fp"
         ohos:width="match_parent"
         ohos:text=""
         ohos:layout_alignment="center"
@@ -74,7 +76,8 @@
         />
 
     <Text
-        ohos:height="match_content"
+        ohos:id="$+id:email_error"
+        ohos:height="10fp"
         ohos:width="match_parent"
         ohos:text=""
         ohos:layout_alignment="center"
@@ -101,7 +104,8 @@
         />
 
     <Text
-        ohos:height="match_content"
+        ohos:id="$+id:password_error"
+        ohos:height="10fp"
         ohos:width="match_parent"
         ohos:text=""
         ohos:layout_alignment="center"
@@ -128,7 +132,8 @@
         />
 
     <Text
-        ohos:height="match_content"
+        ohos:id="$+id:mobile_error"
+        ohos:height="10fp"
         ohos:width="match_parent"
         ohos:text=""
         ohos:layout_alignment="center"
@@ -156,21 +161,28 @@
         ohos:top_margin="20px"
         ohos:orientation="horizontal"
         ohos:layout_alignment="left"
+        ohos:left_margin="40px"
+
         >
         <RadioButton
             ohos:id="$+id:radio_button_1"
             ohos:height="40vp"
             ohos:width="match_content"
             ohos:text="Male"
-            ohos:text_size="14fp"
+            ohos:text_size="50px"
             ohos:right_margin="200px"
+            ohos:text_color_on="#FF0095CB"
+            ohos:text_color_off="#FF000000"
+            ohos:marked="true"
             />
         <RadioButton
             ohos:id="$+id:radio_button_2"
             ohos:height="40vp"
             ohos:width="match_content"
             ohos:text="Female"
-            ohos:text_size="14fp"
+            ohos:text_size="50px"
+            ohos:text_color_on="#FF0095CB"
+            ohos:text_color_off="#FF000000"
             />
 
     </RadioContainer>
