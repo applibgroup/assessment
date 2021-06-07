@@ -16,7 +16,7 @@ public class DbHelper extends DatabaseHelper
     private static  final RdbOpenCallback callback = new RdbOpenCallback() {
         @Override
         public void onCreate(RdbStore rdbStore) {
-            rdbStore.executeSql("CREATE TABLE IF NOT EXISTS test(id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT NOT NULL, lastName TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, mobile TEXT NOT NULL)");
+            rdbStore.executeSql("CREATE TABLE IF NOT EXISTS test(id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT NOT NULL, lastName TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, mobile TEXT NOT NULL, gender INTEGER)");
         }
 
         @Override

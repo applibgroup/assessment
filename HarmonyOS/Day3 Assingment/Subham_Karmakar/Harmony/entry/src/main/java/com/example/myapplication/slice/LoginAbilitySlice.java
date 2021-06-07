@@ -46,7 +46,7 @@ public class LoginAbilitySlice extends AbilitySlice
 
     private void queryData()
     {
-        String[] columns = new String[] {"firstname", "lastname", "email", "password", "mobile"};
+        String[] columns = new String[] {"firstname", "lastname", "email", "password", "mobile", "gender"};
         RdbPredicates rdbPredicates = new RdbPredicates(TABLENAME);
         ResultSet resultSet = db.query(rdbPredicates, columns);
         queryResult = new ArrayList<User>();
@@ -62,14 +62,15 @@ public class LoginAbilitySlice extends AbilitySlice
                     user.setEmail(resultSet.getString(2));
                     user.setPassword(resultSet.getString(3));
                     user.setMobile(resultSet.getString(4));
+                    user.setGender(resultSet.getInt(5));
                     queryResult.add(user);
-                    HiLog.warn(LABEL, "USER = " + String.valueOf(user));
+                    HiLog.warn(LABEL, "USER = " + String.valueOf(user.getFirstName()));
                 }
             }
-        }
-        else
-        {
-            HiLog.warn(LABEL,"Nothing to show");
+            else
+            {
+                HiLog.warn(LABEL,"Nothing to show");
+            }
         }
     }
 

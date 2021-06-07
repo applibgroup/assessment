@@ -7,10 +7,7 @@ import Utils.DbHelper;
 import com.example.myapplication.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Button;
-import ohos.agp.components.Component;
-import ohos.agp.components.Text;
-import ohos.agp.components.TextField;
+import ohos.agp.components.*;
 import ohos.data.rdb.RdbStore;
 import ohos.data.rdb.ValuesBucket;
 import ohos.hiviewdfx.HiLog;
@@ -44,7 +41,18 @@ public class SignupAbilitySlice extends AbilitySlice
         Text emailError = (Text) findComponentById(ResourceTable.Id_email_error);
         Text passwordError = (Text) findComponentById(ResourceTable.Id_password_error);
         Text mobileError = (Text) findComponentById(ResourceTable.Id_mobile_error);
+        RadioContainer radioContainer = (RadioContainer) findComponentById(ResourceTable.Id_radio_container);
 
+        firstName.setText("");
+        lastName.setText("");
+        email.setText("");
+        password.setText("");
+        mobile.setText("");
+        firstNameError.setText("");
+        lastNameError.setText("");
+        emailError.setText("");
+        passwordError.setText("");
+        mobileError.setText("");
 
         signUp.setClickedListener(new Component.ClickedListener()
         {
@@ -56,16 +64,18 @@ public class SignupAbilitySlice extends AbilitySlice
                         && validity.checkEmail(email.getText().trim()) && validity.checkPassword(password.getText()) &&
                         validity.checkMobile(mobile.getText().trim()))
                 {
-                    HiLog.warn(LABEL, "All Correct");
                     user.setFirstName(firstName.getText().trim());
                     user.setLastName(lastName.getText().trim());
                     user.setEmail(email.getText().trim());
                     user.setPassword(password.getText());
                     user.setMobile(mobile.getText().trim());
+                    user.setGender(radioContainer.getMarkedButtonId());
 
                     insertData(firstName.getText().trim(),
                             lastName.getText().trim(), email.getText().trim(),
-                            password.getText(), mobile.getText().trim());
+                            password.getText(), mobile.getText().trim(), radioContainer.getMarkedButtonId());
+
+                    HiLog.warn(LABEL, "All Correct");
 
                 }
                 else
@@ -113,6 +123,7 @@ public class SignupAbilitySlice extends AbilitySlice
                 }
             }
         });
+
     }
 
     @Override
@@ -121,6 +132,8 @@ public class SignupAbilitySlice extends AbilitySlice
         super.onActive();
         DbHelper dbHelper = new DbHelper(this);
         db = dbHelper.initRdb(this);
+        HiLog.warn(LABEL, "DB init " + String.valueOf(db));
+
     }
 
     @Override
@@ -129,7 +142,7 @@ public class SignupAbilitySlice extends AbilitySlice
         super.onForeground(intent);
     }
 
-    private void insertData(String firstName, String lastName, String email, String password, String mobile)
+    private void insertData(String firstName, String lastName, String email, String password, String mobile, int gender)
     {
         ValuesBucket valuesBucket =  new ValuesBucket();
         valuesBucket.putString("firstname", firstName);
@@ -137,6 +150,7 @@ public class SignupAbilitySlice extends AbilitySlice
         valuesBucket.putString("email", email);
         valuesBucket.putString("password", password);
         valuesBucket.putString("mobile", mobile);
+        valuesBucket.putInteger("gender", gender);
         db.insert(TABLENAME, valuesBucket);
 
     }
