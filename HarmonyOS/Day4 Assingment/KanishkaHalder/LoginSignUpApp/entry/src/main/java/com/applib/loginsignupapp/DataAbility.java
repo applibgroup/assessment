@@ -40,7 +40,6 @@ public class DataAbility extends Ability {
         PASSWORD = this.getString(ResourceTable.String_password_field);
         GENDER = this.getString(ResourceTable.String_gender_field);
 
-
         HiLog.info(LABEL_LOG, "DataAbility onStart");
         DatabaseHelper helper = new DatabaseHelper(this);
         ormContext = helper.getOrmContext("users","users.db", DataBase.class);

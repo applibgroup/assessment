@@ -1,21 +1,29 @@
 package com.applib.loginsignupapp.slice;
 
+import com.applib.loginsignupapp.DataAbility;
+import com.applib.loginsignupapp.DataBase;
 import com.applib.loginsignupapp.ResourceTable;
+import com.applib.loginsignupapp.UserModel;
 import com.applib.loginsignupapp.component.TextFieldValidated;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.DataAbilityHelper;
 import ohos.aafwk.ability.DataAbilityRemoteException;
+import ohos.aafwk.ability.OnClickListener;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.RadioButton;
 import ohos.agp.components.RadioContainer;
+import ohos.agp.window.dialog.ToastDialog;
+import ohos.data.DatabaseHelper;
+import ohos.data.orm.OrmContext;
 import ohos.data.rdb.ValuesBucket;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.utils.net.Uri;
 
 import java.util.Arrays;
+import java.util.IdentityHashMap;
 
 public class SignUpSlice extends AbilitySlice {
 
@@ -39,6 +47,7 @@ public class SignUpSlice extends AbilitySlice {
     private TextFieldValidated password;
     private Button submitBtn;
     private RadioContainer radioContainer;
+
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
@@ -60,7 +69,7 @@ public class SignUpSlice extends AbilitySlice {
         password = (TextFieldValidated) findComponentById(ResourceTable.Id_textField_password);
         submitBtn = (Button) findComponentById(ResourceTable.Id_button_signup_signup_slice);
         radioContainer = (RadioContainer) findComponentById(ResourceTable.Id_radio_container);
-        
+
         submitBtn.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
