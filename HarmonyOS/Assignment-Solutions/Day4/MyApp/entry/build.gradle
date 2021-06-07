@@ -1,0 +1,31 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+ohos {
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+    compileOptions{
+        annotationEnabled true
+    }
+    
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    compile files('libs/ohos.jar','libs/orm_annotations_java.jar', 'libs/orm_annotations_processor_java.jar', 'libs/javapoet_java.jar')
+    annotationProcessor files('libs/orm_annotations_java.jar', 'libs/orm_annotations_processor_java.jar', 'libs/javapoet_java.jar')
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+}
+decc {
+    supportType = ['html','xml']
+}
