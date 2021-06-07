@@ -17,10 +17,11 @@ public class HomePageAbilitySlice extends AbilitySlice {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_homepage);
+        int x1=8000,x2=80,x3=590,x4=1,x5=-1;
 
         Text welcome=(Text) findComponentById(ResourceTable.Id_welcome);
         button2Animation = welcome.createAnimatorProperty();  //0r button2Animation.setTarget(targetButton2)
-        button2Animation.setDuration(8000).moveFromX(80).moveToX(590).alpha(1).setLoopedCount(-1).setCurveType(Animator.CurveType.CYCLE);
+        button2Animation.setDuration(x1).moveFromX(x2).moveToX(x3).alpha(x4).setLoopedCount(x5).setCurveType(Animator.CurveType.CYCLE);
         button2Animation.start();
 
     }

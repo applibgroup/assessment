@@ -43,16 +43,10 @@ public class LoginAbilitySlice extends AbilitySlice {
             @Override
             public void onClick(Component component) {
 
-                OrmPredicates predicates = context.where(User.class).equalTo(getString(ResourceTable.String_email), email_inp.getText());
+                OrmPredicates predicates = context.where(User.class).equalTo(getString(ResourceTable.String_email),email_inp.getText()).equalTo(getString(ResourceTable.String_pass),pass_inp.getText());
                 List<User> users = context.query(predicates);
-                boolean flag = false;
-                if (users.size() > 0) {
-                    if (users.get(0).getPassword().compareTo(pass_inp.getText()) == 0) {
-                        flag = true;
-                    }
-                }
 
-                if (!flag) {
+                if (users.size()==0) {
                     new ToastDialog(getContext())
                             .setText(getString(ResourceTable.String_Invalid_Cred))
                             .show();

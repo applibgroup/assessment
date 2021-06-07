@@ -181,19 +181,12 @@ public class SignupAbilitySlice extends AbilitySlice {
                         else
                             user.setGender(2);  //for female
 
-                        boolean isSuccess = context.insert(user);  //inserting into database
-                        isSuccess = context.flush();
-
-                        if (isSuccess) {
+                        context.insert(user);  //inserting into database
+                        context.flush();
                             new ToastDialog(getContext())
                                     .setText(getString(ResourceTable.String_Register_Msg))
                                     .show();
                             showCommonDialog();
-                        } else {
-                            new ToastDialog(getContext())
-                                    .setText(getString(ResourceTable.String_Error_Occ))
-                                    .show();
-                        }
                     }
                     else {
                         new ToastDialog(getContext())

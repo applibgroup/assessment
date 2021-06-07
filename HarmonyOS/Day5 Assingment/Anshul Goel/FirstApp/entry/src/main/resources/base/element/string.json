@@ -21,6 +21,10 @@
       "value": "email"
     },
     {
+      "name": "pass",
+      "value": "password"
+    },
+    {
       "name": "UserData",
       "value": "UserData"
     },

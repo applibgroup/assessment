@@ -19,10 +19,11 @@ public class MainAbilitySlice extends AbilitySlice {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
+        int x1=5000,x2=-230,x3=250,x4=360,x5=-1;
 
         Image imgview= (Image) findComponentById(ResourceTable.Id_imgview);
         btn_img_anim= imgview.createAnimatorProperty();         //for animation
-        btn_img_anim.setDuration(5000).moveFromX(-230).moveToX(250).rotate(360).setLoopedCount(-1).setCurveType(Animator.CurveType.ACCELERATE);
+        btn_img_anim.setDuration(x1).moveFromX(x2).moveToX(x3).rotate(x4).setLoopedCount(x5).setCurveType(Animator.CurveType.ACCELERATE);
 
         imgview.setBindStateChangedListener(new Component.BindStateChangedListener() {
             @Override
