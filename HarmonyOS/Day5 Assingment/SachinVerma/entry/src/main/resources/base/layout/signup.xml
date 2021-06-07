@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#A9BCF5"
+    ohos:orientation="vertical">
+
+    <TextField
+        ohos:top_margin="30vp"
+        ohos:id="$+id:first_name_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="First Name" />
+
+    <Text
+        ohos:id="$+id:error_tip_text"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Incorrect Format"
+        ohos:text_size="18fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <TextField
+        ohos:id="$+id:last_name_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Last Name" />
+
+    <Text
+        ohos:id="$+id:error_tip_text2"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Incorrect Format"
+        ohos:text_size="18fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <TextField
+        ohos:id="$+id:email_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Email" />
+
+    <Text
+        ohos:id="$+id:error_tip_text3"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Incorrect Format"
+        ohos:text_size="18fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <TextField
+        ohos:id="$+id:password_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:text_input_type="pattern_password"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Password" />
+
+    <Text
+        ohos:id="$+id:error_tip_text4"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Weak Password : it must contain atleast 5 characters"
+        ohos:text_size="14fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <TextField
+        ohos:id="$+id:phone_no_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Phone No" />
+
+    <Text
+        ohos:id="$+id:error_tip_text5"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Invalid format"
+        ohos:text_size="18fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <Text
+        ohos:id="$+id:gender"
+        ohos:top_margin="10vp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Gender"
+        ohos:text_color="white"
+        ohos:text_size="25fp"
+        ohos:left_margin="35vp"
+        />
+
+    <RadioButton
+        ohos:id="$+id:rb1"
+        ohos:height="20vp"
+        ohos:width="match_content"
+        ohos:text="MALE"
+        ohos:text_color_on="black"
+        ohos:text_color_off="white"
+        ohos:left_margin="35vp"
+        ohos:text_size="20fp"/>
+
+    <RadioButton
+        ohos:id="$+id:rb2"
+        ohos:height="20vp"
+        ohos:width="match_content"
+        ohos:text="FEMALE"
+        ohos:text_color_on="black"
+        ohos:text_color_off="white"
+        ohos:left_margin="35vp"
+        ohos:text_size="20fp"/>
+
+    <Text
+        ohos:id="$+id:enquiry"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Successfully registered"
+        ohos:text_size="25fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <Button
+        ohos:top_margin="10vp"
+        ohos:id="$+id:button"
+        ohos:width="120vp"
+        ohos:height="35vp"
+        ohos:background_element="$graphic:background_btn"
+        ohos:text="Sign Up"
+        ohos:text_size="20fp"
+        ohos:layout_alignment="horizontal_center"/>
+
+</DirectionalLayout>
