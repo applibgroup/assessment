@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Base Theme Colours -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Background Colours -->
+    <color name="background_page_0">#f64c73</color>
+    <color name="background_page_1">#20d2bb</color>
+    <color name="background_page_2">#3395ff</color>
+    <color name="background_page_3">#c873f4</color>
+
+    <array name="background_colour">
+        <item>@color/background_page_0</item>
+        <item>@color/background_page_1</item>
+        <item>@color/background_page_2</item>
+        <item>@color/background_page_3</item>
+    </array>
+
+    <!-- Inactive Dot Colours -->
+    <color name="inactive_dot_page_0">#d1395c</color>
+    <color name="inactive_dot_page_1">#14a895</color>
+    <color name="inactive_dot_page_2">#2278d4</color>
+    <color name="inactive_dot_page_3">#a854d4</color>
+
+    <array name="inactive_dot_colour">
+        <item>@color/inactive_dot_page_0</item>
+        <item>@color/inactive_dot_page_1</item>
+        <item>@color/inactive_dot_page_2</item>
+        <item>@color/inactive_dot_page_3</item>
+    </array>
+
+    <!-- Active Dot Colours -->
+    <color name="active_dot_page_0">#f98da5</color>
+    <color name="active_dot_page_1">#8cf9eb</color>
+    <color name="active_dot_page_2">#93c6fd</color>
+    <color name="active_dot_page_3">#e4b5fc</color>
+
+    <array name="active_dot_colour">
+        <item>@color/active_dot_page_0</item>
+        <item>@color/active_dot_page_1</item>
+        <item>@color/active_dot_page_2</item>
+        <item>@color/active_dot_page_3</item>
+    </array>
+
+</resources>
