@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:image_src="$graphic:clockvec"
+        ohos:center_in_parent="true"
+        ohos:align_parent_top="true"
+        ohos:padding="32vp">
+    </Image>
+
+    <DependentLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="horizontal"
+        ohos:align_parent_bottom="true"
+        ohos:center_in_parent="true"
+        ohos:padding="32vp">
+        <Button
+            ohos:height="match_content"
+            ohos:width="256vp"
+            ohos:text="Login"
+            ohos:margin="16vp"
+            ohos:id="$+id:loginButton"
+            ohos:text_size="48vp"
+            ohos:background_element="#FF85CEE3"
+            ohos:padding="36vp"
+            ohos:align_parent_bottom="true">
+        </Button>
+        <Button
+            ohos:height="match_content"
+            ohos:width="256vp"
+            ohos:text="Register"
+            ohos:margin="16vp"
+            ohos:id="$+id:registerButton"
+            ohos:text_size="48vp"
+            ohos:background_element="#FF85CEE3"
+            ohos:padding="36vp"
+            ohos:align_parent_bottom="true"
+            ohos:right_of="$id:loginButton">
+        </Button>
+    </DependentLayout>
+
+</DependentLayout>
