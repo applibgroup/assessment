@@ -22,7 +22,7 @@
     },
     {
       "name": "name_regex",
-      "value":"^[a-zA-Z]*$"
+      "value":"^[a-zA-Z]+$"
     },
     {
       "name": "email_regex",
