@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <TextField
+        ohos:id="$+id:first_name"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="First Name"
+        ohos:layout_alignment="center"
+        ohos:text_size="50px"
+        ohos:focus_border_enable="true"
+        ohos:basement="#000"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="320px"
+        />
+
+    <Text
+        ohos:id="$+id:first_name_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="40px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="20px"
+        ohos:text_color="red"
+        />
+
+
+    <TextField
+        ohos:id="$+id:last_name"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Last Name"
+        ohos:layout_alignment="center"
+        ohos:text_size="50px"
+        ohos:focus_border_enable="true"
+        ohos:basement="#000"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="60px"
+        />
+
+    <Text
+        ohos:id="$+id:last_name_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="40px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="20px"
+        ohos:text_color="red"
+        />
+
+
+    <TextField
+        ohos:id="$+id:email"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Email"
+        ohos:layout_alignment="center"
+        ohos:text_size="50px"
+        ohos:focus_border_enable="true"
+        ohos:basement="#000"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="60px"
+        />
+
+    <Text
+        ohos:id="$+id:email_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="40px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="20px"
+        ohos:text_color="red"
+        />
+
+
+    <TextField
+        ohos:id="$+id:password"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Password"
+        ohos:layout_alignment="center"
+        ohos:text_size="50px"
+        ohos:focus_border_enable="true"
+        ohos:basement="#000"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="60px"
+        />
+
+    <Text
+        ohos:id="$+id:password_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="40px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="20px"
+        ohos:text_color="red"
+        />
+
+
+    <TextField
+        ohos:id="$+id:mobile"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Mobile"
+        ohos:layout_alignment="center"
+        ohos:text_size="50px"
+        ohos:focus_border_enable="true"
+        ohos:basement="#000"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="60px"
+        />
+
+    <Text
+        ohos:id="$+id:mobile_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="40px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="20px"
+        ohos:text_color="red"
+        />
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="Gender"
+        ohos:layout_alignment="center"
+        ohos:text_size="50px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="60px"
+        />
+    <RadioContainer
+        ohos:id="$+id:radio_container"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:top_margin="20px"
+        ohos:orientation="horizontal"
+        ohos:layout_alignment="left"
+        ohos:left_margin="40px"
+
+        >
+        <RadioButton
+            ohos:id="$+id:radio_button_1"
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:text="Male"
+            ohos:text_size="50px"
+            ohos:right_margin="200px"
+            ohos:text_color_on="#FF0095CB"
+            ohos:text_color_off="#FF000000"
+            ohos:marked="true"
+            />
+        <RadioButton
+            ohos:id="$+id:radio_button_2"
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:text="Female"
+            ohos:text_size="50px"
+            ohos:text_color_on="#FF0095CB"
+            ohos:text_color_off="#FF000000"
+            />
+
+    </RadioContainer>
+
+    <Button
+        ohos:id="$+id:signup_confirmation"
+        ohos:width="150vp"
+        ohos:height="match_content"
+        ohos:top_padding="10vp"
+        ohos:bottom_padding="10vp"
+        ohos:left_padding="15vp"
+        ohos:right_padding="15vp"
+        ohos:text_size="20fp"
+        ohos:text="SIGN UP"
+        ohos:background_element="$graphic:capsule_button_element"
+        ohos:layout_alignment="center"
+        ohos:top_margin="20vp"
+        />
+
+</DirectionalLayout>
