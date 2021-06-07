@@ -190,12 +190,25 @@
             />
     </DirectionalLayout>
 
+    <Text
+        ohos:id="$+id:er6"
+        ohos:height="match_content"
+        ohos:width="250fp"
+        ohos:text="Enter Gender"
+        ohos:text_color="$ohos:color:id_color_badge_red"
+        ohos:visibility="invisible"
+        ohos:text_size="10fp"
+        ohos:top_margin="3fp"
+        ohos:center_in_parent="true"
+        ohos:below="$id:lay"
+        ohos:left_padding="10fp"
+        />
     <Button
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:id="$id:signup_btn"
         ohos:text="Sign Up"
-        ohos:below="$id:lay"
+        ohos:below="$id:er6"
         ohos:background_element="white"
         ohos:center_in_parent="true"
         ohos:top_margin="20fp"
@@ -205,6 +218,5 @@
         ohos:right_padding="10fp"
         ohos:text_size="20fp"
         />
-
 
 </DependentLayout>
