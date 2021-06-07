@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:background_element="#dcdce6"
+    >
+    <Text
+        ohos:id="$+id:dashboard_name"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:top_margin="300fp"
+        ohos:text="WelCome"
+        ohos:text_size="30fp"
+        ohos:center_in_parent="true"
+        ohos:left_margin="100fp"
+        />
+    <Button
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:id="$+id:logout_btn"
+        ohos:text="Log Out"
+        ohos:below="$id:dashboard_name"
+        ohos:background_element="white"
+        ohos:top_margin="20fp"
+        ohos:left_padding="10fp"
+        ohos:top_padding="5fp"
+        ohos:center_in_parent="true"
+        ohos:bottom_padding="5fp"
+        ohos:left_margin="120fp"
+        ohos:right_padding="10fp"
+        ohos:text_size="20fp"
+        />
+
+</DirectionalLayout>
