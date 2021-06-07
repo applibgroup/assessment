@@ -1,6 +1,9 @@
 package com.example.myapplication.slice;
 
+import Model.User;
 import Utils.CheckInputValidity;
+import Utils.DatabaseMethods;
+import Utils.DbHelper;
 import com.example.myapplication.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
@@ -8,20 +11,27 @@ import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.Text;
 import ohos.agp.components.TextField;
+import ohos.data.rdb.RdbStore;
+import ohos.data.rdb.ValuesBucket;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
 public class SignupAbilitySlice extends AbilitySlice
 {
     private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "VALIDATION_FIELD_TAG");
+    private RdbStore db;
+    private String TABLENAME = "test";
+
     @Override
     public void onStart(Intent intent)
     {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_signup);
 
-        CheckInputValidity validity = new CheckInputValidity();
 
+        CheckInputValidity validity = new CheckInputValidity();
+        DatabaseMethods dbm = new DatabaseMethods();
+        User user = new User();
 
         Button signUp = (Button) findComponentById(ResourceTable.Id_signup_confirmation);
         TextField firstName = (TextField) findComponentById(ResourceTable.Id_first_name);
@@ -36,7 +46,8 @@ public class SignupAbilitySlice extends AbilitySlice
         Text mobileError = (Text) findComponentById(ResourceTable.Id_mobile_error);
 
 
-        signUp.setClickedListener(new Component.ClickedListener() {
+        signUp.setClickedListener(new Component.ClickedListener()
+        {
             @Override
             public void onClick(Component component)
             {
@@ -46,6 +57,16 @@ public class SignupAbilitySlice extends AbilitySlice
                         validity.checkMobile(mobile.getText().trim()))
                 {
                     HiLog.warn(LABEL, "All Correct");
+                    user.setFirstName(firstName.getText().trim());
+                    user.setLastName(lastName.getText().trim());
+                    user.setEmail(email.getText().trim());
+                    user.setPassword(password.getText());
+                    user.setMobile(mobile.getText().trim());
+
+                    insertData(firstName.getText().trim(),
+                            lastName.getText().trim(), email.getText().trim(),
+                            password.getText(), mobile.getText().trim());
+
                 }
                 else
                 {
@@ -90,7 +111,6 @@ public class SignupAbilitySlice extends AbilitySlice
                         mobileError.setText("");
                     }
                 }
-
             }
         });
     }
@@ -99,11 +119,25 @@ public class SignupAbilitySlice extends AbilitySlice
     public void onActive()
     {
         super.onActive();
+        DbHelper dbHelper = new DbHelper(this);
+        db = dbHelper.initRdb(this);
     }
 
     @Override
     public void onForeground(Intent intent)
     {
         super.onForeground(intent);
+    }
+
+    private void insertData(String firstName, String lastName, String email, String password, String mobile)
+    {
+        ValuesBucket valuesBucket =  new ValuesBucket();
+        valuesBucket.putString("firstname", firstName);
+        valuesBucket.putString("lastname", lastName);
+        valuesBucket.putString("email", email);
+        valuesBucket.putString("password", password);
+        valuesBucket.putString("mobile", mobile);
+        db.insert(TABLENAME, valuesBucket);
+
     }
 }
