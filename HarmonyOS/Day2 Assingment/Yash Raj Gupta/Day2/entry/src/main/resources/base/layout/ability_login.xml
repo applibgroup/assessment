@@ -9,9 +9,10 @@
     <Text
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:id="$+id:WelcomeText"
-        ohos:text="$string:welcome"
+        ohos:text="$string:loginpage"
         ohos:text_size="30fp"
+        ohos:text_alignment="horizontal_center"
+
         />
 
 </DirectionalLayout>

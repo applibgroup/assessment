@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Day1"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "siup",
+      "value": "Sign Up"
+    },
+    {
+      "name": "lgin",
+      "value": "Log In"
+    },
+    {
+      "name": "signuppage",
+      "value": "Sign Up Page"
+    },
+    {
+      "name": "loginpage",
+      "value": "Login Page"
+    }
+  ]
+}
