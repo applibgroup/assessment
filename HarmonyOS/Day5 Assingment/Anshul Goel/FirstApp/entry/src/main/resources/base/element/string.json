@@ -1,0 +1,168 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "FirstApp"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "Invalid_Cred",
+      "value": "Invalid Credentials"
+    },
+    {
+      "name": "email",
+      "value": "email"
+    },
+    {
+      "name": "UserData",
+      "value": "UserData"
+    },
+    {
+      "name": "UserData_db",
+      "value": "UserData.db"
+    },
+    {
+      "name": "Register_Msg",
+      "value": "Successfully Registered"
+    },
+    {
+      "name": "Error_Occ",
+      "value": "Error Occurred"
+    },
+    {
+      "name": "Email_exist",
+      "value": "Email already exists"
+    },
+    {
+      "name": "Gender_Msg",
+      "value": "Please Enter the Gender"
+    },
+    {
+      "name": "Enter_valid",
+      "value": "Please enter valid inputs"
+    },
+    {
+      "name": "Empty_Field",
+      "value": "Fields are empty!"
+    },
+    {
+      "name": "Only_aplha",
+      "value": "Invalid format: Name contains only alphabets"
+    },
+    {
+      "name": "Clear_Err",
+      "value": ""
+    },
+    {
+      "name": "Mobile_err",
+      "value": "Invalid mobile number"
+    },
+    {
+      "name": "Pass_error1",
+      "value": "Password should of be atleast 5 characters"
+    },
+    {
+      "name": "Pass_error2",
+      "value": "Password must have a special character"
+    },
+    {
+      "name": "email_err",
+      "value": "Incorrect format of email"
+    },
+    {
+      "name": "name_regx",
+      "value": "^[a-zA-Z]*$"
+    },
+    {
+      "name": "pass_regx",
+      "value": "[^A-Za-z0-9]"
+    },
+    {
+      "name": "mobile_regx",
+      "value": "[^0-9]"
+    },
+    {
+      "name": "at_the_rate",
+      "value": "@"
+    },
+    {
+      "name": "dot",
+      "value": "."
+    },
+    {
+      "name": "My_APP",
+      "value": "My APP"
+    },
+    {
+      "name": "Email_hint",
+      "value": "Enter your email ID"
+    },
+    {
+      "name": "Pass_Hint",
+      "value": "Enter your password"
+    },
+    {
+      "name": "Login_Btn",
+      "value": "Login"
+    },
+    {
+      "name": "Signup_btn",
+      "value": "Signup"
+    },
+    {
+      "name": "Welcome",
+      "value": "Successfully Logged in"
+    },
+    {
+      "name": "F_Name",
+      "value": "First Name"
+    },
+    {
+      "name": "S_Name",
+      "value": "Second Name"
+    },
+    {
+      "name": "Email",
+      "value": "Email"
+    },
+    {
+      "name": "Password",
+      "value": "Password"
+    },
+    {
+      "name": "Mob",
+      "value": "Mobile"
+    },
+    {
+      "name": "Gender",
+      "value": "Gender"
+    },
+    {
+      "name": "Male",
+      "value": "Male"
+    },
+    {
+      "name": "Female",
+      "value": "Female"
+    },
+    {
+      "name": "login_msg",
+      "value": "You are Logged in "
+    },
+    {
+      "name": "Dialog_msg",
+      "value": "Do you want to login immediately?"
+    },
+    {
+      "name": "Success",
+      "value": "SignUp Successfull !!"
+    }
+  ]
+}

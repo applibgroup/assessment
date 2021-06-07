@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:top_margin="-160fp"
+        ohos:text_size="40fp"
+        ohos:left_margin="100fp"
+        ohos:text="$string:My_APP"/>
+
+
+    <TextField
+        ohos:id="$+id:email_inp"
+        ohos:basement="#000000"
+        ohos:hint="$string:Email_hint"
+        ohos:text_input_type="pattern_text"
+        ohos:text_size="20fp"
+        ohos:top_margin="50fp"
+        ohos:left_padding="20fp"
+        ohos:right_padding="50fp"
+        ohos:height="match_content"
+        ohos:width="match_parent"/>
+
+    <TextField
+        ohos:id="$+id:pass_inp"
+        ohos:below="$id:email_inp"
+        ohos:basement="#000000"
+        ohos:text_size="20fp"
+        ohos:top_margin="30fp"
+        ohos:left_padding="20fp"
+        ohos:right_padding="50fp"
+        ohos:text_input_type="pattern_password"
+        ohos:hint="$string:Pass_Hint"
+        ohos:height="match_content"
+        ohos:width="match_parent"/>
+
+    <Button
+        ohos:id="$+id:final_login_btn"
+        ohos:below="$id:pass_inp"
+        ohos:height="match_content"
+        ohos:top_margin="100fp"
+        ohos:left_padding="15fp"
+        ohos:right_padding="15fp"
+        ohos:top_padding="10fp"
+        ohos:bottom_padding="10fp"
+        ohos:left_margin="130fp"
+        ohos:text_size="20fp"
+        ohos:text="$string:Login_Btn"
+        ohos:background_element="$ohos:color:id_color_activated_end_dark"
+        ohos:width="match_content"/>
+
+</DependentLayout>
