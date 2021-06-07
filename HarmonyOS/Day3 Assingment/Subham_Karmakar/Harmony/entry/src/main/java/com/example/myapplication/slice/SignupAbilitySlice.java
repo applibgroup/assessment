@@ -132,7 +132,7 @@ public class SignupAbilitySlice extends AbilitySlice
         super.onActive();
         DbHelper dbHelper = new DbHelper(this);
         db = dbHelper.initRdb(this);
-        HiLog.warn(LABEL, "DB init " + String.valueOf(db));
+        HiLog.warn(LABEL, "DB init");
 
     }
 
