@@ -30,7 +30,7 @@ public class MainAbilitySlice extends AbilitySlice
         if(animator instanceof AnimatorValue)
         {
             animatorValue = (AnimatorValue) animator;
-            animatorValue.setLoopedCount(4);
+            animatorValue.setLoopedCount(3);
             animatorValue.setCurveType(Animator.CurveType.BOUNCE);
             animatorValue.setDuration(2500);
             animatorValue.setDelay(0);
