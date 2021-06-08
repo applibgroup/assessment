@@ -101,6 +101,7 @@
         ohos:left_margin="40px"
         ohos:right_margin="40px"
         ohos:top_margin="60px"
+        ohos:text_input_type="pattern_password"
         />
 
     <Text
@@ -129,6 +130,7 @@
         ohos:left_margin="40px"
         ohos:right_margin="40px"
         ohos:top_margin="60px"
+        ohos:text_input_type="pattern_number"
         />
 
     <Text

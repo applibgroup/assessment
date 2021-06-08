@@ -6,6 +6,7 @@
     ohos:orientation="vertical">
 
     <Image
+        ohos:id="$+id:img"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:image_src="$media:profile"
