@@ -16,7 +16,6 @@ import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class LoginAbilitySlice extends AbilitySlice
 {

@@ -154,7 +154,7 @@ public class SignupAbilitySlice extends AbilitySlice
         valuesBucket.putString("password", password);
         valuesBucket.putString("mobile", mobile);
         valuesBucket.putInteger("gender", gender);
-        if(db.insert(TABLENAME, valuesBucket) == 1)
+        if(db.insert(TABLENAME, valuesBucket) > 0)
         {
             HiLog.warn(LABEL, "Successfully added to database");
             signupState.setText("Account created successfully!");
