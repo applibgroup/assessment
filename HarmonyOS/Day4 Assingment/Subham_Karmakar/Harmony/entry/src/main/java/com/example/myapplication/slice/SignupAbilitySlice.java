@@ -18,6 +18,7 @@ public class SignupAbilitySlice extends AbilitySlice
     private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "VALIDATION_FIELD_TAG");
     private RdbStore db;
     private String TABLENAME = "test";
+    private Text signupState;
 
     @Override
     public void onStart(Intent intent)
@@ -42,6 +43,7 @@ public class SignupAbilitySlice extends AbilitySlice
         Text passwordError = (Text) findComponentById(ResourceTable.Id_password_error);
         Text mobileError = (Text) findComponentById(ResourceTable.Id_mobile_error);
         RadioContainer radioContainer = (RadioContainer) findComponentById(ResourceTable.Id_radio_container);
+        signupState = (Text) findComponentById(ResourceTable.Id_signup_state);
 
         firstName.setText("");
         lastName.setText("");
@@ -53,12 +55,14 @@ public class SignupAbilitySlice extends AbilitySlice
         emailError.setText("");
         passwordError.setText("");
         mobileError.setText("");
+        signupState.setText("");
 
         signUp.setClickedListener(new Component.ClickedListener()
         {
             @Override
             public void onClick(Component component)
             {
+                signupState.setText("");
 
                 if(validity.checkFirstName(firstName.getText().trim()) && validity.checkLastName(lastName.getText().trim())
                         && validity.checkEmail(email.getText().trim()) && validity.checkPassword(password.getText()) &&
@@ -75,7 +79,6 @@ public class SignupAbilitySlice extends AbilitySlice
                             lastName.getText().trim(), email.getText().trim(),
                             password.getText(), mobile.getText().trim(), radioContainer.getMarkedButtonId());
 
-                    HiLog.warn(LABEL, "All Correct");
 
                 }
                 else
@@ -132,7 +135,7 @@ public class SignupAbilitySlice extends AbilitySlice
         super.onActive();
         DbHelper dbHelper = new DbHelper(this);
         db = dbHelper.initRdb(this);
-        HiLog.warn(LABEL, "DB init " + String.valueOf(db));
+        HiLog.warn(LABEL, "DB init");
 
     }
 
@@ -151,7 +154,15 @@ public class SignupAbilitySlice extends AbilitySlice
         valuesBucket.putString("password", password);
         valuesBucket.putString("mobile", mobile);
         valuesBucket.putInteger("gender", gender);
-        db.insert(TABLENAME, valuesBucket);
-
+        if(db.insert(TABLENAME, valuesBucket) == 1)
+        {
+            HiLog.warn(LABEL, "Successfully added to database");
+            signupState.setText("Account created successfully!");
+        }
+        else
+        {
+            HiLog.warn(LABEL, "There was and error while adding to database");
+            signupState.setText("There was some error in creating the account");
+        }
     }
 }

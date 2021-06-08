@@ -202,4 +202,18 @@
         ohos:top_margin="20vp"
         />
 
+    <Text
+        ohos:id="$+id:signup_state"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="20fp"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="100px"
+        ohos:text_color="#FF0084C6"
+        ohos:text_alignment="center"
+        />
+
 </DirectionalLayout>

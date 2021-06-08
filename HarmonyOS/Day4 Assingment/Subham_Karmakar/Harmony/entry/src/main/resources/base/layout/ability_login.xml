@@ -5,14 +5,87 @@
     ohos:width="match_parent"
     ohos:orientation="vertical">
 
-    <Text
-        ohos:id="$+id:login_ability_text"
-        ohos:height="match_parent"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_signup"
-        ohos:layout_alignment="horizontal_center"
-        ohos:text="You are in Login Ability"
+    <TextField
+        ohos:id="$+id:email_login"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Enter registered Email"
+        ohos:layout_alignment="center"
         ohos:text_size="50px"
+        ohos:focus_border_enable="true"
+        ohos:basement="#000"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="400px"
+        />
+
+    <Text
+        ohos:id="$+id:email_login_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="40px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="20px"
+        ohos:text_color="red"
+        />
+
+    <TextField
+        ohos:id="$+id:password_login"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Enter your Password"
+        ohos:layout_alignment="center"
+        ohos:text_size="50px"
+        ohos:focus_border_enable="true"
+        ohos:basement="#000"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="64px"
+        />
+
+    <Text
+        ohos:id="$+id:password_login_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="40px"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="20px"
+        ohos:text_color="red"
+        />
+
+    <Button
+        ohos:id="$+id:login_confirmation"
+        ohos:width="150vp"
+        ohos:height="match_content"
+        ohos:top_padding="10vp"
+        ohos:bottom_padding="10vp"
+        ohos:left_padding="15vp"
+        ohos:right_padding="15vp"
+        ohos:text_size="20fp"
+        ohos:text="LOGIN"
+        ohos:background_element="$graphic:capsule_button_element"
+        ohos:layout_alignment="center"
+        ohos:top_margin="40vp"
+        />
+
+    <Text
+        ohos:id="$+id:login_state"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:layout_alignment="center"
+        ohos:text_size="20fp"
+        ohos:left_margin="40px"
+        ohos:right_margin="40px"
+        ohos:top_margin="100px"
+        ohos:text_color="#FF0084C6"
+        ohos:text_alignment="center"
         />
 
 </DirectionalLayout>
