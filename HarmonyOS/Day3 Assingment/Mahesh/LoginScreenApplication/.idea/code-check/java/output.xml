@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RESULT>
+ <errors>
+  <error>
+   <defectInfo>
+     <category>信息泄露</category>
+     <subCategory>编程规范违反</subCategory>
+     <issueType></issueType>
+     <checkerName>Hardcoded_Password</checkerName>
+     <function><![CDATA[]]></function>
+     <reportLine>21</reportLine>
+     <folder><![CDATA[D:\DevEcoStudioProjects\LoginScreenApplication\entry\src\main\java\com\example\loginscreenapplication\slice\]]></folder>
+     <fileName><![CDATA[D:\DevEcoStudioProjects\LoginScreenApplication\entry\src\main\java\com\example\loginscreenapplication\slice\LoginAbilitySlice.java]]></fileName>
+     <description><![CDATA[Hardcoded passwords may compromise system security in a way that cannot be easily remedied.]]></description>
+     <extra><![CDATA[]]></extra>
+     <mergeKey>1eb44ae25387bda8d20c1a9620da0de4</mergeKey>
+     <severity>Medium</severity>
+     <codeSnippet>
+         <content><![CDATA[import ohos.agp.components.Component;
+import ohos.agp.components.Text;
+import ohos.agp.components.TextField;
+import ohos.data.DatabaseHelper;
+import ohos.data.rdb.RdbStore;
+
+
+
+public class LoginAbilitySlice  extends AbilitySlice {
+
+    public static final String PLEASE_ENTER_VALID_EMAIL_PASSWORD = "Please enter valid email & password.";
+    public static final String LOGIN_SUCCESSFUL = "Login Successful";
+    public static final String EMAIL_ID_NOT_FOUND = "Email Id not found.";
+    public static final String PASSWORD_DOES_NOT_MATCH = "Password does not match.";
+    public static final String USER_DATA = "UserData";
+    TextField inputEmail;
+    TextField inputPassword;
+
+    Button loginButton;
+    Text loginFailedErrorMessage;
+]]></content>
+         <startLine>11</startLine>
+         <endLine>30</endLine>
+     </codeSnippet>
+   </defectInfo>
+   <events/>
+  </error>
+  <error>
+   <defectInfo>
+     <category>信息泄露</category>
+     <subCategory>编程规范违反</subCategory>
+     <issueType></issueType>
+     <checkerName>Hardcoded_Password</checkerName>
+     <function><![CDATA[]]></function>
+     <reportLine>24</reportLine>
+     <folder><![CDATA[D:\DevEcoStudioProjects\LoginScreenApplication\entry\src\main\java\com\example\loginscreenapplication\slice\]]></folder>
+     <fileName><![CDATA[D:\DevEcoStudioProjects\LoginScreenApplication\entry\src\main\java\com\example\loginscreenapplication\slice\LoginAbilitySlice.java]]></fileName>
+     <description><![CDATA[Hardcoded passwords may compromise system security in a way that cannot be easily remedied.]]></description>
+     <extra><![CDATA[]]></extra>
+     <mergeKey>1eb44ae25387bda8d20c1a9620da0de4</mergeKey>
+     <severity>Medium</severity>
+     <codeSnippet>
+         <content><![CDATA[import ohos.data.DatabaseHelper;
+import ohos.data.rdb.RdbStore;
+
+
+
+public class LoginAbilitySlice  extends AbilitySlice {
+
+    public static final String PLEASE_ENTER_VALID_EMAIL_PASSWORD = "Please enter valid email & password.";
+    public static final String LOGIN_SUCCESSFUL = "Login Successful";
+    public static final String EMAIL_ID_NOT_FOUND = "Email Id not found.";
+    public static final String PASSWORD_DOES_NOT_MATCH = "Password does not match.";
+    public static final String USER_DATA = "UserData";
+    TextField inputEmail;
+    TextField inputPassword;
+
+    Button loginButton;
+    Text loginFailedErrorMessage;
+
+    RdbStore db;
+
+]]></content>
+         <startLine>14</startLine>
+         <endLine>33</endLine>
+     </codeSnippet>
+   </defectInfo>
+   <events/>
+  </error>
+ </errors>
+<filesCount>1</filesCount>
+<codeLines>137</codeLines>
+<timeCost>9</timeCost>
+<errorsCount>2</errorsCount>
+</RESULT>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+    <Text
+        ohos:id="$+id:registerWelcomeText"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Welcome to the register page"
+        ohos:text_size="32vp"
+        ohos:center_in_parent="true"
+        ohos:align_parent_top="true"/>
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="vertical"
+        ohos:below="$id:registerWelcomeText"
+        ohos:align_parent_left="true"
+        ohos:padding="32vp">
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:orientation="horizontal">
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text_size="24vp"
+                ohos:text="First Name"/>
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:id="$+id:errorFirstName"
+                ohos:text=" *Name can only consist of letters"
+                ohos:text_size="16vp"
+                ohos:text_color="#FFFF1E00">
+            </Text>
+        </DirectionalLayout>
+        <TextField
+            ohos:height="28vp"
+            ohos:width="400vp"
+            ohos:id="$+id:registerFirstName"
+            ohos:hint="First Name"
+            ohos:padding="4vp"
+            ohos:background_element="#FFEAEAEA"/>
+
+        <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="horizontal">
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text_size="24vp"
+                ohos:text="Last Name"/>
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:id="$+id:errorLastName"
+                ohos:text_size="16vp"
+                ohos:text=" *Name can only consist of letters"
+                ohos:text_color="#FFFF1E00"/>
+        </DirectionalLayout>
+        <TextField
+            ohos:height="28vp"
+            ohos:width="400vp"
+            ohos:id="$+id:registerLastName"
+            ohos:hint="Last Name"
+            ohos:padding="4vp"
+            ohos:background_element="#FFEAEAEA"/>
+
+        <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="horizontal">
+            <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text_size="24vp"
+            ohos:text="Email"/>
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:id="$+id:errorEmail"
+                ohos:text_size="16vp"
+                ohos:text=" *Please enter valid email id"
+                ohos:text_color="#FFFF1E00"/>
+        </DirectionalLayout>
+        <TextField
+            ohos:height="28vp"
+            ohos:width="400vp"
+            ohos:id="$+id:registerEmail"
+            ohos:hint="john@example.com"
+            ohos:padding="4vp"
+            ohos:background_element="#FFEAEAEA"/>
+
+        <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="horizontal">
+            <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text_size="24vp"
+            ohos:text="Password"/>
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:id="$+id:errorPassword"
+                ohos:text_size="16vp"
+                ohos:text=" *Password should be at least 8 characters in length"
+                ohos:text_color="#FFFF1E00"/>
+        </DirectionalLayout>
+        <TextField
+            ohos:height="28vp"
+            ohos:width="400vp"
+            ohos:id="$+id:registerPassword"
+            ohos:hint="password"
+            ohos:text_input_type="pattern_password"
+            ohos:padding="4vp"
+            ohos:background_element="#FFEAEAEA"/>
+
+        <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="horizontal">
+            <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text_size="24vp"
+            ohos:text="Mobile"/>
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:id="$+id:errorMobile"
+                ohos:text_size="16vp"
+                ohos:text=" *Please enter valid mobile number"
+                ohos:text_color="#FFFF1E00"/>
+        </DirectionalLayout>
+        <TextField
+            ohos:height="28vp"
+            ohos:width="400vp"
+            ohos:id="$+id:registerMobile"
+            ohos:hint="00000000"
+            ohos:text_input_type="pattern_number"
+            ohos:padding="4vp"
+            ohos:background_element="#FFEAEAEA"/>
+            <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text_size="24vp"
+            ohos:text="Gender"/>
+        <RadioContainer
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:orientation="horizontal">
+            <RadioButton
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Male"
+                ohos:text_size="16vp"
+                ohos:id="$+id:registerGenderMale"
+                ohos:text_color_off="#FFA7A7A7"
+                ohos:text_color_on="#FF15756D"/>
+            <RadioButton
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Female"
+                ohos:text_size="16vp"
+                ohos:id="$+id:registerGenderFemale"
+                ohos:text_color_off="#FFA7A7A7"
+                ohos:text_color_on="#FF15756D"/>
+        </RadioContainer>
+        <Button
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:id="$+id:registerSubmitButton"
+            ohos:text="Submit"
+            ohos:text_size="24vp"
+            ohos:padding="8vp"
+            ohos:background_element="#FFA7C6D0"/>
+    </DirectionalLayout>
+</DependentLayout>

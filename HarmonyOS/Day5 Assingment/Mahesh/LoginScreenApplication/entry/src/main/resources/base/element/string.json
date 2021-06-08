@@ -1,0 +1,109 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "LoginScreenApplication"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "mainability_Login",
+      "value": "Login"
+    },
+    {
+      "name": "mainability_Register",
+      "value": "Register"
+    },
+    {
+      "name": "login_welcome_text",
+      "value": "Welcome to the login page"
+    },
+    {
+      "name": "register_welcome_text",
+      "value": "Welcome to the register page"
+    },
+    {
+      "name": "email_text_field",
+      "value": "Email"
+    },
+    {
+      "name": "email_hint",
+      "value": "john@example.com"
+    },
+    {
+      "name": "email_error_text",
+      "value": " *Please enter valid email id"
+    },
+    {
+      "name": "password_text_field",
+      "value": "Password"
+    },
+    {
+      "name": "password_error_text",
+      "value": " *Minimum 8 characters"
+    },
+    {
+      "name": "password_hint",
+      "value": "password"
+    },
+    {
+      "name": "first_name_text_field",
+      "value": "First name"
+    },
+    {
+      "name": "name_error_text",
+      "value": " *Name can only consist of letters"
+    },
+    {
+      "name": "first_name_hint",
+      "value": "John"
+    },
+    {
+      "name": "last_name_text_field",
+      "value": "Last Name"
+    },
+    {
+      "name": "last_name_hint",
+      "value": "Smith"
+    },
+    {
+      "name": "mobile_text_field",
+      "value": "Mobile Number"
+    },
+    {
+      "name": "mobile_error_text",
+      "value": " *Please enter valid mobile number"
+    },
+    {
+      "name": "mobile_hint",
+      "value": "00000000"
+    },
+    {
+      "name": "gender_text_field",
+      "value": "Gender"
+    },
+    {
+      "name": "gender_male",
+      "value": "Male"
+    },
+    {
+      "name": "gender_female",
+      "value": "Female"
+    },
+    {
+      "name": "submit_button_text",
+      "value": "Submit"
+    },
+    {
+      "name": "default_error_msg",
+      "value": " *Error Message"
+    }
+
+  ]
+}

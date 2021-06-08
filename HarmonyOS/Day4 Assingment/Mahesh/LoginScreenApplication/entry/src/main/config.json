@@ -1,0 +1,49 @@
+{
+  "app": {
+    "bundleName": "com.example.loginscreenapplication",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    },
+    "apiVersion": {
+      "compatible": 4,
+      "target": 5,
+      "releaseType": "Release"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.example.loginscreenapplication",
+    "name": ".MyApplication",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.example.loginscreenapplication.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}
