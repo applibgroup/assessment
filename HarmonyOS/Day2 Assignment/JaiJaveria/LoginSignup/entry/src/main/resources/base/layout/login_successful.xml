@@ -3,6 +3,11 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
-    ohos:orientation="vertical">
-
+    ohos:orientation="vertical"
+    ohos:alignment="center">
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="$ohos:float:id_text_size_headline7"
+        ohos:text="Login Successful"/>
 </DirectionalLayout>

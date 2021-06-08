@@ -6,6 +6,9 @@ ohos {
     defaultConfig {
         compatibleSdkVersion 4
     }
+    compileOptions{
+        annotationEnabled true
+    }
 }
 	
 buildscript {

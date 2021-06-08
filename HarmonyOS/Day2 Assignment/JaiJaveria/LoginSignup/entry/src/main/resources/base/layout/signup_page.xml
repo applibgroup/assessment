@@ -162,6 +162,7 @@
             ohos:scrollbar_overlap_enabled="false"
             >
             <RadioButton
+                ohos:id="$+id:Male"
                 ohos:height="match_content"
                 ohos:width="match_content"
                 ohos:text="Male"
@@ -172,6 +173,7 @@
                 ohos:right_padding="8fp"
                 />
             <RadioButton
+                ohos:id="$+id:Female"
                 ohos:height="match_content"
                 ohos:width="match_content"
                 ohos:text="Female"
@@ -182,6 +184,7 @@
 
                 />
             <RadioButton
+                ohos:id="$+id:NonBinary"
                 ohos:height="match_content"
                 ohos:width="match_content"
                 ohos:text="Non Binary"
@@ -192,9 +195,10 @@
                 ohos:right_padding="8fp"
                 />
             <RadioButton
+                ohos:id="$+id:Others"
                 ohos:height="match_content"
                 ohos:width="match_content"
-                ohos:text="Other"
+                ohos:text="Others"
                 ohos:text_size="15fp"
                 ohos:right_margin="5fp"
                 ohos:scrollbar_overlap_enabled="false"
@@ -203,6 +207,15 @@
 
                 />
         </RadioContainer>
+    <Text
+        ohos:id="$+id:xGenderError"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="13fp"
+        ohos:text="*Please Assign A Gender"
+        ohos:text_alignment="center"
+        ohos:visibility="hide"
+        ohos:text_color="red"/>
     <Button
         ohos:id="$+id:xSignupSubmit"
         ohos:height="match_content"
