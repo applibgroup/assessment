@@ -33,9 +33,10 @@ public class DataAbility extends Ability {
     public void onStart(Intent intent) {
         super.onStart(intent);
 
+
         HiLog.info(LABEL_LOG, "DataAbility onStart");
         DatabaseHelper helper = new DatabaseHelper(this);
-        ormContext = helper.getOrmContext("users","users.db", DataBase.class);
+        ormContext = helper.getOrmContext("test","test.db", DataBase.class);
     }
 
     @Override
@@ -55,8 +56,9 @@ public class DataAbility extends Ability {
     public int insert(Uri uri, ValuesBucket value) {
         HiLog.info(LABEL_LOG, "DataAbility insert");
         UserModel userModel = new UserModel();
+        HiLog.info(LABEL_LOG, "DataAbility insert" + FIRST_NAME + LAST_NAME + EMAIL);
         if(value.getString(FIRST_NAME) != null)
-            userModel.setFirstname(value.getString(FIRST_NAME));
+            userModel.setFirstName(value.getString(FIRST_NAME));
         if(value.getString(LAST_NAME) != null)
             userModel.setLastName(value.getString(LAST_NAME));
         if(value.getString(EMAIL) != null)
@@ -73,6 +75,7 @@ public class DataAbility extends Ability {
             HiLog.error(LABEL_LOG, "failed to insert");
             return -1;
         }
+
         try {
             isSuccessful = ormContext.flush();
         } catch (Exception e){

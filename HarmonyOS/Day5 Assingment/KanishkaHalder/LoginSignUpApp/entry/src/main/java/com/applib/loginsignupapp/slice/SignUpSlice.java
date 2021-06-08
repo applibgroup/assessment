@@ -10,16 +10,18 @@ import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.RadioButton;
 import ohos.agp.components.RadioContainer;
+import ohos.agp.window.dialog.CommonDialog;
+import ohos.agp.window.dialog.IDialog;
 import ohos.data.rdb.ValuesBucket;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.utils.net.Uri;
 
-import java.util.Arrays;
+import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
 
 public class SignUpSlice extends AbilitySlice {
 
-    private static final Uri URI =  Uri.parse("dataability:///com.applib.loginsignupapp.DataAbility/users");
+    private static final Uri URI =  Uri.parse("dataability:///com.applib.loginsignupapp.DataAbility/test");
     private static final int[] radioButtonIds = new int[]{ResourceTable.Id_radio_button_male,ResourceTable.Id_radio_button_female};
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(HiLog.DEBUG, 0xD001100, "SIGNUP_LOG");
 
@@ -30,7 +32,11 @@ public class SignUpSlice extends AbilitySlice {
     private String PASSWORD = "password";
     private String GENDER = "gender";
 
+    private int DIALOG_BOX_WIDTH=900;
+
     private DataAbilityHelper dbHelper;
+
+
 
     private TextFieldValidated firstName;
     private TextFieldValidated lastName;
@@ -39,6 +45,7 @@ public class SignUpSlice extends AbilitySlice {
     private TextFieldValidated password;
     private Button submitBtn;
     private RadioContainer radioContainer;
+
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
@@ -53,7 +60,9 @@ public class SignUpSlice extends AbilitySlice {
         password = (TextFieldValidated) findComponentById(ResourceTable.Id_textField_password);
         submitBtn = (Button) findComponentById(ResourceTable.Id_button_signup_signup_slice);
         radioContainer = (RadioContainer) findComponentById(ResourceTable.Id_radio_container);
-        
+
+        dummySignup();
+
         submitBtn.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
@@ -81,6 +90,7 @@ public class SignUpSlice extends AbilitySlice {
                     isAllValidated = password.isValidated() && isAllValidated;
                 }
 
+
                 if(radioContainer.getMarkedButtonId() != -1){
                     int markedId = radioButtonIds[radioContainer.getMarkedButtonId()];
                     RadioButton selectedButton = (RadioButton) findComponentById(markedId);
@@ -97,6 +107,8 @@ public class SignUpSlice extends AbilitySlice {
                     try {
                         int result = dbHelper.insert(URI, value);
                         HiLog.debug(LABEL_LOG, "LOG_RESULT: " + result);
+                        if(result != -1)
+                            showCommonDialog();
                     } catch (DataAbilityRemoteException e) {
                         e.printStackTrace();
                     }
@@ -115,4 +127,34 @@ public class SignUpSlice extends AbilitySlice {
     protected void onInactive() {
         super.onInactive();
     }
+
+    private void showCommonDialog() {
+        CommonDialog commonDialog = new CommonDialog(this);
+        commonDialog.setTitleText("SignUp Sucess!!");
+        commonDialog.setContentText("Go to Login Page to enter the app");
+        commonDialog.setAutoClosable(true);
+        commonDialog.setSize(MATCH_CONTENT, MATCH_CONTENT);
+        commonDialog.setButton(IDialog.BUTTON1, "Yes", (iDialog, i) -> {
+            Intent intent = new Intent();
+            intent.setParam(EMAIL,emailId.getText());
+            intent.setParam(PASSWORD,password.getText());
+
+            present(new LoginSlice(),intent);
+            iDialog.destroy();
+        });
+        commonDialog.setButton(IDialog.BUTTON2, "No", (iDialog, i) -> {
+            this.terminate();
+            iDialog.destroy();
+        });
+        commonDialog.show();
+    }
+
+    void dummySignup(){
+        firstName.setText("testName");
+        lastName.setText("testName");
+        emailId.setText("abc@gmail.com");
+        phoneNumber.setText("9999999999");
+        password.setText("qwerty");
+    }
+
 }

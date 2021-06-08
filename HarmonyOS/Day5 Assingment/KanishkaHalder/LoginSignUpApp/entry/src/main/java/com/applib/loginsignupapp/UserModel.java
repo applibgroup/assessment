@@ -1,0 +1,74 @@
+package com.applib.loginsignupapp;
+
+import ohos.data.orm.OrmObject;
+import ohos.data.orm.annotation.Entity;
+import ohos.data.orm.annotation.Index;
+import ohos.data.orm.annotation.PrimaryKey;
+
+@Entity(tableName = "user",
+        indices = {@Index(value = {"emailID"}, name = "email_index", unique = true)})
+public class UserModel extends OrmObject {
+    @PrimaryKey(autoGenerate = true)
+    private Integer uid;
+    private String firstName;
+    private String lastName;
+    private String emailID;
+    private String phoneNumber;
+    private String password;
+    private String gender;
+
+    public Integer getUid() {
+        return uid;
+    }
+    public void setUid(Integer uid){
+        this.uid = uid;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmailID() {
+        return emailID;
+    }
+
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+}

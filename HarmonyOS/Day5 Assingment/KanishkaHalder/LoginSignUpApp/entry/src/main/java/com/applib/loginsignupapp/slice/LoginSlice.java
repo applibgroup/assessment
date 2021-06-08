@@ -20,11 +20,11 @@ import java.util.Arrays;
 
 public class LoginSlice extends AbilitySlice {
 
-    private static final Uri URI =  Uri.parse("dataability:///com.applib.loginsignupapp.DataAbility/users");
+    private static final Uri URI =  Uri.parse("dataability:///com.applib.loginsignupapp.DataAbility/test");
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(HiLog.DEBUG, 0xD001100, "LOGIN_LOG");
 
-    private String EMAIL;
-    private String PASSWORD;
+    private String EMAIL = "emailID";
+    private String PASSWORD = "password";
 
     private TextField username;
     private TextField password;
@@ -35,13 +35,18 @@ public class LoginSlice extends AbilitySlice {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_login);
 
-        EMAIL = this.getString(ResourceTable.String_email_field);
-        PASSWORD = this.getString(ResourceTable.String_password_field);
-
         username = (TextField) findComponentById(ResourceTable.Id_textField_email_login_slice);
         password = (TextField) findComponentById(ResourceTable.Id_textField_password_login_slice);
 
         submitBtn = (Button) findComponentById(ResourceTable.Id_button_login_login_slice);
+
+        if(intent.getStringParam(EMAIL) != null){
+            String emailStr = intent.getStringParam(EMAIL);
+            String passwordStr = intent.getStringParam(PASSWORD);
+
+            username.setText(emailStr);
+            password.setText(passwordStr);
+        }
 
         DataAbilityHelper helper = DataAbilityHelper.creator(this,URI);
 
@@ -49,11 +54,12 @@ public class LoginSlice extends AbilitySlice {
             @Override
             public void onClick(Component component) {
                 DataAbilityPredicates predicates = new DataAbilityPredicates();
-                predicates.equalTo(EMAIL,username.getText().trim());
+                predicates.equalTo("emailID",username.getText());
 
                 try {
                     ResultSet resultSet = (ResultSet) helper.query(URI, new String[]{PASSWORD},predicates);
                     resultSet.goToFirstRow();
+                    HiLog.debug(LABEL_LOG,""+ Arrays.toString(resultSet.getAllColumnNames()) + resultSet.getRowCount());
 
                     if(resultSet.getRowCount()>0) {
                         do {

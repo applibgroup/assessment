@@ -14,6 +14,8 @@ import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.RadioButton;
 import ohos.agp.components.RadioContainer;
+import ohos.agp.window.dialog.CommonDialog;
+import ohos.agp.window.dialog.IDialog;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.data.DatabaseHelper;
 import ohos.data.orm.OrmContext;
@@ -24,6 +26,8 @@ import ohos.utils.net.Uri;
 
 import java.util.Arrays;
 import java.util.IdentityHashMap;
+
+import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
 
 public class SignUpSlice extends AbilitySlice {
 
@@ -97,8 +101,10 @@ public class SignUpSlice extends AbilitySlice {
                     isAllValidated = password.isValidated() && isAllValidated;
                 }
 
-                if(Arrays.stream(radioButtonIds).anyMatch(i -> i==radioContainer.getMarkedButtonId())){
-                    RadioButton selectedButton = (RadioButton) findComponentById(radioContainer.getMarkedButtonId());
+
+                if(radioContainer.getMarkedButtonId() != -1){
+                    int markedId = radioButtonIds[radioContainer.getMarkedButtonId()];
+                    RadioButton selectedButton = (RadioButton) findComponentById(markedId);
                     findComponentById(ResourceTable.Id_text_radioGroup_unselected_error).setVisibility(Component.HIDE);
                     value.putString(GENDER, selectedButton.getText());
                 } else {
@@ -130,4 +136,6 @@ public class SignUpSlice extends AbilitySlice {
     protected void onInactive() {
         super.onInactive();
     }
+
+
 }
