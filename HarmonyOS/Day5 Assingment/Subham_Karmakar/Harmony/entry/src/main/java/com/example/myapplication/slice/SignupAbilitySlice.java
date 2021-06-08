@@ -19,12 +19,28 @@ import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
 
 public class SignupAbilitySlice extends AbilitySlice
 {
-    private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "VALIDATION_FIELD_TAG");
     private RdbStore db;
+
+    private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "VALIDATION_FIELD_TAG");
     private String TABLENAME = "test";
-    private Text signupState;
     public static final float DIALOG_BOX_CORNER_RADIUS = 36.0f;
     public static final int DIALOG_BOX_WIDTH = 984;
+
+    private Text signupState;
+    private Button signUp;
+    private TextField firstName;
+    private TextField lastName;
+    private TextField email;
+    private TextField password;
+    private TextField mobile;
+    private Text firstNameError;
+    private Text lastNameError;
+    private Text emailError;
+    private Text passwordError;
+    private Text mobileError;
+    private RadioContainer radioContainer;
+
+    private User user;
 
     @Override
     public void onStart(Intent intent)
@@ -35,20 +51,20 @@ public class SignupAbilitySlice extends AbilitySlice
 
         CheckInputValidity validity = new CheckInputValidity();
         DatabaseMethods dbm = new DatabaseMethods();
-        User user = new User();
+        user = new User();
 
-        Button signUp = (Button) findComponentById(ResourceTable.Id_signup_confirmation);
-        TextField firstName = (TextField) findComponentById(ResourceTable.Id_first_name);
-        TextField lastName = (TextField) findComponentById(ResourceTable.Id_last_name);
-        TextField email = (TextField) findComponentById(ResourceTable.Id_email);
-        TextField password = (TextField) findComponentById(ResourceTable.Id_password);
-        TextField mobile = (TextField) findComponentById(ResourceTable.Id_mobile);
-        Text firstNameError = (Text) findComponentById(ResourceTable.Id_first_name_error);
-        Text lastNameError = (Text) findComponentById(ResourceTable.Id_last_name_error);
-        Text emailError = (Text) findComponentById(ResourceTable.Id_email_error);
-        Text passwordError = (Text) findComponentById(ResourceTable.Id_password_error);
-        Text mobileError = (Text) findComponentById(ResourceTable.Id_mobile_error);
-        RadioContainer radioContainer = (RadioContainer) findComponentById(ResourceTable.Id_radio_container);
+        signUp = (Button) findComponentById(ResourceTable.Id_signup_confirmation);
+        firstName = (TextField) findComponentById(ResourceTable.Id_first_name);
+        lastName = (TextField) findComponentById(ResourceTable.Id_last_name);
+        email = (TextField) findComponentById(ResourceTable.Id_email);
+        password = (TextField) findComponentById(ResourceTable.Id_password);
+        mobile = (TextField) findComponentById(ResourceTable.Id_mobile);
+        firstNameError = (Text) findComponentById(ResourceTable.Id_first_name_error);
+        lastNameError = (Text) findComponentById(ResourceTable.Id_last_name_error);
+        emailError = (Text) findComponentById(ResourceTable.Id_email_error);
+        passwordError = (Text) findComponentById(ResourceTable.Id_password_error);
+        mobileError = (Text) findComponentById(ResourceTable.Id_mobile_error);
+        radioContainer = (RadioContainer) findComponentById(ResourceTable.Id_radio_container);
         signupState = (Text) findComponentById(ResourceTable.Id_signup_state);
 
         firstName.setText("");
@@ -70,10 +86,9 @@ public class SignupAbilitySlice extends AbilitySlice
             {
                 signupState.setText("");
 
-//                if(validity.checkFirstName(firstName.getText().trim()) && validity.checkLastName(lastName.getText().trim())
-//                        && validity.checkEmail(email.getText().trim()) && validity.checkPassword(password.getText()) &&
-//                        validity.checkMobile(mobile.getText().trim()))
-                if(true)
+                if(validity.checkFirstName(firstName.getText().trim()) && validity.checkLastName(lastName.getText().trim())
+                        && validity.checkEmail(email.getText().trim()) && validity.checkPassword(password.getText()) &&
+                        validity.checkMobile(mobile.getText().trim()))
                 {
                     user.setFirstName(firstName.getText().trim());
                     user.setLastName(lastName.getText().trim());
@@ -160,26 +175,23 @@ public class SignupAbilitySlice extends AbilitySlice
     private void showCommonDialog()
     {
         CommonDialog commonDialog = new CommonDialog(this);
-        commonDialog.setTitleText("Common Dialog");
-        commonDialog.setContentText("This is a common dialog");
+        commonDialog.setTitleText("   Signup Successful");
+        commonDialog.setContentText("    Do you want to go to login page?");
         commonDialog.setAutoClosable(true);
         commonDialog.setSize(DIALOG_BOX_WIDTH, MATCH_CONTENT);
 
         commonDialog.setButton(IDialog.BUTTON1, "Yes", (iDialog, i) ->
         {
-            showToast("Clicked Yes button");
+            Intent intent = new Intent();
+            intent.setParam("email", user.getEmail());
+            intent.setParam("password", user.getPassword());
+            present(new LoginAbilitySlice(), intent);
+            terminate();
             iDialog.destroy();
         });
 
         commonDialog.setButton(IDialog.BUTTON2, "No", (iDialog, i) ->
         {
-            showToast("Clicked No button");
-            iDialog.destroy();
-        });
-
-        commonDialog.setButton(IDialog.BUTTON3, "Maybe", (iDialog, i) ->
-        {
-            showToast("Clicked Maybe button");
             iDialog.destroy();
         });
 

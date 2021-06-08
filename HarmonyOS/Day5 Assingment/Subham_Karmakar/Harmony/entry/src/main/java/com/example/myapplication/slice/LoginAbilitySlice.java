@@ -21,14 +21,20 @@ import java.util.List;
 
 public class LoginAbilitySlice extends AbilitySlice
 {
-    private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "VALIDATION_FIELD_TAG");
     private RdbStore db;
+
+    private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "VALIDATION_FIELD_TAG");
     private String TABLENAME = "test";
-    private Text login;
+
+    private TextField emailLogin;
+    private TextField passwordLogin;
+    private Text emailError;
+    private Text passwordError;
+    private Button login;
+    private Text loginState;
 
     private int flag = 0;
-
-    ArrayList<User> queryResult;
+    private ArrayList<User> queryResult;
 
     @Override
     public void onStart(Intent intent)
@@ -36,15 +42,24 @@ public class LoginAbilitySlice extends AbilitySlice
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_login);
 
-        TextField emailLogin = (TextField) findComponentById(ResourceTable.Id_email_login);
-        TextField passwordLogin = (TextField) findComponentById(ResourceTable.Id_password_login);
-        Text emailError = (Text) findComponentById(ResourceTable.Id_email_login_error);
-        Text passwordError = (Text) findComponentById(ResourceTable.Id_password_login_error);
-        Button login = (Button) findComponentById(ResourceTable.Id_login_confirmation);
-        Text loginState = (Text) findComponentById(ResourceTable.Id_login_state);
+        emailLogin = (TextField) findComponentById(ResourceTable.Id_email_login);
+        passwordLogin = (TextField) findComponentById(ResourceTable.Id_password_login);
+        emailError = (Text) findComponentById(ResourceTable.Id_email_login_error);
+        passwordError = (Text) findComponentById(ResourceTable.Id_password_login_error);
+        login = (Button) findComponentById(ResourceTable.Id_login_confirmation);
+        loginState = (Text) findComponentById(ResourceTable.Id_login_state);
 
-        emailLogin.setText("");
-        passwordLogin.setText("");
+        if(intent != null)
+        {
+            emailLogin.setText(intent.getStringParam("email"));
+            passwordLogin.setText(intent.getStringParam("password"));
+        }
+        else
+        {
+            emailLogin.setText("");
+            passwordLogin.setText("");
+        }
+
         emailError.setText("");
         passwordError.setText("");
         loginState.setText("");
