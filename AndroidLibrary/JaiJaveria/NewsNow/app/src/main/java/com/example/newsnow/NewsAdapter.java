@@ -42,14 +42,12 @@ public class  NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.task, parent, false);
-//        firestore=FirebaseFirestore.getInstance();
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         NewsItem newsItem = news_list.get(position);
-//        Log.d("onBindViewHolder", "heading: " + newsItem.heading);
         holder.headline.setText(newsItem.heading);
         Log.d("NewsAdapter", "img width"+holder.img.getWidth());
         holder.img.getViewTreeObserver()
@@ -62,7 +60,6 @@ public class  NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
                                 .removeOnGlobalLayoutListener(this);
                         Picasso.get().load(newsItem.img_url).resize(holder.img.getMeasuredWidth(),0).into(holder.img);
                 }});
-//        Glide.with(holder.img.getRootView()).load(newsItem.img_url).into(holder.img);
         View.OnClickListener openURL = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +76,6 @@ public class  NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
             public void onClick(View v) {
                 if (holder.share.getText().equals("Share"))
                 {
-//                    holder.qrCode.hei
                     try {
                         generateQRCode_general(newsItem.news_url, holder.qrCode);
                     } catch (WriterException e) {
@@ -90,7 +86,6 @@ public class  NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
                 }
                 else
                 {
-//                    holder.qrCode.setI;
                     holder.qrCode.setVisibility(View.GONE);
                     holder.share.setText("Share");
 

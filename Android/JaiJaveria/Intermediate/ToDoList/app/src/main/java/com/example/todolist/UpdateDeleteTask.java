@@ -13,9 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-//import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,22 +22,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.ItemTouchHelper;
 
 import com.example.todolist.Adapter.ToDoAdapter;
 import com.example.todolist.Model.ToDoListModel;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-
-import static androidx.core.content.ContextCompat.getSystemService;
 
 public class UpdateDeleteTask extends BottomSheetDialogFragment {
     public static final String TAG = "UpdateDeleteTask";
@@ -62,10 +51,7 @@ public class UpdateDeleteTask extends BottomSheetDialogFragment {
 
     public static UpdateDeleteTask newInstance(ToDoAdapter toDoAdapter) {
 
-//        Bundle args = new Bundle();
-
         UpdateDeleteTask fragment = new UpdateDeleteTask(toDoAdapter);
-//        fragment.setArguments(args);
         return fragment;
     }
     public UpdateDeleteTask(ToDoAdapter toDoAdapter)
@@ -74,7 +60,6 @@ public class UpdateDeleteTask extends BottomSheetDialogFragment {
     }
 
     @Nullable
-//    @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable  Bundle savedInstanceState) {
         return inflater.inflate(R.layout.update_delete_task,container,false);
@@ -187,7 +172,6 @@ public class UpdateDeleteTask extends BottomSheetDialogFragment {
                             "taskDate", date_string, "taskTime",timeVal);
                     ToDoListModel toDoListModel=new ToDoListModel(tname, tdesc, date_string,timeVal, id);
                     toDoAdapter.updateTaskList(position,toDoListModel);
-//                    toDoAdapter.notifyItemChanged(position);
                     toDoAdapter.notifyDataSetChanged();
                     dismiss();
                 }
@@ -211,7 +195,6 @@ public class UpdateDeleteTask extends BottomSheetDialogFragment {
                             .setNegativeButton("No", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-//                                    toDoAdapter.notifyItemChanged(position);
                                 }
                             })
                     .show();

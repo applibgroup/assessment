@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.todolist.AddNewTask;
 import com.example.todolist.MainActivity;
 import com.example.todolist.Model.ToDoListModel;
 import com.example.todolist.R;
@@ -57,9 +56,6 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         bundle.putString("time",toDoListModel.getTaskTime());
         bundle.putString("id",toDoListModel.taskID);
         bundle.putInt("position",p);
-//        AddNewTask addNewTask=new AddNewTask();
-//        addNewTask.setArguments(bundle);
-//        addNewTask.show(mainActivity.getSupportFragmentManager(), addNewTask.getTag());
         UpdateDeleteTask updateDeleteTask=new UpdateDeleteTask(this);
         updateDeleteTask.setArguments(bundle);
         updateDeleteTask.show(mainActivity.getSupportFragmentManager(), updateDeleteTask.getTag());

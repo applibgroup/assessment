@@ -12,10 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.browser.customtabs.CustomTabsIntent;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-//import com.squareup.picasso.Picasso;
 
 import com.bumptech.glide.Glide;
 
@@ -38,7 +36,6 @@ public class  NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull   ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.task, parent, false);
-//        firestore=FirebaseFirestore.getInstance();
         return new MyViewHolder(view);
     }
 

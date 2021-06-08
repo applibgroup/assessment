@@ -6,24 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.newsnow.API;
 import com.example.newsnow.Article;
-import com.example.newsnow.MySingleton;
 import com.example.newsnow.NewsAdapter;
 import com.example.newsnow.NewsItem;
 import com.example.newsnow.Pojo;
@@ -31,9 +24,6 @@ import com.example.newsnow.R;
 import com.example.newsnow.databinding.FragmentGalleryBinding;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +36,6 @@ public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
     private FragmentGalleryBinding binding;
-//    JSONArray news=null;
     RequestQueue  queue;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -120,54 +109,5 @@ public class GalleryFragment extends Fragment {
         };
         return c;
     }
-//    public void volleyUse()
-//    {
-//
-//    List<NewsItem> l= new ArrayList<>();
-//        String category="entertainment";
-//        String apikey="b6bac42b86514a3d85237f7de4c2f2fa";
-////        https://newsapi.org/v2/top-headlines?category=entertainment&language=en&country=in&apiKey=b6bac42b86514a3d85237f7de4c2f2fa
-//        String url = "https://newsapi.org/v2/top-headlines?category="+category+"&language=en&country=in&apiKey="+apikey;
-//        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
-//                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-//
-//                    @Override
-//                    public void onResponse(JSONObject response) {
-//                        JSONArray jsonArray = null;
-//                        try {
-//                            jsonArray=response.getJSONArray("articles");
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                        for (int i=0;i<jsonArray.length();i++)
-//                        {
-//                            NewsItem n=new NewsItem();
-//                            JSONObject j = null;
-//                            try {
-//                                j=jsonArray.getJSONObject(i);
-//                                n.heading=j.getString("title");
-//                                n.img_url=j.getString("urlToImage");
-//                                n.news_url=j.getString("url");
-//                            } catch (JSONException e) {
-//                                e.printStackTrace();
-//                            }
-//
-//
-//                        }
-//                        newsAdapter.getNewsList(l);
-//                        newsAdapter.notifyDataSetChanged();
-//                    }
-//                }, new Response.ErrorListener() {
-//
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        // TODO: Handle error
-//                        Log.e("GalleryFrag",error.toString());
-//                    }
-//                });
-//
-//
-////        queue.add(jsonObjectRequest);
-//        MySingleton.getInstance(this.getContext()).addToRequestQueue(jsonObjectRequest);
-//    }
+
 }

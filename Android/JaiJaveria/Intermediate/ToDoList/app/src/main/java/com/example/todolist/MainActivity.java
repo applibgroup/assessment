@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.multidex.MultiDex;
 import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.Button;
 
 import com.example.todolist.Adapter.ToDoAdapter;
@@ -22,7 +21,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -46,7 +44,6 @@ public class MainActivity extends AppCompatActivity    {
         setContentView(R.layout.activity_main);
         recyclerView=findViewById(R.id.recyclerView);
         button=findViewById(R.id.add_task);
-//        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         firestore=FirebaseFirestore.getInstance();
         list= new ArrayList<>();
@@ -73,23 +70,6 @@ public class MainActivity extends AppCompatActivity    {
             }
             else
             {
-//                String[] a1=d1.split("-");
-//                String[] a2=d2.split("-");
-//                int year1= Integer.parseInt(a1[2]);
-//                int year2= Integer.parseInt(a2[2]);
-//                if (year1!=year2)
-//                {
-//                    return (year1<year2) ? -1: 1;
-//                }
-//                int month1= Integer.parseInt(a1[1]);
-//                int month2= Integer.parseInt(a2[1])
-//                if (month2!=month1)
-//                {
-//                    return (month1<month2) ? -1: 1;
-//                }
-//                int day1=Integer.parseInt(a1[0]);
-//                int day2=Integer.parseInt(a2[0]);
-//                return (day1<day2) ? -1: 1;
                 return d1.compareTo(d2);
             }
 
@@ -108,26 +88,16 @@ public class MainActivity extends AppCompatActivity    {
                     Log.d("ShowData MainActivity", "docChange type: "+documentChange.getType());
                     if (documentChange.getType()== DocumentChange.Type.ADDED)
                     {
-//                        ToDoListModel toDoListModel=documentChange.getDocument().toObject(ToDoListModel.class).withID(id);
                         if (toDoListModel.getTaskTime()!=null)
                         {
                             list.add(toDoListModel);
                             adapter.notifyDataSetChanged();
                         }
                     }
-//                    else if (documentChange.getType()== DocumentChange.Type.MODIFIED)
-//                    {
-//                        list.set(p,toDoListModel);
-//                    }
                 }
-//                Collections.reverse(list);
-
-//                public int sort()
                 Collections.sort(list,sortOnDateAndTime);
             }
         });
     }
 
-//    private Object sort() {
-//    }
 }

@@ -2,8 +2,7 @@ package com.example.todolist.Model;
 
 public class ToDoListModel extends TaskId {
     private String taskName, taskDesc, taskDate, taskTime;
-    public ToDoListModel()
-    {}
+
     public ToDoListModel(String taskName, String taskDesc, String taskDate, String taskTime, String id)
     {
         this.taskName=taskName;

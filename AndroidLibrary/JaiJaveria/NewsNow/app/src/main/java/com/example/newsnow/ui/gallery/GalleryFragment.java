@@ -5,20 +5,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newsnow.API;
 import com.example.newsnow.Article;
-import com.example.newsnow.MySingleton;
 import com.example.newsnow.NewsAdapter;
 import com.example.newsnow.NewsItem;
 import com.example.newsnow.Pojo;
@@ -26,9 +22,6 @@ import com.example.newsnow.R;
 import com.example.newsnow.databinding.FragmentGalleryBinding;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +34,6 @@ public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
     private FragmentGalleryBinding binding;
-    //    JSONArray news=null;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -88,7 +80,6 @@ public class GalleryFragment extends Fragment {
                     NewsItem n = new NewsItem();
                     Article j = arr.get(i);
                     n.heading = j.getTitle();
-//                    Log.d("GFrag", "inside onViewCreated success: " + n.heading);
                     n.img_url = j.getUrlToImage();
                     n.news_url = j.getUrl();
                     l.add(n);
