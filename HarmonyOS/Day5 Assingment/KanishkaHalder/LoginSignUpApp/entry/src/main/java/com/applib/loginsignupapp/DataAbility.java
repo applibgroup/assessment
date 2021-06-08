@@ -56,7 +56,6 @@ public class DataAbility extends Ability {
     public int insert(Uri uri, ValuesBucket value) {
         HiLog.info(LABEL_LOG, "DataAbility insert");
         UserModel userModel = new UserModel();
-        HiLog.info(LABEL_LOG, "DataAbility insert" + FIRST_NAME + LAST_NAME + EMAIL);
         if(value.getString(FIRST_NAME) != null)
             userModel.setFirstName(value.getString(FIRST_NAME));
         if(value.getString(LAST_NAME) != null)

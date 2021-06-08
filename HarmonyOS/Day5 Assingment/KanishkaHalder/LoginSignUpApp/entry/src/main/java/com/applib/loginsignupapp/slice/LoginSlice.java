@@ -8,6 +8,7 @@ import ohos.aafwk.content.Intent;
 import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.TextField;
+import ohos.agp.window.dialog.ToastDialog;
 import ohos.data.dataability.DataAbilityPredicates;
 import ohos.data.rdb.ValuesBucket;
 import ohos.data.resultset.ResultSet;
@@ -61,17 +62,25 @@ public class LoginSlice extends AbilitySlice {
                     resultSet.goToFirstRow();
                     HiLog.debug(LABEL_LOG,""+ Arrays.toString(resultSet.getAllColumnNames()) + resultSet.getRowCount());
 
+                    boolean loginStatus=false;
                     if(resultSet.getRowCount()>0) {
                         do {
                             int index = resultSet.getRowIndex();
                             String passwordStr = resultSet.getString(index);
                             if (password.getText().trim().equals(passwordStr)) {
+                                loginStatus=true;
                                 HiLog.debug(LABEL_LOG, "Authentication Successful");
-                                present(new HomeSlice(), new Intent());
+                                new ToastDialog(getContext()).setText("Login Sucessful").setDuration(500).show();
+                                Intent intentHome = new Intent();
+                                intentHome.setFlags(Intent.FLAG_ABILITY_NEW_MISSION);
+                                present(new HomeSlice(), intentHome);
                                 break;
                             }
                         } while (resultSet.goToNextRow());
                     }
+                    if(!loginStatus)
+                        new ToastDialog(getContext()).setText("Invalid Credentials. Try Again!").setDuration(500).show();
+
                 } catch (DataAbilityRemoteException e) {
                     e.printStackTrace();
                 }

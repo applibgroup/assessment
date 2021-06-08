@@ -12,6 +12,7 @@ import ohos.agp.components.RadioButton;
 import ohos.agp.components.RadioContainer;
 import ohos.agp.window.dialog.CommonDialog;
 import ohos.agp.window.dialog.IDialog;
+import ohos.agp.window.dialog.ToastDialog;
 import ohos.data.rdb.ValuesBucket;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
@@ -61,8 +62,6 @@ public class SignUpSlice extends AbilitySlice {
         submitBtn = (Button) findComponentById(ResourceTable.Id_button_signup_signup_slice);
         radioContainer = (RadioContainer) findComponentById(ResourceTable.Id_radio_container);
 
-        dummySignup();
-
         submitBtn.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
@@ -107,11 +106,16 @@ public class SignUpSlice extends AbilitySlice {
                     try {
                         int result = dbHelper.insert(URI, value);
                         HiLog.debug(LABEL_LOG, "LOG_RESULT: " + result);
-                        if(result != -1)
+                        if(result != -1) {
                             showCommonDialog();
+                        } else {
+                            new ToastDialog(getContext()).setText("EmailID already Registered").setDuration(500).show();
+                        }
                     } catch (DataAbilityRemoteException e) {
                         e.printStackTrace();
                     }
+                } else {
+                    new ToastDialog(getContext()).setText("SignUp not Completed").setDuration(500).show();
                 }
             }
         });
@@ -133,7 +137,7 @@ public class SignUpSlice extends AbilitySlice {
         commonDialog.setTitleText("SignUp Sucess!!");
         commonDialog.setContentText("Go to Login Page to enter the app");
         commonDialog.setAutoClosable(true);
-        commonDialog.setSize(MATCH_CONTENT, MATCH_CONTENT);
+        commonDialog.setSize(DIALOG_BOX_WIDTH, MATCH_CONTENT);
         commonDialog.setButton(IDialog.BUTTON1, "Yes", (iDialog, i) -> {
             Intent intent = new Intent();
             intent.setParam(EMAIL,emailId.getText());
@@ -149,12 +153,6 @@ public class SignUpSlice extends AbilitySlice {
         commonDialog.show();
     }
 
-    void dummySignup(){
-        firstName.setText("testName");
-        lastName.setText("testName");
-        emailId.setText("abc@gmail.com");
-        phoneNumber.setText("9999999999");
-        password.setText("qwerty");
-    }
+
 
 }

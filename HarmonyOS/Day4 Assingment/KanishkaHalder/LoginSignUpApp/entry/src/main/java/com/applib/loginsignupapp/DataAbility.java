@@ -20,25 +20,18 @@ import java.io.FileDescriptor;
 public class DataAbility extends Ability {
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD001100, "DB_LOG");
 
-    private String FIRST_NAME;
-    private String LAST_NAME;
-    private String EMAIL;
-    private String PHONE_NUMBER;
-    private String PASSWORD;
-    private String GENDER;
+    private String FIRST_NAME = "firstName";
+    private String LAST_NAME = "lastName";
+    private String EMAIL = "emailID";
+    private String PHONE_NUMBER = "phoneNumber";
+    private String PASSWORD = "password";
+    private String GENDER = "gender";
 
     private OrmContext ormContext = null;
 
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
-
-        FIRST_NAME = this.getString(ResourceTable.String_firstName_field);
-        LAST_NAME = this.getString(ResourceTable.String_lastName_field);
-        EMAIL = this.getString(ResourceTable.String_email_field);
-        PHONE_NUMBER = this.getString(ResourceTable.String_phoneNumber_field);
-        PASSWORD = this.getString(ResourceTable.String_password_field);
-        GENDER = this.getString(ResourceTable.String_gender_field);
 
         HiLog.info(LABEL_LOG, "DataAbility onStart");
         DatabaseHelper helper = new DatabaseHelper(this);

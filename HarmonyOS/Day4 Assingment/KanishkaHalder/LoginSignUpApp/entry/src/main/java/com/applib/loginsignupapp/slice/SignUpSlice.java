@@ -35,13 +35,12 @@ public class SignUpSlice extends AbilitySlice {
     private static final int[] radioButtonIds = new int[]{ResourceTable.Id_radio_button_male,ResourceTable.Id_radio_button_female};
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(HiLog.DEBUG, 0xD001100, "SIGNUP_LOG");
 
-    private String FIRST_NAME;
-    private String LAST_NAME;
-    private String EMAIL;
-    private String PHONE_NUMBER;
-    private String PASSWORD;
-    private String GENDER;
-
+    private String FIRST_NAME = "firstName";
+    private String LAST_NAME = "lastName";
+    private String EMAIL = "emailID";
+    private String PHONE_NUMBER = "phoneNumber";
+    private String PASSWORD = "password";
+    private String GENDER = "gender";
     private DataAbilityHelper dbHelper;
 
     private TextFieldValidated firstName;
@@ -56,13 +55,6 @@ public class SignUpSlice extends AbilitySlice {
     protected void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_signup);
-
-        FIRST_NAME = this.getString(ResourceTable.String_firstName_field);
-        LAST_NAME = this.getString(ResourceTable.String_lastName_field);
-        EMAIL = this.getString(ResourceTable.String_email_field);
-        PHONE_NUMBER = this.getString(ResourceTable.String_phoneNumber_field);
-        PASSWORD = this.getString(ResourceTable.String_password_field);
-        GENDER = this.getString(ResourceTable.String_gender_field);
 
         dbHelper = DataAbilityHelper.creator(this,URI);
 
