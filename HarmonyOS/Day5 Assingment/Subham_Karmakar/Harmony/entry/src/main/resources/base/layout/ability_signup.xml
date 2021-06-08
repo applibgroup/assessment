@@ -206,6 +206,7 @@
         ohos:id="$+id:signup_state"
         ohos:height="match_content"
         ohos:width="match_parent"
+        ohos:multiple_lines="true"
         ohos:text=""
         ohos:layout_alignment="center"
         ohos:text_size="20fp"

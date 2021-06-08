@@ -207,6 +207,7 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:text=""
+        ohos:multiple_lines="true"
         ohos:layout_alignment="center"
         ohos:text_size="20fp"
         ohos:left_margin="40px"

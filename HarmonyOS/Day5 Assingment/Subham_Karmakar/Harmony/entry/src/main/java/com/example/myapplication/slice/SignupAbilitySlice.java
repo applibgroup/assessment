@@ -8,11 +8,14 @@ import com.example.myapplication.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
+import ohos.agp.window.dialog.CommonDialog;
+import ohos.agp.window.dialog.IDialog;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.data.rdb.RdbStore;
 import ohos.data.rdb.ValuesBucket;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
+import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
 
 public class SignupAbilitySlice extends AbilitySlice
 {
@@ -20,6 +23,8 @@ public class SignupAbilitySlice extends AbilitySlice
     private RdbStore db;
     private String TABLENAME = "test";
     private Text signupState;
+    public static final float DIALOG_BOX_CORNER_RADIUS = 36.0f;
+    public static final int DIALOG_BOX_WIDTH = 984;
 
     @Override
     public void onStart(Intent intent)
@@ -65,9 +70,10 @@ public class SignupAbilitySlice extends AbilitySlice
             {
                 signupState.setText("");
 
-                if(validity.checkFirstName(firstName.getText().trim()) && validity.checkLastName(lastName.getText().trim())
-                        && validity.checkEmail(email.getText().trim()) && validity.checkPassword(password.getText()) &&
-                        validity.checkMobile(mobile.getText().trim()))
+//                if(validity.checkFirstName(firstName.getText().trim()) && validity.checkLastName(lastName.getText().trim())
+//                        && validity.checkEmail(email.getText().trim()) && validity.checkPassword(password.getText()) &&
+//                        validity.checkMobile(mobile.getText().trim()))
+                if(true)
                 {
                     user.setFirstName(firstName.getText().trim());
                     user.setLastName(lastName.getText().trim());
@@ -151,6 +157,41 @@ public class SignupAbilitySlice extends AbilitySlice
         super.onForeground(intent);
     }
 
+    private void showCommonDialog()
+    {
+        CommonDialog commonDialog = new CommonDialog(this);
+        commonDialog.setTitleText("Common Dialog");
+        commonDialog.setContentText("This is a common dialog");
+        commonDialog.setAutoClosable(true);
+        commonDialog.setSize(DIALOG_BOX_WIDTH, MATCH_CONTENT);
+
+        commonDialog.setButton(IDialog.BUTTON1, "Yes", (iDialog, i) ->
+        {
+            showToast("Clicked Yes button");
+            iDialog.destroy();
+        });
+
+        commonDialog.setButton(IDialog.BUTTON2, "No", (iDialog, i) ->
+        {
+            showToast("Clicked No button");
+            iDialog.destroy();
+        });
+
+        commonDialog.setButton(IDialog.BUTTON3, "Maybe", (iDialog, i) ->
+        {
+            showToast("Clicked Maybe button");
+            iDialog.destroy();
+        });
+
+        commonDialog.show();
+    }
+
+    private void showToast(String s)
+    {
+        new ToastDialog(getContext()).setText(s).setDuration(1000).show();
+    }
+
+
     private void insertData(String firstName, String lastName, String email, String password, String mobile, int gender)
     {
         ValuesBucket valuesBucket =  new ValuesBucket();
@@ -160,15 +201,16 @@ public class SignupAbilitySlice extends AbilitySlice
         valuesBucket.putString("password", password);
         valuesBucket.putString("mobile", mobile);
         valuesBucket.putInteger("gender", gender);
-        if(db.insert(TABLENAME, valuesBucket) == 1)
+        if(db.insert(TABLENAME, valuesBucket) > 0)
         {
             HiLog.warn(LABEL, "Successfully added to database");
             signupState.setText("Account created successfully!");
+            showCommonDialog();
         }
         else
         {
             new ToastDialog(getContext()).setText("Error adding to database!").setDuration(1000).show();
-            HiLog.warn(LABEL, "There was and error while adding to database");
+            HiLog.warn(LABEL, "There was an error while adding to database");
             signupState.setText("There was some error in creating the account");
         }
     }
