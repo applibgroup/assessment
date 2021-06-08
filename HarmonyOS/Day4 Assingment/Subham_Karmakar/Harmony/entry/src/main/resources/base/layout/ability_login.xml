@@ -44,6 +44,7 @@
         ohos:left_margin="40px"
         ohos:right_margin="40px"
         ohos:top_margin="64px"
+        ohos:text_input_type="pattern_password"
         />
 
     <Text
