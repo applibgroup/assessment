@@ -9,6 +9,7 @@ import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.Text;
 import ohos.agp.components.TextField;
+import ohos.agp.window.dialog.ToastDialog;
 import ohos.data.rdb.RdbPredicates;
 import ohos.data.rdb.RdbStore;
 import ohos.data.resultset.ResultSet;
@@ -74,6 +75,7 @@ public class LoginAbilitySlice extends AbilitySlice
 
                 if(flag == 0)
                 {
+                    new ToastDialog(getContext()).setText("One or more error!").setDuration(1000).show();
                     emailError.setText("No such email found. Please Sign Up if not yet!");
                     passwordError.setText("");
                     loginState.setText("");
@@ -86,9 +88,13 @@ public class LoginAbilitySlice extends AbilitySlice
                     if(match.getPassword().equals(passwordLogin.getText()))
                     {
                         loginState.setText("Successfully logged in!");
+                        present(new LoggedInAbilitySlice(), new Intent());
+                        new ToastDialog(getContext()).setText("Login successful!").setDuration(2500).show();
+                        terminate();
                     }
                     else
                     {
+                        new ToastDialog(getContext()).setText("One or more error!").setDuration(1000).show();
                         passwordError.setText("Wrong password entered");
                     }
 

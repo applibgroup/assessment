@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "app_name",
-      "value": "Database"
+      "value": "Dialog"
     },
     {
       "name": "mainability_description",
@@ -26,6 +26,14 @@
     },
     {
       "name": "signupability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "loggedinability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "loggedinability_HelloWorld",
       "value": "Hello World"
     }
   ]

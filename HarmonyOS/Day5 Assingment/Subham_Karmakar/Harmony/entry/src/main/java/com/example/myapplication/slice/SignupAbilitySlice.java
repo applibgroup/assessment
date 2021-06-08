@@ -8,6 +8,7 @@ import com.example.myapplication.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
+import ohos.agp.window.dialog.ToastDialog;
 import ohos.data.rdb.RdbStore;
 import ohos.data.rdb.ValuesBucket;
 import ohos.hiviewdfx.HiLog;
@@ -85,6 +86,7 @@ public class SignupAbilitySlice extends AbilitySlice
                 {
                     if(!validity.checkFirstName(firstName.getText().trim()))
                     {
+                        new ToastDialog(getContext()).setText("One or more error!").setDuration(1000).show();
                         firstNameError.setText("Please enter a valid First Name with first letter capital");
                     }
                     else
@@ -93,6 +95,7 @@ public class SignupAbilitySlice extends AbilitySlice
                     }
                     if(!validity.checkLastName(lastName.getText().trim()))
                     {
+                        new ToastDialog(getContext()).setText("One or more error!").setDuration(1000).show();
                         lastNameError.setText("Please enter a valid Last Name with first letter capital");
                     }
                     else
@@ -101,6 +104,7 @@ public class SignupAbilitySlice extends AbilitySlice
                     }
                     if(!validity.checkEmail(email.getText().trim()))
                     {
+                        new ToastDialog(getContext()).setText("One or more error!").setDuration(1000).show();
                         emailError.setText("Please enter a valid Email ID");
                     }
                     else
@@ -109,6 +113,7 @@ public class SignupAbilitySlice extends AbilitySlice
                     }
                     if(!validity.checkPassword(password.getText()))
                     {
+                        new ToastDialog(getContext()).setText("One or more error!").setDuration(1000).show();
                         passwordError.setText("Please enter a strong password");
                     }
                     else
@@ -117,6 +122,7 @@ public class SignupAbilitySlice extends AbilitySlice
                     }
                     if(!validity.checkMobile(mobile.getText().trim()))
                     {
+                        new ToastDialog(getContext()).setText("One or more error!").setDuration(1000).show();
                         mobileError.setText("Please enter a valid Mobile number");
                     }
                     else
@@ -161,6 +167,7 @@ public class SignupAbilitySlice extends AbilitySlice
         }
         else
         {
+            new ToastDialog(getContext()).setText("Error adding to database!").setDuration(1000).show();
             HiLog.warn(LABEL, "There was and error while adding to database");
             signupState.setText("There was some error in creating the account");
         }

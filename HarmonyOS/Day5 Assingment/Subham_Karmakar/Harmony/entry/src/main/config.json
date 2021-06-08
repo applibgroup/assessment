@@ -61,6 +61,15 @@
         "label": "$string:app_name",
         "type": "page",
         "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.myapplication.LoggedInAbility",
+        "icon": "$media:icon",
+        "description": "$string:loggedinability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
       }
     ]
   }
