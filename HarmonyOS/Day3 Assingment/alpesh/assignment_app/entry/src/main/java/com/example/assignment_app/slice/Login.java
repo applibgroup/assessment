@@ -30,32 +30,39 @@ public class Login extends AbilitySlice {
         Button signup = (Button) findComponentById(ResourceTable.Id_signup_btn);
         signup.setClickedListener(List -> present(new Signup(),new Intent()));
         login.setClickedListener(new Component.ClickedListener() {
-             @Override
-             public void onClick(Component component) {
-                 OrmPredicates query = context.where(User.class).equalTo("DB_COLUMN_EMAIL", email.getText());
-                 try {
-                     List<User> users = context.query(query);
-                     if (password.getText().equals(users.get(0).getDB_COLUMN_PASSWORD()))
-                     {
-                        present(new Dashboard(),new Intent());
-                     }
-                     else if (users.isEmpty())
-                     {
-                         new ToastDialog(getContext()).setText("No match").show();
-                     }
-                     else
-                     {
-                         new ToastDialog(getContext()).setText("Email or Password not matched").show();
-                     }
-                 }
-                 catch (Exception e)
-                 {
-                     new ToastDialog(getContext()).setText("Email or Password did not matched").show();
-                     //present(new Login(),new Intent());
-                 }
+            @Override
+            public void onClick(Component component) {
+                if (email.getText().equals("") || password.getText().equals(""))
+                {
+                    new ToastDialog(getContext()).setText(getString(ResourceTable.String_feild)).show();
+                }
+                else
+                {
+                    OrmPredicates query = context.where(User.class).equalTo("DB_COLUMN_EMAIL", email.getText());
+                    try {
+                        List<User> users = context.query(query);
+                        if (users.size()!=0 && password.getText().equals(users.get(0).getDB_COLUMN_PASSWORD()))
+                        {
+                            new ToastDialog(getContext()).setText("Login Success").show();
+                            present(new Dashboard(),new Intent());
+                        }
+                        else if (users.size()!=0)
+                        {
+                            new ToastDialog(getContext()).setText(getString(ResourceTable.String_wrong_pass)).show();
+                        }
+                        else
+                        {
+                            new ToastDialog(getContext()).setText(getString(ResourceTable.String_not_registered)).show();
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        new ToastDialog(getContext()).setText(getString(ResourceTable.String_wrong_email_pass)).show();
+                    }
+                }
 
-             }
-         });
+            }
+        });
 
     }
 }

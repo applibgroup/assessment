@@ -40,7 +40,7 @@ public class Signup extends AbilitySlice {
         Text er5 = (Text) findComponentById(ResourceTable.Id_er5);
         Text er6 = (Text) findComponentById(ResourceTable.Id_er6);
 
-       // All field cleared
+        // All field cleared
         firstname.setText("");
         lastname.setText("");
         email.setText("");
@@ -212,12 +212,12 @@ public class Signup extends AbilitySlice {
 
                 if(email.getText().equals("") || password.getText().equals("") || firstname.getText().equals("") || lastname.getText().equals("") || mobile.getText().equals(""))
                 {
-                    new ToastDialog(getContext()).setText("Enter All Data").show();
+                    new ToastDialog(getContext()).setText(getString(ResourceTable.String_feild)).show();
                     //present(new Signup(), new Intent());
                 }
                 else if(er1.getVisibility()==0 || er2.getVisibility()==0 || er3.getVisibility()==0 || er4.getVisibility()==0 || er5.getVisibility()==0 || er6.getVisibility()==0)
                 {
-                    new ToastDialog(getContext()).setText("Enter Correct data and gender").show();
+                    new ToastDialog(getContext()).setText(getString(ResourceTable.String_correct_data)).show();
                 }
 
                 else {

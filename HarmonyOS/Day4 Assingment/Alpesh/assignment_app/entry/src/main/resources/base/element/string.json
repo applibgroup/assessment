@@ -47,6 +47,58 @@
     {
       "name": "female",
       "value": "Female"
+    },
+    {
+      "name": "yes",
+      "value": "Yes"
+    },
+    {
+      "name": "no",
+      "value": "No"
+    },
+    {
+      "name": "error_toast",
+      "value": "Email or Password did not matched"
+    },
+    {
+      "name": "em",
+      "value": "em"
+    },
+    {
+      "name": "pas",
+      "value": "pas"
+    },
+    {
+      "name": "feild",
+      "value": "Enter All feilds"
+    },
+    {
+      "name": "not_registered",
+      "value": "Email not registred"
+    },
+    {
+      "name": "dialog_text",
+      "value": "Go to Login page to enter the app?"
+    },
+    {
+      "name": "dialog_title",
+      "value": "Please Verify"
+    },
+    {
+      "name": "dialog_no_click",
+      "value":"Clicked No button"
+    },
+    {
+      "name": "correct_data",
+      "value": "Enter Correct data and gender"
+    },
+    {
+      "name": "wrong_pass",
+      "value": "Wrong password"
+    },
+    {
+      "name": "wrong_email_pass",
+      "value": "Wrong email/password"
     }
   ]
 }
