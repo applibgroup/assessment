@@ -1,5 +1,6 @@
 package com.example.myfirstapplication;
 
+import com.example.myfirstapplication.rdb.RdbHelper;
 import com.example.myfirstapplication.slice.MainAbilitySlice;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;

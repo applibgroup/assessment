@@ -5,6 +5,14 @@
       "value": "MyFirstApplication"
     },
     {
+      "name": "title_login",
+      "value": "Login"
+    },
+    {
+      "name": "title_signup",
+      "value": "Signup"
+    },
+    {
       "name": "mainability_description",
       "value": "Java_Phone_Empty Feature Ability"
     },
@@ -34,7 +42,19 @@
     },
     {
       "name": "signupability_SignupAbility",
-      "value": "Signup Ability"
+      "value": "My App"
+    },
+    {
+      "name": "homeability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "homeability_welcome",
+      "value": "Welcome to Home"
+    },
+    {
+      "name": "title_home",
+      "value": "Home"
     }
   ]
 }

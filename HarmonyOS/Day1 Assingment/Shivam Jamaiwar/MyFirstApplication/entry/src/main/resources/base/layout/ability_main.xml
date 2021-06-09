@@ -7,6 +7,7 @@
     ohos:alignment="center">
 
     <Image
+        ohos:id="$+id:icon"
         ohos:height="360px"
         ohos:width="360px"
         ohos:image_src="$media:profile_person"
@@ -40,7 +41,19 @@
         ohos:bottom_padding="20px"
         ohos:text="$string:mainability_button_signup"
         ohos:text_size="60px"
-        ohos:text_color="#fff"
+        ohos:text_color="#FFF"
         />
+
+    <!--<com.example.myfirstapplication.component.CustomOvalButton
+        ohos:height="60vp"
+        ohos:width="match_content"
+        ohos:top_margin="60vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:buttonColor="#FF2FB1C3"
+        ohos:textColor="#F00"
+        ohos:textSize="80"
+        ohos:text="SignUp"
+
+        />-->
 
 </DirectionalLayout>
