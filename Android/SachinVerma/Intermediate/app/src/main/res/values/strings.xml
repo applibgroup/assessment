@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TO_DO_LIST</string>
+    <string name="delete">DELETE</string>
+    <string name="update">UPDATE</string>
+    <string name="add">ADD</string>
+    <string name="task">Task</string>
+    <string name="details">Details</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="travel">Travel</string>
+    <string name="shopping">Shopping</string>
+    <string name="gym">Gym</string>
+    <string name="party">Party</string>
+    <string name="others">Others</string>
+    <string name="submit">SUBMIT</string>
+    <string name="cancel">CANCEL</string>
+    <string name="event_time">Event_Time</string>
+    <string name="event_date">Event_Date</string>
+    <string name="event_task">Event_Task</string>
+    <string name="event_details">event_details</string>
+    <string name="event_type">event_type</string>
+</resources>
