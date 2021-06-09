@@ -4,7 +4,6 @@ import com.example.loginsignup.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 
-import java.util.logging.Logger;
 
 public class LoginPage extends AbilitySlice {
     @Override
