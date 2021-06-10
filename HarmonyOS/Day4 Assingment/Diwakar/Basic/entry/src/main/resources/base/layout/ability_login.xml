@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:top_margin="30fp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="MY APP"
+        ohos:text_size="70px"/>
+
+    <TextField
+        ohos:top_margin="20fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:id="$+id:email_login"
+        ohos:height="50fp"
+        ohos:width="match_parent"
+        ohos:hint="Email"
+        ohos:text_size="20fp"/>
+
+    <Text
+        ohos:id="$+id:email_err_login"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_padding="25fp"
+        ohos:text_color="red"
+        ohos:text_size="10fp"
+        ohos:visibility="invisible"
+        ohos:text="Please enter valid email id."/>
+
+    <TextField
+        ohos:text_input_type="pattern_password"
+        ohos:top_margin="20fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:id="$+id:password_login"
+        ohos:height="50fp"
+        ohos:width="match_parent"
+        ohos:hint="Password"
+        ohos:text_size="20fp"/>
+
+    <Button
+        ohos:id="$+id:login"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:layout_alignment="center"
+        ohos:top_margin="30fp"
+        ohos:left_padding="20fp"
+        ohos:right_padding="20fp"
+        ohos:top_padding="10fp"
+        ohos:bottom_padding="10fp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="20fp"
+        ohos:text="LOGIN"/>
+
+
+    <Text
+        ohos:id="$+id:login_message"
+        ohos:height="match_content"
+        ohos:top_margin="100fp"
+        ohos:width="match_parent"
+        ohos:text_alignment="center"
+        ohos:text_size="40fp"/>
+
+</DirectionalLayout>

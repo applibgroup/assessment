@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEWS FEED"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_background"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_marginStart="10dp"
+            android:layout_width="300dp"
+            android:background="@drawable/black_background"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grey"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:hint="Search"/>
+        <Button
+            android:id="@+id/button"
+            android:drawableEnd="@drawable/ic_search"
+            android:background="@drawable/black_background"
+            android:paddingEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
+
+
+</LinearLayout>
