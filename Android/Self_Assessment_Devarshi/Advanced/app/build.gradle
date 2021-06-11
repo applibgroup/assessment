@@ -56,8 +56,8 @@ dependencies {
 
 //Network
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
-
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 //Times Formater
     implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
 }

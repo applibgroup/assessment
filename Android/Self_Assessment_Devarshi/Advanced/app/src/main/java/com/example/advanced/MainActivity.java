@@ -1,19 +1,12 @@
 package com.example.advanced;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.advanced.api.ApiClient;
 import com.example.advanced.api.ApiInterface;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
-
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;

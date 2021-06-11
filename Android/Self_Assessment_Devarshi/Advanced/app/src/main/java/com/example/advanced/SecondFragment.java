@@ -7,42 +7,37 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.advanced.databinding.FragmentSecondBinding;
 import com.example.advanced.models.Article;
-import com.example.advanced.models.News;
+
+import org.jetbrains.annotations.NotNull;
 
 public class SecondFragment extends Fragment {
-    Article n;
+    Article article;
     private FragmentSecondBinding binding;
     public void setNews(Article t)
     {
-        this.n=t;
+        this.article=t;
     }
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
+            @NotNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
 
     ) {
-
         binding = FragmentSecondBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.itemTitle.setText(n.getTitle());
-        binding.itemDescription.setText(n.getDescription());
-        binding.itemContent.setText(n.getContent());
-        binding.itemAuthor.setText(n.getAuthor());
-        binding.itemPublishedAt.setText(n.getPublishedAt());
-
-
+        binding.itemTitle.setText(article.getTitle());
+        binding.itemDescription.setText(article.getDescription());
+        binding.itemContent.setText(article.getContent());
+        binding.itemAuthor.setText(article.getAuthor());
+        binding.itemPublishedAt.setText(article.getPublishedAt());
     }
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
