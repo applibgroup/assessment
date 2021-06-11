@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/transportTextView"/>
 
     <EditText
-        android:id="@+id/transnameEditText"
+        android:id="@+id/taskEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner1" />
 
     <EditText
-        android:id="@+id/fromEditText"
+        android:id="@+id/detailsEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -59,12 +59,12 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transnameEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/taskEditText" />
 
 
 
     <EditText
-        android:id="@+id/sdateEditText"
+        android:id="@+id/dateandtimeEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fromEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/detailsEditText" />
 
 
     <Button
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sdateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/dateandtimeEditText"
         app:layout_constraintVertical_bias="0.195" />
 
 

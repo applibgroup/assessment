@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/AddTransportFragment"
-        android:name="com.example.intermediate.AddTransportFragment"
+        android:name="com.example.intermediate.ToDoFragment"
         android:label="Add Transport Fragment"
         tools:layout="@layout/fragment_second">
 
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/DetailFragment"
-        android:name="com.example.intermediate.AddTransportFragment"
+        android:name="com.example.intermediate.ToDoFragment"
         android:label="Add Transport Fragment"
         tools:layout="@layout/fragment_second">
 
