@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="center">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="40vp"
+        ohos:text="Signup"
+        ohos:bottom_margin="20"
+        />
+
+    <TextField
+        ohos:id="$+id:first_name"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="First Name"
+        ohos:text_size="22vp"
+        ohos:background_element="#fceea7"
+        ohos:left_margin="30"
+        ohos:right_margin="30"
+        ohos:left_padding="20"
+        ohos:bottom_margin="30"
+        />
+
+    <Text
+        ohos:id="$+id:first_name_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="15vp"
+        ohos:text_color="#FF0000"
+        />
+
+    <TextField
+        ohos:id="$+id:last_name"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Last Name"
+        ohos:text_size="22vp"
+        ohos:background_element="#fceea7"
+        ohos:left_margin="30"
+        ohos:right_margin="30"
+        ohos:left_padding="20"
+        ohos:bottom_margin="30"
+        />
+
+    <Text
+        ohos:id="$+id:last_name_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="15vp"
+        ohos:text_color="#FF0000"
+        />
+
+    <TextField
+        ohos:id="$+id:email"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Email"
+        ohos:text_size="22vp"
+        ohos:background_element="#fceea7"
+        ohos:left_margin="30"
+        ohos:right_margin="30"
+        ohos:left_padding="20"
+        ohos:bottom_margin="30"
+        />
+
+    <Text
+        ohos:id="$+id:email_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="15vp"
+        ohos:text_color="#FF0000"
+        />
+
+    <TextField
+        ohos:id="$+id:mobile"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Mobile"
+        ohos:text_size="22vp"
+        ohos:background_element="#fceea7"
+        ohos:left_margin="30"
+        ohos:right_margin="30"
+        ohos:left_padding="20"
+        ohos:bottom_margin="30"
+        />
+
+    <Text
+        ohos:id="$+id:mobile_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="15vp"
+        ohos:text_color="#FF0000"
+        />
+
+    <TextField
+        ohos:id="$+id:password"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:hint="Password"
+        ohos:text_size="22vp"
+        ohos:background_element="#fceea7"
+        ohos:left_margin="30"
+        ohos:right_margin="30"
+        ohos:left_padding="20"
+        ohos:bottom_margin="30"
+        />
+
+    <Text
+        ohos:id="$+id:password_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="15vp"
+        ohos:text_color="#FF0000"
+        />
+
+    <RadioContainer
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:alignment="center"
+        ohos:top_margin="20"
+        ohos:bottom_margin="40">
+        <RadioButton
+            ohos:id="$+id:radio_male"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="Male"
+            ohos:text_size="22vp"
+            ohos:background_element="#fceea7"
+            />
+        <RadioButton
+            ohos:id="$+id:radio_female"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="Female"
+            ohos:text_size="22vp"
+            ohos:background_element="#fceea7"
+            />
+    </RadioContainer>
+
+    <Text
+        ohos:id="$+id:gender_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="15vp"
+        ohos:text_color="#FF0000"
+        />
+
+    <Button
+        ohos:id="$+id:signup_btn"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Sign up"
+        ohos:text_size="20vp"
+        ohos:background_element="#e0e0e0"
+        />
+
+
+
+</DirectionalLayout>
