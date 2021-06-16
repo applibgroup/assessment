@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    >
+
+    <TextField
+        ohos:id="$+id:email_textField_login"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Email Id"
+        ohos:top_margin="200vp"
+        ohos:left_margin="24vp"
+        />
+
+    <TextField
+        ohos:id="$+id:password_textField_login"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Password"
+        ohos:top_margin="10vp"
+        ohos:below="$id:email_textField_login"
+        ohos:align_left="$id:email_textField_login"
+        />
+
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:error_login"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Incorrect Credentials"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="left"
+        ohos:left_margin="14vp"
+        ohos:top_margin="10vp"
+        ohos:below="$id:password_textField_login"
+        ohos:align_left="$id:password_textField_login"
+        ohos:text_color="red"
+        />
+
+
+    <Button
+        ohos:top_margin="60vp"
+        ohos:id="$+id:login_button2"
+        ohos:width="120vp"
+        ohos:height="35vp"
+        ohos:background_element="$graphic:background_btn"
+        ohos:text="Login"
+        ohos:text_size="20fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:below="$id:password_textField_login"
+        ohos:left_margin="120vp"
+        />
+
+</DependentLayout>
