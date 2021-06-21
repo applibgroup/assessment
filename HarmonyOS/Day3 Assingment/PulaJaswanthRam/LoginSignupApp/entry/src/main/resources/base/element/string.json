@@ -1,0 +1,80 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "LoginSignupApp"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "Signup",
+      "value": "Signup"
+    },
+    {
+      "name": "login",
+      "value": "Login"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "MYAPP",
+      "value": "MYAPP"
+    },
+    {
+      "name": "gender",
+      "value": "Gender"
+    },
+    {
+      "name": "genderErr",
+      "value": "Please Select gender"
+    },
+    {
+      "name": "male",
+      "value": "Male"
+    },
+    {
+      "name": "female",
+      "value": "Female"
+    },
+    {
+      "name": "FirstName",
+      "value": "First Name"
+    },
+    {
+      "name": "LastName",
+      "value": "Last Name"
+    },
+    {
+      "name": "LastNameErr",
+      "value": "Invalid last name - it can't be alphanumeric"
+    },
+    {
+      "name": "Email",
+      "value": "Email"
+    },
+    {
+      "name": "EmailErr",
+      "value": "Incorrect email format - must be like x@y.z"
+    },
+    {
+      "name": "Password",
+      "value": "Password"
+    },
+    {
+      "name": "PasswordErr",
+      "value": "Weak password - must contain atleast 5 characters"
+    },
+    {
+      "name": "Mobile",
+      "value": "Mobile"
+    },
+    {
+      "name": "MobileErr",
+      "value": "Invalid phone number format - must contain 10 digits"
+    }
+  ]
+}

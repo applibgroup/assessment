@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Introduction Application</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="back">BACK</string>
+    <string name="dots">....</string>
+    <string name="gotit">GOT IT</string>
+    <string name="title_page_0">Hello Food!</string>
+    <string name="title_page_1">Movie Tickets</string>
+    <string name="title_page_2">World Travel</string>
+    <string name="title_page_3">Great Discounts</string>
+    <string name="description_page_0">The easiest way to order food from your favourite restaurant!</string>
+    <string name="description_page_1">Book movie tickets for your family and friends!</string>
+    <string name="description_page_2">Book tickets of any transportation and travel the world!</string>
+    <string name="description_page_3">Best discounts on every single service we offer!</string>
+</resources>

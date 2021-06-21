@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+
+    <string name="news_feed">NEWS FEED</string>
+    <string name="search_hint">SEARCH</string>
+    <string name="go">GO</string>
+    <string name="card_image">Card Image</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">News App</string>
+    <string name="nav_header_subtitle">https://newsapi.org/</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_business">Business</string>
+    <string name="menu_science">Science</string>
+    <string name="menu_entertainment">Entertainment</string>
+    <string name="menu_sports">Sports</string>
+
+</resources>

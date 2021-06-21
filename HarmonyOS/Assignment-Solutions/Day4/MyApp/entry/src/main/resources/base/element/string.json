@@ -1,0 +1,120 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "myAPP"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "email",
+      "value": "Email"
+    },
+    {
+      "name": "password",
+      "value": "Password"
+    },
+    {
+      "name": "Username",
+      "value": "username"
+    },
+    {
+      "name": "gender",
+      "value": "Gender"
+    },
+    {
+      "name": "mobile",
+      "value": "Mobile"
+    },
+    {
+      "name": "dob",
+      "value": "Birthday"
+    },
+    {
+      "name": "signup",
+      "value": "SIGN UP"
+    },
+    {
+      "name": "login",
+      "value": "LOGIN"
+    },
+    {
+      "name": "first_name",
+      "value": "First Name"
+    },
+    {
+      "name": "last_name",
+      "value": "Last Name"
+    },
+    {
+      "name": "email_error_text",
+      "value": "Invalid Email format..!!"
+    },
+    {
+      "name": "first_name_error_text",
+      "value": "must not contain alphanumeric text or integers"
+    },
+    {
+      "name": "last_name_error_text",
+      "value": "must not contain alphanumeric text or integers"
+    },
+    {
+      "name": "mobile_error_text",
+      "value": "Invalid mobile number - must contain only numbers"
+    },
+    {
+      "name": "password_error_text",
+      "value": "Weak password - must contain atleast 5 characters including a special character"
+    },
+    {
+      "name": "submit_error",
+      "value": "Submit ERROR..!!"
+    },
+    {
+      "name": "submit_success",
+      "value": "Submit SUCCESS..!!"
+    },
+    {
+      "name": "error_select_gender",
+      "value": "ERROR - Select gender"
+    },
+    {
+      "name": "radio_male",
+      "value": "Male"
+    },
+    {
+      "name": "radio_female",
+      "value": "Female"
+    },
+    {
+      "name": "submit_account_exist_error",
+      "value": "Account already exist..!!"
+    },
+    {
+      "name": "login_error_empty_fields",
+      "value": "Login error - Fields empty!!"
+    },
+    {
+      "name": "login_error_invalid_email",
+      "value": "Login error - Invalid email"
+    },
+    {
+      "name": "login_error_invalid_credentials",
+      "value": "Login error - Invalid credentials"
+    },
+    {
+      "name": "login_success",
+      "value": "Login SUCCESS"
+    },
+    {
+      "name": "welcome",
+      "value": "WELCOME"
+    }
+  ]
+}

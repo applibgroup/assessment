@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:width="match_parent"
+    ohos:height="match_parent"
+    ohos:orientation="vertical"
+    >
+
+    <TextField
+        ohos:id="$+id:firstname_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="First Name"
+        ohos:top_margin="30vp"
+        ohos:left_margin="24vp"
+        />
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:firstname_error"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="can't be alphanumeric"
+        ohos:text_size="18fp"
+        ohos:text_color="red"
+        ohos:layout_alignment="left"
+        ohos:below="$id:firstname_textField"
+        ohos:align_left="$id:firstname_textField"
+        />
+
+    <TextField
+        ohos:id="$+id:lastname_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Last Name"
+        ohos:top_margin="40vp"
+        ohos:below="$id:firstname_textField"
+        ohos:align_left="$id:firstname_textField"
+        />
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:lastname_error"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="can't be alphanumeric"
+        ohos:text_size="18fp"
+        ohos:text_color="red"
+        ohos:layout_alignment="left"
+        ohos:below="$id:lastname_textField"
+        ohos:align_left="$id:lastname_textField"
+        />
+
+    <TextField
+        ohos:id="$+id:email_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Email"
+        ohos:top_margin="40vp"
+        ohos:below="$id:lastname_textField"
+        ohos:align_left="$id:lastname_textField"
+        />
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:email_error"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="incorrect format"
+        ohos:text_size="18fp"
+        ohos:text_color="red"
+        ohos:layout_alignment="left"
+        ohos:below="$id:email_textField"
+        ohos:align_left="$id:email_textField"
+        />
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:email_exists_error"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Email already taken"
+        ohos:text_size="18fp"
+        ohos:text_color="red"
+        ohos:layout_alignment="left"
+        ohos:below="$id:email_textField"
+        ohos:align_left="$id:email_textField"
+        />
+
+    <TextField
+        ohos:id="$+id:password_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Password"
+        ohos:top_margin="40vp"
+        ohos:below="$id:email_textField"
+        ohos:align_left="$id:email_textField"
+        />
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:password_error"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="atleast 5 characters needed"
+        ohos:text_size="18fp"
+        ohos:text_color="red"
+        ohos:layout_alignment="left"
+        ohos:below="$id:password_textField"
+        ohos:align_left="$id:password_textField"
+        />
+
+    <TextField
+        ohos:id="$+id:mobile_textField"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Mobile"
+        ohos:top_margin="40vp"
+        ohos:below="$id:password_textField"
+        ohos:align_left="$id:password_textField"
+        />
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:mobile_error"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="invaild format"
+        ohos:text_size="18fp"
+        ohos:text_color="red"
+        ohos:layout_alignment="left"
+        ohos:below="$id:mobile_textField"
+        ohos:align_left="$id:mobile_textField"
+        />
+
+    <Text
+        ohos:id="$+id:gender_text"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Gender"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="left"
+        ohos:left_margin="14vp"
+        ohos:top_margin="40vp"
+        ohos:below="$id:mobile_textField"
+        ohos:align_left="$id:mobile_textField"
+        />
+
+    <DependentLayout
+        ohos:id="$+id:signup_dependentlayout"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:below="$id:gender_text"
+        ohos:align_left="$id:gender_text"
+        ohos:align_right="$id:firstname_textField"
+        >
+        <Checkbox
+            ohos:id="$+id:male_check_box"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="Male"
+            ohos:text_size="20fp"
+            ohos:align_parent_left="true"
+            ohos:check_element="$graphic:checkbox_check_element"
+            ohos:text_color_on="#00AAEE"
+            ohos:text_color_off="#000000"
+
+            />
+
+        <Checkbox
+            ohos:id="$+id:female_check_box"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="Female"
+            ohos:text_size="20fp"
+            ohos:align_parent_right="true"
+            ohos:check_element="$graphic:checkbox_check_element"
+            ohos:text_color_on="#00AAEE"
+            ohos:text_color_off="#000000"
+            />
+
+    </DependentLayout>
+
+    <Text
+        ohos:visibility="hide"
+        ohos:id="$+id:gender_error"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="select gender"
+        ohos:text_size="18fp"
+        ohos:text_color="red"
+        ohos:layout_alignment="left"
+        ohos:left_margin="14vp"
+        ohos:below="$id:signup_dependentlayout"
+        ohos:align_left="$id:mobile_textField"
+        />
+
+
+    <Button
+        ohos:top_margin="40vp"
+        ohos:id="$+id:signup_button2"
+        ohos:width="120vp"
+        ohos:height="35vp"
+        ohos:background_element="$graphic:background_btn"
+        ohos:text="SignUp"
+        ohos:text_size="20fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:below="$id:signup_dependentlayout"
+        ohos:left_margin="120vp"
+        ohos:bottom_margin="20vp"
+        />
+
+
+</DependentLayout>
