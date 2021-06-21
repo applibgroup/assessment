@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+    <Image
+        ohos:id="$+id:image"
+        ohos:height="$float:main_page_field_height"
+        ohos:width="$float:main_page_field_width"
+        ohos:image_src="$media:my_app"
+        ohos:scale_mode="stretch"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="$float:login_image_top_margin"/>
+    <TextField
+        ohos:id="$+id:login_email"
+        ohos:height="$float:signup_page_field_height"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:hint="$string:email"
+        ohos:hint_color="$color:black"
+        ohos:component_description="$string:email"
+        ohos:end_margin="$float:signup_end_margin"
+        ohos:top_margin="$float:login_page_email_field_top_margin"
+        ohos:start_margin="$float:signup_start_margin"
+        ohos:top_padding="$float:signup_page_field_padding"
+        ohos:bottom_padding="$float:signup_page_field_padding"
+        ohos:text_color="$color:white"
+        ohos:padding="$float:text_padding"
+        ohos:padding_for_text="true"
+        ohos:text_font="sans-serif-medium"
+        ohos:text_size="$float:signup_page_field_text_size"/>
+
+    <Text
+        ohos:id="$+id:login_email_error"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:text_color="$ohos:color:id_color_alert"
+        ohos:text_size="$float:signup_page_error_text_size"
+        ohos:start_margin="$float:signup_start_margin"
+        ohos:text="$string:email_error_text"
+        ohos:visibility="hide"/>
+
+    <TextField
+        ohos:id="$+id:login_password"
+        ohos:height="$float:signup_page_field_height"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:hint_color="$color:black"
+        ohos:text_color="$color:white"
+        ohos:text_input_type="pattern_password"
+        ohos:hint="$string:password"
+        ohos:end_margin="$float:signup_end_margin"
+        ohos:top_margin="$float:login_page_field_top_margin"
+        ohos:start_margin="$float:signup_start_margin"
+        ohos:top_padding="$float:signup_page_field_padding"
+        ohos:bottom_padding="$float:signup_page_field_padding"
+        ohos:padding="$float:text_padding"
+        ohos:padding_for_text="true"
+        ohos:text_font="sans-serif-medium"
+        ohos:text_size="$float:signup_page_field_text_size"/>
+    <Button
+        ohos:id="$+id:login_btn"
+        ohos:height="match_content"
+        ohos:width="$float:signup_page_submit_btn_width"
+        ohos:background_element="$graphic:button_background"
+        ohos:bottom_padding="$float:signup_page_submit_btn_padding"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="$string:login"
+        ohos:text_color="$ohos:color:id_color_activated_end_transparent"
+        ohos:text_size="$float:signup_page_submit_btn_text_size"
+        ohos:top_margin="$float:login_page_button_field_top_margin"
+        ohos:top_padding="$float:signup_page_submit_btn_padding"/>
+
+</DirectionalLayout>

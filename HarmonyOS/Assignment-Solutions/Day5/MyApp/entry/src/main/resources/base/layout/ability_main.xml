@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+    <Image
+        ohos:id="$+id:image"
+        ohos:height="$float:main_page_field_height"
+        ohos:width="$float:main_page_field_width"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="$float:main_page_image_top_margin"
+        />
+    <Button
+        ohos:height="match_content"
+        ohos:width="$float:main_page_field_width"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="$string:login"
+        ohos:top_margin="$float:main_page_login_top_margin"
+        ohos:text_size="$float:main_page_text_size"
+        ohos:top_padding="$float:main_page_field_padding"
+        ohos:bottom_padding="$float:main_page_field_padding"
+        ohos:text_color="$ohos:color:id_color_activated_end_transparent"
+        ohos:background_element="$graphic:button_background"
+        ohos:text_font="sans-serif"
+        ohos:id="$+id:login"/>
+    <Button
+        ohos:height="match_content"
+        ohos:width="$float:main_page_field_width"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="$string:signup"
+        ohos:top_margin="$float:main_page_signup_top_margin"
+        ohos:text_size="$float:main_page_text_size"
+        ohos:top_padding="$float:main_page_field_padding"
+        ohos:bottom_padding="$float:main_page_field_padding"
+        ohos:text_color="$ohos:color:id_color_activated_end_transparent"
+        ohos:background_element="$graphic:button_background"
+        ohos:text_font="sans-serif"
+        ohos:id="$+id:signup"/>
+</DirectionalLayout>

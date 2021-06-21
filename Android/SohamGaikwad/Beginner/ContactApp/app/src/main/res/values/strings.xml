@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Contact App</string>
+    <string name="contact_image">Contact image</string>
+    <string name="name">Name</string>
+    <string name="call_image">Call image</string>
+    <string name="phone">Phone</string>
+    <string name="email_image">Email image</string>
+    <string name="email">Email</string>
+    <string name="contact_name">contact name</string>
+</resources>

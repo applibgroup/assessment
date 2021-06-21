@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+
+    <Text
+        ohos:top_margin="30fp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="MY APP"
+        ohos:text_size="70px"/>
+
+    <TextField
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:id="$+id:first_name"
+        ohos:height="50fp"
+        ohos:width="match_parent"
+        ohos:hint="First Name"
+        ohos:text_size="20fp"/>
+
+    <Text
+        ohos:id="$+id:first_name_err"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_padding="25fp"
+        ohos:text_color="red"
+        ohos:text_size="10fp"
+        ohos:visibility="invisible"
+        ohos:text="Please enter valid first name (Eg: one word, no special symbols, etc)."/>
+
+
+    <TextField
+        ohos:top_margin="20fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:id="$+id:last_name"
+        ohos:height="50fp"
+        ohos:width="match_parent"
+        ohos:hint="Last Name"
+        ohos:text_size="20fp"/>
+
+    <Text
+        ohos:id="$+id:last_name_err"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_padding="25fp"
+        ohos:text_color="red"
+        ohos:text_size="10fp"
+        ohos:visibility="invisible"
+        ohos:text="Please enter valid last name (Eg: one word, no special symbols, etc)."/>
+
+    <TextField
+        ohos:top_margin="20fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:id="$+id:email"
+        ohos:height="50fp"
+        ohos:width="match_parent"
+        ohos:hint="Email"
+        ohos:text_size="20fp"/>
+
+    <Text
+        ohos:id="$+id:email_err"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_padding="25fp"
+        ohos:text_color="red"
+        ohos:text_size="10fp"
+        ohos:visibility="invisible"
+        ohos:text="Please enter valid email id."/>
+
+    <TextField
+        ohos:text_input_type="pattern_password"
+        ohos:top_margin="20fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:id="$+id:password"
+        ohos:height="50fp"
+        ohos:width="match_parent"
+        ohos:hint="Password"
+        ohos:text_size="20fp"/>
+
+    <Text
+        ohos:id="$+id:password_err"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_padding="25fp"
+        ohos:text_color="red"
+        ohos:text_size="10fp"
+        ohos:visibility="invisible"
+        ohos:text="Password should be of at least 6 characters."/>
+
+    <TextField
+        ohos:top_margin="20fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:id="$+id:mobile"
+        ohos:height="50fp"
+        ohos:width="match_parent"
+        ohos:text_input_type="pattern_number"
+        ohos:hint="Mobile"
+        ohos:text_size="20fp"/>
+
+    <Text
+        ohos:id="$+id:mobile_err"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_padding="25fp"
+        ohos:text_color="red"
+        ohos:text_size="10fp"
+        ohos:visibility="invisible"
+        ohos:text="Please enter valid mobile number."/>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="horizontal">
+        <Text
+            ohos:left_margin="20fp"
+            ohos:right_margin="10fp"
+            ohos:height="50fp"
+            ohos:width="match_parent"
+            ohos:text="Gender"
+            ohos:text_size="20fp"/>
+        <Text
+            ohos:id="$+id:gender_err"
+            ohos:left_margin="20fp"
+            ohos:right_margin="20fp"
+            ohos:height="50fp"
+            ohos:width="match_parent"
+            ohos:text="Please select the gender!!"
+            ohos:visibility="invisible"
+            ohos:text_color="red"
+            ohos:text_size="15fp"/>
+    </DirectionalLayout>
+
+    <RadioContainer
+        ohos:id="$+id:gender"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:alignment="center">
+        <RadioButton
+            ohos:id="$+id:gender_male"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text_size="20fp"
+            ohos:text="Male"/>
+        <RadioButton
+            ohos:id="$+id:gender_female"
+            ohos:left_margin="30fp"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text_size="20fp"
+            ohos:text="Female"/>
+    </RadioContainer>
+
+    <Button
+        ohos:id="$+id:signup"
+        ohos:background_element="$graphic:textfield_background"
+        ohos:layout_alignment="center"
+        ohos:top_margin="30fp"
+        ohos:left_padding="20fp"
+        ohos:right_padding="20fp"
+        ohos:top_padding="10fp"
+        ohos:bottom_padding="10fp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="20fp"
+        ohos:text="SIGN UP"/>
+
+    <Text
+        ohos:id="$+id:signup_success"
+        ohos:height="match_content"
+        ohos:top_margin="30fp"
+        ohos:width="match_parent"
+        ohos:text="SIGNUP SUCCESSFULL"
+        ohos:text_alignment="center"
+        ohos:visibility="invisible"
+        ohos:text_color="green"
+        ohos:text_size="30fp"/>
+
+
+
+</DirectionalLayout>
