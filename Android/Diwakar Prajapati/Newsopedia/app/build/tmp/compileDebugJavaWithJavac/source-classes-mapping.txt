@@ -1,0 +1,53 @@
+com/example/newsopedia/Model/Source.java
+ com.example.newsopedia.Model.Source
+com/example/newsopedia/ApiInterface.java
+ com.example.newsopedia.ApiInterface
+com/example/newsopedia/ui/gallery/BusinessFragment.java
+ com.example.newsopedia.ui.gallery.BusinessFragment
+ com.example.newsopedia.ui.gallery.BusinessFragment$1
+com/example/newsopedia/ui/science/ScienceFragment.java
+ com.example.newsopedia.ui.science.ScienceFragment
+ com.example.newsopedia.ui.science.ScienceFragment$1
+com/example/newsopedia/BuildConfig.java
+ com.example.newsopedia.BuildConfig
+com/example/newsopedia/ui/home/HomeViewModel.java
+ com.example.newsopedia.ui.home.HomeViewModel
+com/example/newsopedia/ui/slideshow/SporthowViewModel.java
+ com.example.newsopedia.ui.slideshow.SporthowViewModel
+com/example/newsopedia/MainActivity.java
+ com.example.newsopedia.MainActivity
+com/example/newsopedia/Adapter.java
+ com.example.newsopedia.Adapter
+ com.example.newsopedia.Adapter$1
+ com.example.newsopedia.Adapter$ViewHolder
+com/example/newsopedia/ui/gallery/BusinessViewModel.java
+ com.example.newsopedia.ui.gallery.BusinessViewModel
+com/example/newsopedia/Model/Articles.java
+ com.example.newsopedia.Model.Articles
+com/example/newsopedia/Detailed.java
+ com.example.newsopedia.Detailed
+com/example/newsopedia/ApiClient.java
+ com.example.newsopedia.ApiClient
+com/example/newsopedia/Model/Category.java
+ com.example.newsopedia.Model.Category
+com/example/newsopedia/ui/technology/TechnologyFragment.java
+ com.example.newsopedia.ui.technology.TechnologyFragment
+ com.example.newsopedia.ui.technology.TechnologyFragment$1
+com/example/newsopedia/ui/technology/TechnologyViewModel.java
+ com.example.newsopedia.ui.technology.TechnologyViewModel
+com/example/newsopedia/Model/Headlines.java
+ com.example.newsopedia.Model.Headlines
+com/example/newsopedia/ui/science/ScienceViewModel.java
+ com.example.newsopedia.ui.science.ScienceViewModel
+com/example/newsopedia/ui/finance/FinanceViewModel.java
+ com.example.newsopedia.ui.finance.FinanceViewModel
+com/example/newsopedia/ui/home/HomeFragment.java
+ com.example.newsopedia.ui.home.HomeFragment
+ com.example.newsopedia.ui.home.HomeFragment$1
+ com.example.newsopedia.ui.home.HomeFragment$2
+com/example/newsopedia/ui/slideshow/SporthowFragment.java
+ com.example.newsopedia.ui.slideshow.SporthowFragment
+ com.example.newsopedia.ui.slideshow.SporthowFragment$1
+com/example/newsopedia/ui/finance/FinanceFragment.java
+ com.example.newsopedia.ui.finance.FinanceFragment
+ com.example.newsopedia.ui.finance.FinanceFragment$1

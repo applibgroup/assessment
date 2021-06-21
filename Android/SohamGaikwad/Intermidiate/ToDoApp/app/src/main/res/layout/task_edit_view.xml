@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskEditActivity"
+    android:padding="10sp"
+    >
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateTextTask"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/updateTaskBtn"
+        android:layout_marginTop="20sp"
+        android:hint="@string/update_task"
+        android:layout_marginStart="2sp"
+        android:autofillHints="@string/add_new_task"
+        android:inputType="text" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateTaskBtn"
+        android:text="@string/update"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/updateTextTask"
+        app:layout_constraintBottom_toBottomOf="@id/updateTextTask"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

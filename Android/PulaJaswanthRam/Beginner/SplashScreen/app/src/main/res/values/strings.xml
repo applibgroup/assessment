@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SplashScreen</string>
+
+    <string name="slide_headings_1">"Fastest Food\nDelivery"</string>
+    <string name="slide_headings_2">"Find best restaurant\nservice"</string>
+    <string name="slide_headings_3">"Browse all menu and\norder food"</string>
+
+    <string name="slide_desc_1">"Your order will be immediately collected\nand sent by our best and fastest food\ndelivery courier"</string>
+    <string name="slide_desc_2">"You can find best restaurant service,\ndelicious food, best professional chef\nservice"</string>
+    <string name="slide_desc_3">"Browse the menu and order food directly\nform the application, yups, you can find\nyour food easily"</string>
+
+</resources>
