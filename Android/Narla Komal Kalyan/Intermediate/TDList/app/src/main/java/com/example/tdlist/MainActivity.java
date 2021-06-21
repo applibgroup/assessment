@@ -1,7 +1,5 @@
 package com.example.tdlist;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,28 +7,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.example.tdlist.Adapter.ListItemAdapter;
 import com.example.tdlist.Model.ToDo;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 import dmax.dialog.SpotsDialog;
@@ -61,25 +51,22 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         dialog = new SpotsDialog(this);
-        title = (MaterialEditText) findViewById(R.id.title);
-        description = (MaterialEditText) findViewById(R.id.description);
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!isUpdate)
-                {
-                    setData(title.getText().toString(),description.getText().toString());
-                }
-                else
-                {
-                    updateData(title.getText().toString(),description.getText().toString());
-                    isUpdate = !isUpdate;
-                }
+        title = findViewById(R.id.title);
+        description = findViewById(R.id.description);
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(v -> {
+            if(!isUpdate)
+            {
+                setData(Objects.requireNonNull(title.getText()).toString(), Objects.requireNonNull(description.getText()).toString());
+            }
+            else
+            {
+                updateData(Objects.requireNonNull(title.getText()).toString(), Objects.requireNonNull(description.getText()).toString());
+                isUpdate = !isUpdate;
             }
         });
 
-        listItem = (RecyclerView)findViewById(R.id.listTodo);
+        listItem = findViewById(R.id.listTodo);
         listItem.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         listItem.setLayoutManager(layoutManager);
@@ -98,40 +85,20 @@ public class MainActivity extends AppCompatActivity {
         db.collection("ToDoList")
                 .document(toDoList.get(index).getId())
                 .delete()
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(MainActivity.this, "Deleted!", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                .addOnSuccessListener(unused -> Toast.makeText(MainActivity.this, "Deleted!", Toast.LENGTH_SHORT).show());
 
         db.collection("ToDoList")
                 .document(toDoList.get(index).getId())
-                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
-                        loadData();
-                    }
-                });
+                .addSnapshotListener((documentSnapshot, e) -> loadData());
     }
 
     private void updateData(String title, String description) {
         db.collection("ToDoList").document(idUpdate)
                 .update("title",title,"description",description)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(MainActivity.this, "Updated!", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                .addOnSuccessListener(unused -> Toast.makeText(MainActivity.this, "Updated!", Toast.LENGTH_SHORT).show());
 
         db.collection("ToDoList").document(idUpdate)
-                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
-                        loadData();
-                    }
-                });
+                .addSnapshotListener((documentSnapshot, e) -> loadData());
     }
 
     private void setData(String title, String description) {
@@ -142,20 +109,10 @@ public class MainActivity extends AppCompatActivity {
         todo.put("description",description);
 
         db.collection("ToDoList").document(id)
-                .set(todo).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(MainActivity.this, "Added!", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                .set(todo).addOnSuccessListener(unused -> Toast.makeText(MainActivity.this, "Added!", Toast.LENGTH_SHORT).show());
 
         db.collection("ToDoList").document(id)
-                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
-                        loadData();
-                    }
-                });
+                .addSnapshotListener((documentSnapshot, e) -> loadData());
     }
 
     private void loadData() {
@@ -164,35 +121,26 @@ public class MainActivity extends AppCompatActivity {
             toDoList.clear();
         db.collection("ToDoList")
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        for(DocumentSnapshot doc:task.getResult())
-                        {
-                            ToDo todo = new ToDo(doc.getString("id"), doc.getString("title"), doc.getString("description"));
+                .addOnCompleteListener(task -> {
+                    for(DocumentSnapshot doc: Objects.requireNonNull(task.getResult()))
+                    {
+                        ToDo todo = new ToDo(doc.getString("id"), doc.getString("title"), doc.getString("description"));
 
-                            boolean flag = true;
-                            Iterator<ToDo> iterator = toDoList.iterator();
-                            while (iterator.hasNext()) {
-                                ToDo elem = iterator.next();
-                                if (elem.getId().equals(todo.getId().toString())) {
-                                    flag = false;
-                                }
+                        boolean flag = true;
+                        for (ToDo elem : toDoList) {
+                            if (elem.getId().equals(todo.getId())) {
+                                flag = false;
+                                break;
                             }
-
-                            if(flag)
-                                toDoList.add(todo);
                         }
-                        adapter = new ListItemAdapter(MainActivity.this, toDoList);
-                        listItem.setAdapter(adapter);
-                        dialog.dismiss();
+
+                        if(flag)
+                            toDoList.add(todo);
                     }
+                    adapter = new ListItemAdapter(MainActivity.this, toDoList);
+                    listItem.setAdapter(adapter);
+                    dialog.dismiss();
                 })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MainActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+                .addOnFailureListener(e -> Toast.makeText(MainActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show());
     }
 }

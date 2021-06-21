@@ -1,5 +1,6 @@
 package com.example.newsfeed;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -29,8 +30,8 @@ import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
-    private List<Article> articles;
-    private Context context;
+    private final List<Article> articles;
+    private final Context context;
     private OnItemClickListener onItemClickListener;
 
 
@@ -46,6 +47,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         return new MyViewHolder(view, onItemClickListener);
     }
 
+    @SuppressLint("CheckResult")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holders, int position) {
         final MyViewHolder holder = holders;
@@ -78,7 +80,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         holder.title.setText(model.getTitle());
         holder.desc.setText(model.getDescription());
         holder.source.setText(model.getSource().getName());
-        holder.time.setText(" \u2219 " + Utils.DateToTimeFormat(model.getPublishedAt()));
+        holder.time.setText("");
         holder.published_at.setText(Utils.DateFormat(model.getPublishedAt()));
         holder.author.setText(model.getAuthor());
 
@@ -97,7 +99,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         void onItemClick(View view, int position);
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
+    public static class MyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
         TextView title, desc, author, published_at, source, time;
         ImageView imageView;
         ProgressBar progressBar;

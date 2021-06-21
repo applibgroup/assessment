@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="Title"
+                android:text="@string/title"
                 android:textColorHint="@android:color/white"
                 android:textSize="30sp"
                 app:met_baseColor="@android:color/white"
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:text="Description"
+                android:text="@string/description"
                 android:textColorHint="@android:color/white"
                 android:textSize="20sp"
                 app:met_baseColor="@android:color/white"
@@ -62,7 +62,9 @@
         app:fabSize="normal"
         app:layout_anchor="@id/app_bar_layout"
         app:layout_anchorGravity="bottom|right"
-        app:pressedTranslationZ="12dp" />
+        app:pressedTranslationZ="12dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/todo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listTodo"

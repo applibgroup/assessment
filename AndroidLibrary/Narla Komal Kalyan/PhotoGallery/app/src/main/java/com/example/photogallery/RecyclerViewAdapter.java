@@ -38,13 +38,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         if (imgFile.exists()) {
             Picasso.get().load(imgFile).placeholder(R.drawable.ic_launcher_background).into(holder.imageIV);
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, ImageDetailActivity.class);
-                    intent.putExtra("imgPath", imagePathArrayList.get(position));
-                    context.startActivity(intent);
-                }
+            holder.itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(context, ImageDetailActivity.class);
+                intent.putExtra("imgPath", imagePathArrayList.get(position));
+                context.startActivity(intent);
             });
         }
     }

@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_margin="3dp"
-    android:elevation="8dp"
     app:cardCornerRadius="8dp">
 
     <ImageView
@@ -14,6 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image" />
 
 </androidx.cardview.widget.CardView>

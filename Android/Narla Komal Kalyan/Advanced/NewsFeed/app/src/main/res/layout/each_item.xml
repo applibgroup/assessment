@@ -26,14 +26,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                tools:ignore="UnusedAttribute" />
+                tools:ignore="UnusedAttribute"
+                android:contentDescription="@string/image" />
 
             <ImageView
                 android:id="@+id/shadow_bottom"
                 android:src="@drawable/bottom_shadow"
                 android:layout_alignBottom="@id/img"
                 android:layout_width="match_parent"
-                android:layout_height="80dp" />
+                android:layout_height="80dp"
+                android:contentDescription="@string/bottom_shadow" />
 
             <ProgressBar
                 android:id="@+id/prograss_load_photo"
@@ -52,7 +54,7 @@
                 android:textColor="@android:color/white"
                 android:singleLine="true"
                 android:layout_marginRight="160dp"
-                android:text="Author"
+                android:text="@string/author"
                 android:gravity="bottom"
                 android:layout_alignLeft="@+id/title"
                 android:layout_alignStart="@+id/title"
@@ -79,13 +81,14 @@
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp" />
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@string/date" />
                 <TextView
                     android:textColor="#606060"
                     android:id="@+id/publishedAt"
                     android:layout_marginLeft="27dp"
                     android:layout_marginRight="10dp"
-                    android:text="02 July 2000"
+                    android:text="@string/_02_july_2000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="27dp"
@@ -103,7 +106,7 @@
                 android:textColor="@color/black"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="Title"
+                android:text="@string/title"
                 android:textSize="17sp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/img"
@@ -118,7 +121,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="5dp"
-                android:text="Desc"
+                android:text="@string/desc"
                 />
 
             <TextView
@@ -136,7 +139,7 @@
                 android:drawablePadding="10dp"
                 android:singleLine="true"
                 android:ellipsize="end"
-                android:text="Source"
+                android:text="@string/source"
                 android:layout_marginStart="16dp" />
 
 
@@ -152,7 +155,7 @@
                 android:drawablePadding="10dp"
                 android:singleLine="true"
                 android:ellipsize="end"
-                android:text="Time"
+                android:text="@string/time"
                 android:layout_toEndOf="@id/source" />
 
 

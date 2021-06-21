@@ -1,5 +1,6 @@
 package com.example.newsfeed;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
@@ -29,6 +30,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
     public static final String API_KEY = "86bab5e48b1b45cfb2fa389fc33ed9e3";
     private static final String TAG = MainActivity.class.getSimpleName();
     private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
     private List<Article> articles = new ArrayList<>();
     private Adapter adapter;
     private TextView topHeadline;
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
 
         topHeadline = findViewById(R.id.topheadelines);
         recyclerView = findViewById(R.id.recyclerView);
-        layoutManager = new LinearLayoutManager(MainActivity.this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setNestedScrollingEnabled(false);
@@ -80,12 +81,11 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
 
         Call<News> call;
         call = apiInterface.getNews("apple", language, "publishedAt", API_KEY);
-        // call = apiInterface.getNews("cnn", API_KEY);
 
         call.enqueue(new Callback<News>() {
             @Override
-            public void onResponse(Call<News> call, Response<News> response) {
-                if (response.isSuccessful() && response.body().getArticles() != null) {
+            public void onResponse(@NonNull Call<News> call, @NonNull Response<News> response) {
+                if (response.isSuccessful() && Objects.requireNonNull(response.body()).getArticles() != null) {
 
                     if (!articles.isEmpty()) {
                         articles.clear();
@@ -99,17 +99,16 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
                     initListener();
 
                     topHeadline.setVisibility(View.VISIBLE);
-                    swipeRefreshLayout.setRefreshing(false);
 
                 }
                 else {
                     topHeadline.setVisibility(View.INVISIBLE);
-                    swipeRefreshLayout.setRefreshing(false);
                 }
+                swipeRefreshLayout.setRefreshing(false);
             }
 
             @Override
-            public void onFailure(Call<News> call, Throwable t) {
+            public void onFailure(@NonNull Call<News> call, @NonNull Throwable t) {
                 topHeadline.setVisibility(View.INVISIBLE);
                 swipeRefreshLayout.setRefreshing(false);
             }
@@ -119,32 +118,29 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
 
 
     private void initListener(){
-        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                ImageView imageView = view.findViewById(R.id.img);
-                Intent intent = new Intent(MainActivity.this, FeedDetails.class);
+        adapter.setOnItemClickListener((view, position) -> {
+            ImageView imageView = view.findViewById(R.id.img);
+            Intent intent = new Intent(MainActivity.this, FeedDetails.class);
 
-                Article article = articles.get(position);
-                intent.putExtra("url", article.getUrl());
-                intent.putExtra("title", article.getTitle());
-                intent.putExtra("img",  article.getUrlToImage());
-                intent.putExtra("date",  article.getPublishedAt());
-                intent.putExtra("source",  article.getSource().getName());
-                intent.putExtra("author",  article.getAuthor());
+            Article article = articles.get(position);
+            intent.putExtra("url", article.getUrl());
+            intent.putExtra("title", article.getTitle());
+            intent.putExtra("img",  article.getUrlToImage());
+            intent.putExtra("date",  article.getPublishedAt());
+            intent.putExtra("source",  article.getSource().getName());
+            intent.putExtra("author",  article.getAuthor());
 
-                Pair<View, String> pair = Pair.create((View)imageView, ViewCompat.getTransitionName(imageView));
-                ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                        MainActivity.this,
-                        pair
-                );
+            Pair<View, String> pair = Pair.create(imageView, ViewCompat.getTransitionName(imageView));
+            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    MainActivity.this,
+                    pair
+            );
 
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                    startActivity(intent, optionsCompat.toBundle());
-                }else {
-                    startActivity(intent);
-                }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                startActivity(intent, optionsCompat.toBundle());
+            }else {
+                startActivity(intent);
             }
         });
     }
@@ -156,12 +152,7 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
 
     private void onLoadingSwipeRefresh(){
         swipeRefreshLayout.post(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        LoadJson();
-                    }
-                }
+                this::LoadJson
         );
     }
 
@@ -169,12 +160,9 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
     protected void onResume() {
         super.onResume();
 
-        handler.postDelayed( runnable = new Runnable() {
-            public void run() {
-                //do your function;
-                LoadJson();
-                handler.postDelayed(runnable, 30*1000);
-            }
+        handler.postDelayed( runnable = () -> {
+            LoadJson();
+            handler.postDelayed(runnable, 30*1000);
         }, 30*1000);
     }
 
@@ -186,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
 
     private void reduceChoreographerSkippedFramesWarningThreshold() {
         if (BuildConfig.DEBUG) {
-            Field field = null;
+            Field field;
             try {
                 field = Choreographer.class.getDeclaredField("SKIPPED_FRAME_WARNING_LIMIT");
                 field.setAccessible(true);

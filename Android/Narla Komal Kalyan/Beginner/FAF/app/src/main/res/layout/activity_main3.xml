@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/fast_delivery_service" />
 
     <TextView
         android:id="@+id/TV1"
@@ -38,12 +39,13 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#0A0A0B"
-        android:textSize="24sp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.161"
+        android:text="@string/tv3_text"/>
 
     <Button
         android:id="@+id/button"
@@ -59,7 +61,7 @@
         android:layout_marginEnd="90dp"
         android:layout_marginRight="90dp"
         android:layout_marginBottom="70dp"
-        android:text="GET STARTED"
+        android:text="@string/get_started"
         android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,9 +85,9 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="340dp"
         android:gravity="center_horizontal"
-        android:text="Fast Delivery Service"
+        android:text="@string/fast_delivery_service"
         android:textAlignment="center"
         android:textColor="#9C27B0"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
 </RelativeLayout>

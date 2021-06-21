@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="News Headlines"
+                    android:text="@string/news_headlines"
                     android:fontFamily="sans-serif-light"
                     android:textSize="17sp"
                     android:layout_marginLeft="16dp"

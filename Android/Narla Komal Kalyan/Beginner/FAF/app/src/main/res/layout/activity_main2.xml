@@ -17,7 +17,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginBottom="70dp"
-        android:text="SKIP"
+        android:text="@string/skip"
         android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/order_tracking" />
 
     <TextView
         android:id="@+id/TV1"
@@ -57,12 +58,14 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#0A0A0B"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.161"
+        android:text="@string/tv2_text"
+        android:layout_marginTop="100dp"/>
 
     <Button
         android:id="@+id/next_button"
@@ -74,7 +77,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="70dp"
-        android:text="NEXT"
+        android:text="@string/next"
         android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,9 +101,9 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="310dp"
         android:gravity="center_horizontal"
-        android:text="Realtime Order Tracking"
+        android:text="@string/realtime_order_tracking"
         android:textAlignment="center"
         android:textColor="#9C27B0"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
 </RelativeLayout>

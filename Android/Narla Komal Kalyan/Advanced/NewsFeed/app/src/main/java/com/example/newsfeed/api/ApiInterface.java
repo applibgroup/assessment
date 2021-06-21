@@ -17,13 +17,4 @@ public interface ApiInterface {
             @Query("apiKey") String apiKey
 
     );
-
-//    @GET("top-headlines")
-//    Call<News> getNews(
-//
-//            @Query("sources") String sources,
-//            @Query("apiKey") String apiKey
-//
-//    );
-
 }
