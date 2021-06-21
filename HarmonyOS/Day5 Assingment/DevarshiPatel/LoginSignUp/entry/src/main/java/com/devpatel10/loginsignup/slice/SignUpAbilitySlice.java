@@ -15,7 +15,6 @@ import ohos.data.orm.OrmContext;
 import ohos.data.orm.OrmPredicates;
 
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
@@ -194,9 +193,7 @@ public class SignUpAbilitySlice extends AbilitySlice {
                 });
         commonDialog.setButton(IDialog.BUTTON2,
                 component.getContext().getString(ResourceTable.String_signup_cancel_login),
-                (iDialog, i) -> {
-                    iDialog.hide();
-                });
+                (iDialog, i) -> iDialog.hide());
         commonDialog.show();
     }
     @Override
