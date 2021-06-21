@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+    <Text
+        ohos:id="$+id:login_page_header"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Login Page"
+        ohos:text_size="50fp"
+        ohos:padding="10fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="80fp"/>
+    <TextField
+        ohos:id="$+id:user_email"
+        ohos:height="35fp"
+        ohos:width="310fp"
+        ohos:element_top="$id:login_page_header"
+        ohos:top_margin="100fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="#F5F5F5"
+        ohos:left_padding="8fp"
+        ohos:hint="Email"
+        ohos:hint_color="#808080"
+        ohos:text_color="black"
+        ohos:text_font="sans-serif-medium"
+        ohos:text_size="20fp"/>
+
+    <TextField
+        ohos:id="$+id:user_password"
+        ohos:height="35fp"
+        ohos:width="310fp"
+        ohos:element_top="$id:user_email"
+        ohos:top_margin="25fp"
+        ohos:left_padding="8fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="#F5F5F5"
+        ohos:hint="Password"
+        ohos:hint_color="#808080"
+        ohos:text_color="black"
+        ohos:text_font="sans-serif-medium"
+        ohos:text_input_type="pattern_password"
+        ohos:text_size="20fp"/>
+    <RadioContainer
+        ohos:id="$+id:login_radio_container"
+        ohos:height="25fp"
+        ohos:width="120fp"
+        ohos:left_padding="5fp"
+        ohos:component_description="Remember Me"
+        ohos:layout_alignment="left"
+        ohos:left_margin="27fp"
+        ohos:text_size="13fp"
+        ohos:background_element="#F5F5F5"
+        ohos:top_margin="20fp"
+        ohos:orientation="horizontal">
+        <RadioButton
+            ohos:height="match_content"
+            ohos:width="120fp"
+            ohos:text="Remember Me"
+            ohos:text_color_off="gray"
+            ohos:text_color_on="#696969"
+            ohos:text_size="13fp"
+            ohos:layout_alignment="vertical_center"
+            ohos:id="$+id:remember_me"/>
+    </RadioContainer>
+
+    <Button
+        ohos:id="$+id:login_button"
+        ohos:height="45fp"
+        ohos:text_alignment="center"
+        ohos:width="150fp"
+        ohos:element_top="$id:login_radio_container"
+        ohos:top_margin="100fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="Login"
+        ohos:background_element="#F5F5F5"
+        ohos:text_color="black"
+        ohos:text_size="25fp"></Button>
+
+
+
+</DirectionalLayout>
