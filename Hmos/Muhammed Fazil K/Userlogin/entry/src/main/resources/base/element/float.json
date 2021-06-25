@@ -1,0 +1,44 @@
+{
+  "float": [
+    {
+      "name": "float_1",
+      "value": "30.6"
+    },
+    {
+      "name": "main_image_size",
+      "value": "200vp"
+    },
+    {
+      "name": "button_width",
+      "value": "100vp"
+    },
+    {
+      "name": "padding",
+      "value": "10vp"
+    },
+    {
+      "name": "text_size",
+      "value": "20vp"
+    },
+    {
+      "name": "error_text_size",
+      "value": "15vp"
+    },
+    {
+      "name": "margin_top",
+      "value": "10vp"
+    },
+    {
+      "name": "margin_bottom",
+      "value": "10vp"
+    },
+    {
+      "name": "field_size",
+      "value": "250vp"
+    },
+    {
+      "name": "big_margin",
+      "value": "100vp"
+    }
+  ]
+}

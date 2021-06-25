@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Image
+
+        ohos:id="$+id:main_image"
+        ohos:height="$float:main_image_size"
+        ohos:width="$float:main_image_size"
+        ohos:layout_alignment="center"
+        ohos:image_src="$media:icon"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:top_margin="80vp"
+        ohos:scale_mode="stretch"
+        ohos:bottom_margin="80vp"
+
+        />
+
+    <Button
+        ohos:top_margin="$float:margin_top"
+        ohos:id="$+id:main_signup_button"
+        ohos:height="match_content"
+        ohos:width="$float:button_width"
+        ohos:background_element="$graphic:button_bg"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        ohos:text="$string:mainpage_signupbutton"
+        ohos:text_color="$ohos:color:id_color_activated_end_transparent"
+        ohos:text_size="$float:text_size"
+
+        />
+    <Button
+        ohos:top_margin="$float:margin_top"
+        ohos:id="$+id:main_login_button"
+        ohos:height="match_content"
+        ohos:width="$float:button_width"
+        ohos:background_element="$graphic:button_bg"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        ohos:text="$string:mainpage_loginbutton"
+        ohos:text_color="$ohos:color:id_color_activated_end_transparent"
+        ohos:text_size="$float:text_size"
+
+        />
+
+
+
+
+
+</DirectionalLayout>

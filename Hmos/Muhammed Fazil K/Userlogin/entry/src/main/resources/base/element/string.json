@@ -1,0 +1,76 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Userlogin"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "mainpage_loginbutton",
+      "value": "Login"
+    },
+    {
+      "name": "mainpage_signupbutton",
+      "value": "SignUp"
+    },
+    {
+      "name": "firstname",
+      "value": "Firstname"
+    },
+    {
+      "name": "firstname_error",
+      "value": "Enter a valid Firstname"
+    },
+    {
+      "name": "lastname",
+      "value": "Lastname"
+    },
+    {
+      "name": "lastname_error",
+      "value": "Enter a valid Lastname"
+    },
+    {
+      "name": "email",
+      "value": "Email"
+    },
+    {
+      "name": "email_error",
+      "value": "Enter a valid Email"
+    },
+    {
+      "name": "password",
+      "value": "Password"
+    },
+    {
+      "name": "password_error",
+      "value": "Enter a valid Password"
+    },
+    {
+      "name": "mobile",
+      "value": "Mobile"
+    },
+    {
+      "name": "mobile_error",
+      "value": "Enter a valid Mobile Number"
+    },
+    {
+      "name": "gender",
+      "value": "Gender"
+    },
+    {
+      "name": "male",
+      "value": "Male"
+    },
+    {
+      "name": "female",
+      "value": "Female"
+    }
+  ]
+}

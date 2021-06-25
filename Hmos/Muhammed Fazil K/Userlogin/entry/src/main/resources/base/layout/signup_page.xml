@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    >
+
+    <TextField
+        ohos:id="$+id:signup_firstname"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:background_element="$color:brown"
+        ohos:hint="$string:firstname"
+        ohos:text_size="$float:text_size"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        />
+    <Text
+        ohos:id="$+id:signuperror_firstname"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:text="$string:firstname_error"
+        ohos:text_size="$float:error_text_size"
+        ohos:text_color="$color:red"
+        ohos:layout_alignment="center"
+        ohos:top_margin="$float:margin_top"
+        ohos:bottom_margin="$float:margin_bottom"
+
+        />
+
+
+    <TextField
+        ohos:id="$+id:signup_lastname"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:background_element="$color:brown"
+        ohos:hint="$string:lastname"
+        ohos:text_size="$float:text_size"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        />
+    <Text
+        ohos:id="$+id:signuperror_lastname"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:text="$string:lastname_error"
+        ohos:text_size="$float:error_text_size"
+        ohos:text_color="$color:red"
+        ohos:layout_alignment="center"
+        ohos:top_margin="$float:margin_top"
+        ohos:bottom_margin="$float:margin_bottom"
+
+        />
+
+
+    <TextField
+        ohos:id="$+id:signup_email"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:background_element="$color:brown"
+        ohos:hint="$string:email"
+        ohos:text_size="$float:text_size"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        />
+    <Text
+        ohos:id="$+id:signuperror_email"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:text="$string:email_error"
+        ohos:text_size="$float:error_text_size"
+        ohos:text_color="$color:red"
+        ohos:layout_alignment="center"
+        ohos:top_margin="$float:margin_top"
+        ohos:bottom_margin="$float:margin_bottom"
+
+        />
+
+    <TextField
+        ohos:id="$+id:signup_password"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:background_element="$color:brown"
+        ohos:hint="$string:password"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        ohos:text_size="$float:text_size"
+        ohos:text_input_type="pattern_password"
+        />
+    <Text
+        ohos:id="$+id:signuperror_password"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:bottom_margin="$float:margin_bottom"
+        ohos:layout_alignment="center"
+        ohos:text="$string:password_error"
+        ohos:text_color="$color:red"
+        ohos:text_size="$float:error_text_size"
+        ohos:top_margin="$float:margin_top"
+
+        />
+
+    <TextField
+        ohos:id="$+id:signup_mobile"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:background_element="$color:brown"
+        ohos:hint="$string:mobile"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        ohos:text_size="$float:text_size"
+        />
+    <Text
+        ohos:id="$+id:signuperror_mobile"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:bottom_margin="$float:margin_bottom"
+        ohos:layout_alignment="center"
+        ohos:text="$string:mobile_error"
+        ohos:text_color="$color:red"
+        ohos:text_size="$float:error_text_size"
+        ohos:top_margin="$float:margin_top"
+
+        />
+
+    <Text
+        ohos:id="$+id:signup_gender"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:bottom_margin="$float:margin_bottom"
+        ohos:layout_alignment="center"
+        ohos:text="$string:gender"
+        ohos:text_size="$float:text_size"
+        ohos:top_margin="$float:margin_top"
+
+        />
+    <RadioContainer
+        ohos:id="$+id:radiocontainer"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:orientation="horizontal"
+        ohos:background_element="$color:brown"
+        ohos:layout_alignment="center"
+
+        >
+
+        <RadioButton
+            ohos:id="$+id:male_btn"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="$string:male"
+            ohos:text_size="$float:text_size"
+            ohos:margin="$float:margin_top"
+            />
+        <RadioButton
+            ohos:id="$+id:female_btn"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="$string:female"
+            ohos:text_size="$float:text_size"
+            ohos:margin="$float:margin_top"
+            />
+
+
+    </RadioContainer>
+    <Text
+        ohos:id="$+id:signuperror_gender"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:bottom_margin="$float:margin_bottom"
+        ohos:layout_alignment="center"
+        ohos:text="$string:mobile_error"
+        ohos:text_color="$color:red"
+        ohos:text_size="$float:error_text_size"
+        ohos:top_margin="$float:margin_top"
+
+        />
+
+    <Button
+        ohos:id="$+id:final_signupbtn"
+        ohos:height="match_content"
+        ohos:width="$float:button_width"
+        ohos:text="$string:mainpage_signupbutton"
+        ohos:layout_alignment="center"
+        ohos:background_element="$color:blue"
+        ohos:text_size="$float:text_size"
+        ohos:top_margin="$float:margin_top"
+        ohos:padding="$float:padding"
+        />
+
+
+
+</DirectionalLayout>
