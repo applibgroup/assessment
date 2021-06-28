@@ -32,7 +32,7 @@ public class LoginSlice extends AbilitySlice {
         loginBtn.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
-
+			validateUser();
             }
         });
     }
