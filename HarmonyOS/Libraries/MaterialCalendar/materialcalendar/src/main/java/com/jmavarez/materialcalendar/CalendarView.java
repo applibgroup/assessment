@@ -8,23 +8,13 @@ import com.jmavarez.materialcalendar.Util.CalendarDay;
 import com.jmavarez.materialcalendar.Util.LogUtil;
 import com.jmavarez.materialcalendar.Util.WrapContentViewPager;
 import ohos.agp.colors.RgbColor;
-import ohos.agp.components.PageSliderProvider;
 import ohos.agp.components.*;
-import ohos.agp.components.element.Element;
-import ohos.agp.components.element.ElementContainer;
 import ohos.agp.components.element.ShapeElement;
-import ohos.agp.render.ColorMatrix;
-import ohos.agp.utils.Color;
 import ohos.app.Context;
-import ohos.global.resource.NotExistException;
-import ohos.global.resource.Resource;
-import ohos.global.resource.ResourceManager;
-import ohos.global.resource.solidxml.TypedAttribute;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.utils.PlainArray;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -83,25 +73,7 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
         init();
     }
 
-
-
     public CalendarView(Context context, AttrSet attrs)  {
-
-        /*
-        super(context, attrs);
-        this.startsOnSunday = false;
-
-        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.CalendarView, 0, 0);
-
-        try {
-            calendarColor = a.getColor(R.styleable.CalendarView_mc_color, ContextCompat.getColor(context, R.color.colorPrimary));
-            startsOnSunday = a.getBoolean(R.styleable.CalendarView_mc_startsOnSunday, false);
-        } finally {
-            a.recycle();
-        }
-
-        init();
-         */
         super(context, attrs);
         this.startsOnSunday = false;
         calendarColor=attrs.getAttr(CalendarView_mc_color).isPresent() ?
@@ -117,7 +89,6 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
         this.selection = new Date();
         this.indicatorsVisible = true;
         this.adapter = new CalendarAdapter(this, this);
-        //setPageCacheSize(6);
         setProvider(this.adapter);
         setCurrentPage((30),false);//
         addPageChangedListener(this);
@@ -176,7 +147,6 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
             MonthView v=null;
             if(i>=this.adapter.mComponents.size()){
                 LogUtil.debug("Calendar_view","The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
-                //HiLog.debug(adapter.label,"The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
                 }
             else
             v = this.adapter.getmComponents().valueAt(i);
@@ -198,7 +168,6 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
                 MonthView v=null;
                 if(i>=this.adapter.mComponents.size()){
                     LogUtil.debug("Calendar_view","The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
-                //HiLog.debug(adapter.label,"The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
                 }
                 else
                 v = this.adapter.getmComponents().valueAt(i);
@@ -214,7 +183,6 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
             MonthView view=null;
             if(i>=this.adapter.mComponents.size()){
                 LogUtil.debug("Calendar_view","The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
-                //HiLog.debug(adapter.label,"The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
             }
             else
             view = this.adapter.getmComponents().valueAt(i);
@@ -306,7 +274,7 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
             this.mListener = listener;
             this.mCallback = callback;
             this.mDateStart = new Date();
-            this.mPositionStart = 30 ;//+ CalendarDay.from(CalendarView.this.selection).getMonth();
+            this.mPositionStart = 30 ;
             this.mComponents = new PlainArray<>();
             this.dayViewDecorators = new ArrayList<>();
         }

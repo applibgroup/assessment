@@ -1,40 +1,21 @@
 package com.jmavarez.materialcalendar;
 
-//import android.annotation.TargetApi;
-//import android.graphics.Typeface;
-//import android.graphics.drawable.Drawable;
-//import android.graphics.drawable.ShapeDrawable;
-//import android.graphics.drawable.shapes.OvalShape;
-//import android.os.Build;
-//import android.support.v4.content.ContextCompat;
-//import android.util.AttributeSet;
-//import android.util.DisplayMetrics;
-//import android.util.TypedValue;
-//import android.view.Gravity;
-//import android.view.View;
-//import android.widget.FrameLayout;
-//import android.widget.TextView;
-
 import com.jmavarez.materialcalendar.Util.CalendarDay;
 import ohos.agp.colors.RgbColor;
-import ohos.agp.components.*;
+import ohos.agp.components.AttrSet;
+import ohos.agp.components.Component;
+import ohos.agp.components.StackLayout;
+import ohos.agp.components.Text;
 import ohos.agp.components.element.Element;
 import ohos.agp.components.element.ShapeElement;
-import ohos.agp.graphics.Surface;
-import ohos.agp.render.Canvas;
-import ohos.agp.render.Paint;
-import ohos.agp.render.Texture;
 import ohos.agp.text.Font;
-import ohos.agp.text.Layout;
 import ohos.agp.utils.Color;
 import ohos.agp.utils.LayoutAlignment;
-import ohos.agp.utils.RectFloat;
 import ohos.agp.utils.TextAlignment;
 import ohos.agp.window.service.DisplayManager;
 import ohos.app.Context;
-import ohos.global.resource.solidxml.TypedAttribute;
-import ohos.org.w3c.dom.TypeInfo;
 
+import static com.jmavarez.materialcalendar.Util.CanvasHelper.dpToPx;
 import static com.jmavarez.materialcalendar.Util.CanvasHelper.pxToDp;
 
 public class DayView extends StackLayout {
@@ -42,10 +23,7 @@ public class DayView extends StackLayout {
     private static final int DEFAULT_INDICATOR_MARGIN_BOTTOM = 2;
     private static final int DEFAULT_INDICATOR_SIZE = 4;
     private static final int DEFAULT_TEXT_SIZE = 12;
-    /*
-    private static Drawable _indicatorDrawable;
-    private static Drawable _selectionDrawable;
-     */
+
     private static Element _indicatorDrawable;
     private static Element _selectionDrawable;
 
@@ -169,7 +147,7 @@ public class DayView extends StackLayout {
           super(context, attrs, String.valueOf(defStyleAttr));
     }
 
-    private static Element generateCircleCanvas(Color color) { // slight change <<< Compare with android >>>
+    private static Element generateCircleCanvas(Color color) {
 
         ShapeElement element=new ShapeElement();
         element.setShape(ShapeElement.OVAL);
@@ -183,9 +161,9 @@ public class DayView extends StackLayout {
         this.indicatorVisible = false;
         this.tvDay = new Text(getContext());
         this.tvDay.setText(String.format("%d", this.day.getDay()));
-        this.tvDay.setTextSize(pxToDp(getContext(),DEFAULT_TEXT_SIZE));
+        this.tvDay.setTextSize(dpToPx(getContext(),DEFAULT_TEXT_SIZE));
         this.tvDay.setTextColor(Color.WHITE);
-        this.tvDay.setTextAlignment(TextAlignment.CENTER); // slight change <<< Gravity Center - Android >>>
+        this.tvDay.setTextAlignment(TextAlignment.CENTER);
         StackLayout.LayoutConfig layoutConfig;
         layoutConfig = new StackLayout.LayoutConfig(getDefaultMeasuredHeight(),getDefaultMeasuredHeight());
         layoutConfig.alignment=LayoutAlignment.HORIZONTAL_CENTER;
@@ -222,7 +200,6 @@ public class DayView extends StackLayout {
             if (this.selected) {
                 Element element=getSelectionDrawable();
                 this.tvDay.setBackground(element);
-                //this.tvDay.setTextColor(new Color(0xFF4081));
                 this.tvDay.setTextColor(Color.MAGENTA);
                 this.indicator.setVisibility(Component.HIDE);
                 Font font=Font.DEFAULT_BOLD;
@@ -265,21 +242,21 @@ public class DayView extends StackLayout {
 
     private int getDefaultMeasuredHeight() {
         if (_measuredHeight == null) {
-            _measuredHeight = pxToDp(context, DEFAULT_HEIGHT);
+            _measuredHeight = dpToPx(context, DEFAULT_HEIGHT);
         }
         return _measuredHeight;
     }
 
     private int getDefaultIndicatorSize() {
         if (_indicatorSize == null) {
-            _indicatorSize = pxToDp(context, DEFAULT_INDICATOR_SIZE);
+            _indicatorSize = dpToPx(context, DEFAULT_INDICATOR_SIZE);
         }
         return _indicatorSize;
     }
 
     private int getDefaultIndicatorMarginBottom() {
         if (_indicatorMarginBottom == null) {
-            _indicatorMarginBottom = pxToDp(context,DEFAULT_INDICATOR_MARGIN_BOTTOM);
+            _indicatorMarginBottom = dpToPx(context,DEFAULT_INDICATOR_MARGIN_BOTTOM);
         }
         return _indicatorMarginBottom;
     }

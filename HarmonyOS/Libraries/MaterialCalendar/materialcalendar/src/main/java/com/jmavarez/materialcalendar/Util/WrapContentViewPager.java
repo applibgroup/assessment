@@ -1,10 +1,7 @@
 package com.jmavarez.materialcalendar.Util;
 
-//import android.content.Context;
 import ohos.agp.components.*;
 import ohos.app.Context;
-//import android.support.v4.view.ViewPager;
-
 
 public class WrapContentViewPager extends PageSlider implements Component.EstimateSizeListener {
 

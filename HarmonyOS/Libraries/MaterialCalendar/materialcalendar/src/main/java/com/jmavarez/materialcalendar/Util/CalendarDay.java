@@ -4,7 +4,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 

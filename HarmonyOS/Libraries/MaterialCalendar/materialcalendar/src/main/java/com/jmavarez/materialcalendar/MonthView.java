@@ -1,7 +1,13 @@
 package com.jmavarez.materialcalendar;
 
-import ohos.agp.animation.AnimatorValue;
+import com.jmavarez.materialcalendar.Interface.CalendarCallback;
+import com.jmavarez.materialcalendar.Interface.OnDateChangedListener;
+import com.jmavarez.materialcalendar.Util.CalendarDay;
+import com.jmavarez.materialcalendar.Util.CalendarUtils;
+import ohos.agp.components.Component;
+import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.StackLayout;
+import ohos.agp.components.Text;
 import ohos.agp.text.Font;
 import ohos.agp.utils.Color;
 import ohos.agp.utils.LayoutAlignment;
@@ -9,36 +15,13 @@ import ohos.agp.utils.TextAlignment;
 import ohos.agp.window.service.Display;
 import ohos.agp.window.service.DisplayManager;
 import ohos.app.Context;
-/*import android.graphics.Typeface;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;*/
-
-import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.Text;
-import ohos.agp.components.ComponentContainer.ArrangeListener;
-
-import ohos.global.configuration.Configuration;
 import org.jetbrains.annotations.NotNull;
-
-import com.jmavarez.materialcalendar.Interface.CalendarCallback;
-import com.jmavarez.materialcalendar.Interface.OnDateChangedListener;
-import com.jmavarez.materialcalendar.Util.CalendarDay;
-import com.jmavarez.materialcalendar.Util.CalendarUtils;
-
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
-import java.util.Optional;
 
-import static com.jmavarez.materialcalendar.Util.CanvasHelper.pxToDp;
+import static com.jmavarez.materialcalendar.Util.CanvasHelper.dpToPx;
 
 public class MonthView extends ComponentContainer implements Component.EstimateSizeListener,ComponentContainer.ArrangeListener {
     private static final int DEFAULT_DAYS_IN_WEEK = 7;
@@ -153,7 +136,7 @@ public class MonthView extends ComponentContainer implements Component.EstimateS
             text.setLayoutConfig(config);
             text.setFont(font_bold);
             text.setTextColor(Color.WHITE);
-            text.setTextSize( pxToDp(getContext(),12));
+            text.setTextSize( dpToPx(getContext(),12));
             //text.setAllCaps(true);
             addComponent(text);
             i++;
@@ -209,9 +192,9 @@ public class MonthView extends ComponentContainer implements Component.EstimateS
         }
 
 
-        int measureTileWidth = (specWidthSize - (pxToDp(getContext(),8)*2)) / DEFAULT_DAYS_IN_WEEK;
-        int measureTileHeight = pxToDp(getContext(),30);
-        setEstimatedSize(specWidthSize,(measureTileHeight*DEFAULT_DAYS_IN_WEEK)+pxToDp(getContext(),20))    ;
+        int measureTileWidth = (specWidthSize - (dpToPx(getContext(),8)*2)) / DEFAULT_DAYS_IN_WEEK;
+        int measureTileHeight = dpToPx(getContext(),30);
+        setEstimatedSize(specWidthSize,(measureTileHeight*DEFAULT_DAYS_IN_WEEK)+dpToPx(getContext(),20))    ;
         int count = getChildCount();
 
         for (int i=0;i<count;i++)
@@ -225,8 +208,8 @@ public class MonthView extends ComponentContainer implements Component.EstimateS
 
     @Override
     public boolean onArrange(int left, int top, int right, int bottom) {
-        int marginTop=pxToDp(getContext(),8);
-        int marginLeft=pxToDp(getContext(),8);
+        int marginTop=dpToPx(getContext(),8);
+        int marginLeft=dpToPx(getContext(),8);
         int count = getChildCount();
         int offset=this.offset;
         int headOffset=0;

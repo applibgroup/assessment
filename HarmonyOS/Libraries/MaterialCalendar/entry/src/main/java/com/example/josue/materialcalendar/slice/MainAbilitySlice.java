@@ -1,25 +1,19 @@
 package com.example.josue.materialcalendar.slice;
 
 import com.example.josue.materialcalendar.ResourceTable;
+import com.github.clans.fab.FloatingActionButton;
 import com.jmavarez.materialcalendar.CalendarView;
-import com.jmavarez.materialcalendar.Interface.OnDateChangedListener;
-import com.jmavarez.materialcalendar.Interface.OnMonthChangedListener;
 import com.jmavarez.materialcalendar.Util.CalendarDay;
 import com.jmavarez.materialcalendar.Util.CalendarUtils;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.Button;
 import ohos.agp.components.Component;
-import ohos.agp.components.DirectionalLayout;
 import ohos.agp.components.Text;
-import ohos.agp.components.element.ShapeElement;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
-
-import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
-import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_PARENT;
 
 public class MainAbilitySlice extends AbilitySlice {
 
@@ -27,7 +21,7 @@ public class MainAbilitySlice extends AbilitySlice {
     Text dateString;
     Text monthString;
     Component emptyEvents;
-    Button button;
+    FloatingActionButton floatingActionButton;
 
     HashSet<CalendarDay> calendarDays;
 
@@ -38,8 +32,7 @@ public class MainAbilitySlice extends AbilitySlice {
         calendarView =(CalendarView) findComponentById(ResourceTable.Id_calendarView);
         monthString = (Text) findComponentById(ResourceTable.Id_month);
         dateString = (Text) findComponentById(ResourceTable.Id_date);
-        button = (Button) findComponentById(ResourceTable.Id_button);
-
+        floatingActionButton = (FloatingActionButton) findComponentById(ResourceTable.Id_fab);
 
         calendarView.setIndicatorsVisibility(true);
         calendarDays = new HashSet<>();
@@ -65,7 +58,7 @@ public class MainAbilitySlice extends AbilitySlice {
             dateString.setText(d);
         });
 
-        button.setClickedListener(component -> calendarView.reset());
+        floatingActionButton.setClickedListener(component -> calendarView.reset());
         String date = new SimpleDateFormat("MMMM yyyy").format(calendarView.getDateSelected());
         monthString.setText(date);
         String d = new SimpleDateFormat("dd/MM/yyyy").format(calendarView.getDateSelected());

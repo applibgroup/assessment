@@ -1,11 +1,7 @@
 package com.jmavarez.materialcalendar.Util;
 
 import ohos.app.Context;
-
-import com.jmavarez.materialcalendar.ResourceTable;
 import ohos.global.resource.NotExistException;
-import ohos.global.resource.ResourceManager;
-import ohos.global.resource.WrongTypeException;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
