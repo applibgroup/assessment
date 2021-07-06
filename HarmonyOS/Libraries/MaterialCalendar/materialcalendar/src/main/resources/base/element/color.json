@@ -1,0 +1,32 @@
+{
+  "color": [
+    {
+      "name": "colorPrimary",
+      "value": "#3F51B5"
+    },
+    {
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "name": "white",
+      "value": "#FFFFFF"
+    },
+    {
+        "name" : "colorPrimaryDark",
+        "value" :  "#303F9F"
+    },
+    {
+      "name" : "colorAccent",
+      "value" :  "#FF4081"
+    },
+    {
+      "name" : "colorPrimaryText",
+      "value" :  "#212121"
+    },
+    {
+      "name" : "colorSecondaryText",
+      "value" :  "#757575"
+    }
+  ]
+}

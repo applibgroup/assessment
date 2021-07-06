@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "MDCalendar"
+    },
+    {
+      "name": "monday_name_short",
+      "value": "M"
+    },
+    {
+      "name": "tuesday_name_short",
+      "value": "T"
+    },
+    {
+      "name": "wednesday_name_short",
+      "value": "W"
+    },
+    {
+      "name": "thursday_name_short",
+      "value": "T"
+    },
+    {
+      "name": "friday_name_short",
+      "value": "F"
+    },
+    {
+      "name": "saturday_name_short",
+      "value": "S"
+    },
+    {
+      "name": "sunday_name_short",
+      "value": "S"
+    }
+  ]
+}

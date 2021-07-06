@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:app="http://schemas.huawei.com/hap/res-auto"
+    xmlns:tools="http://schemas.huawei.com/tools"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:id="$+id:main"
+    ohos:orientation="vertical">
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:id="$+id:month"
+        ohos:text="Month Year"
+        ohos:top_padding="10vp"
+        ohos:text_size="40vp"
+        ohos:text_color="$color:white"
+        ohos:text_alignment="vertical_center"
+        ohos:layout_alignment="horizontal_center"
+        ohos:background_element="$color:colorPrimary"/>
+
+    <com.jmavarez.materialcalendar.CalendarView
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:id="$+id:calendarView"/>
+<!--    <Component-->
+<!--        ohos:height="3px"-->
+<!--        ohos:width="match_parent"-->
+<!--        ohos:background_element="$graphic:toolbar_dropshadow"/>-->
+<!--    <include ohos:layout="@layout/content_main"-->
+<!--             ohos:height="match_content"-->
+<!--             ohos:width="match_content"-->
+<!--        />-->
+    <DependentLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent">
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:id="$+id:date"
+            ohos:text="Date"
+            ohos:text_size="40vp"
+            ohos:text_alignment="vertical_center"
+            ohos:center_in_parent="true"
+            ohos:layout_alignment="horizontal_center"
+            />
+        <Button
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:id="$+id:button"
+            ohos:text="Today"
+            ohos:text_size="50vp"
+            ohos:text_alignment="vertical_center"
+            ohos:layout_alignment="horizontal_center"
+            ohos:align_parent_right="true"
+            ohos:align_parent_bottom="true"
+            ohos:background_element="$graphic:background_ability_main"
+            ohos:left_padding="10vp"
+            ohos:right_padding="10vp"
+
+            />
+    </DependentLayout>
+</DirectionalLayout>
