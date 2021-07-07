@@ -63,8 +63,8 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
 
     private int calendarColor;
     private boolean startsOnSunday;
-    private static final String CalendarView_mc_color = "CalendarView_mc_color";
-    private static final String CalendarView_mc_startsOnSunday = "CalendarView_mc_startsOnSunday";
+    private static final String CALENDARVIEW_MC_COLOR = "CalendarView_mc_color";
+    private static final String CALENDARVIEW_MC_STARTSONSATURDAY = "CalendarView_mc_startsOnSunday";
     static final HiLogLabel label = new HiLogLabel(HiLog.LOG_APP, 0xD000F00, "CALENDAR_VIEW");
 
     public CalendarView(Context context) {
@@ -76,10 +76,10 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
     public CalendarView(Context context, AttrSet attrs)  {
         super(context, attrs);
         this.startsOnSunday = false;
-        calendarColor=attrs.getAttr(CalendarView_mc_color).isPresent() ?
-                attrs.getAttr(CalendarView_mc_color).get().getColorValue().getValue() : 0x3F51B5;
-        startsOnSunday= attrs.getAttr(CalendarView_mc_startsOnSunday).isPresent() &&
-                    attrs.getAttr(CalendarView_mc_startsOnSunday).get().getBoolValue() ;
+        calendarColor=attrs.getAttr(CALENDARVIEW_MC_COLOR).isPresent() ?
+                attrs.getAttr(CALENDARVIEW_MC_COLOR).get().getColorValue().getValue() : 0x3F51B5;
+        startsOnSunday= attrs.getAttr(CALENDARVIEW_MC_STARTSONSATURDAY).isPresent() &&
+                    attrs.getAttr(CALENDARVIEW_MC_STARTSONSATURDAY).get().getBoolValue() ;
         init();
     }
 
@@ -145,10 +145,7 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
 
         for (int i = 0; i < this.adapter.mComponents.size(); i++) {
             MonthView v=null;
-            if(i>=this.adapter.mComponents.size()){
-                LogUtil.debug("Calendar_view","The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
-                }
-            else
+
             v = this.adapter.getmComponents().valueAt(i);
             if (v != null) {
                 v.refreshSelection(day, month, year);
@@ -166,10 +163,6 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
 
             for (int i = 0; i < this.adapter.mComponents.size(); i++) {
                 MonthView v=null;
-                if(i>=this.adapter.mComponents.size()){
-                    LogUtil.debug("Calendar_view","The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
-                }
-                else
                 v = this.adapter.getmComponents().valueAt(i);
                 if (v != null) {
                     v.hideIndicators();
@@ -181,10 +174,6 @@ public class CalendarView extends WrapContentViewPager implements OnDateChangedL
     private void refreshEvents() {
                for (int i = 0; i < this.adapter.mComponents.size(); i++) {
             MonthView view=null;
-            if(i>=this.adapter.mComponents.size()){
-                LogUtil.debug("Calendar_view","The size of mComponents : "+this.adapter.mComponents.size()+" \n"+"Value of i : "+i);
-            }
-            else
             view = this.adapter.getmComponents().valueAt(i);
             if (view != null) {
                 view.refreshEvents();

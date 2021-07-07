@@ -1,6 +1,5 @@
 package com.jmavarez.materialcalendar.Util;
 
-import ohos.app.Context;
 import ohos.global.resource.NotExistException;
 import org.jetbrains.annotations.NotNull;
 
@@ -82,7 +81,7 @@ public class CalendarUtils {
             return this.mDay;
         }
 
-        public String getShortName(Context context) throws IOException, NotExistException {
+        public String getShortName() throws IOException, NotExistException {
             String res_string;
             switch (this.mDay.intValue()) {
                 case 1:

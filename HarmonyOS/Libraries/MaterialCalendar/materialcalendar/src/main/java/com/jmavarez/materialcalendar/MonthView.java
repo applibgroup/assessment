@@ -123,13 +123,12 @@ public class MonthView extends ComponentContainer implements Component.EstimateS
             Text text = new Text(getContext());
 
             try {
-                text.setText(new CalendarUtils.Day(Integer.valueOf(actual)).getShortName(getContext()));
+                text.setText(new CalendarUtils.Day(Integer.valueOf(actual)).getShortName());
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
             Font font_bold=Font.DEFAULT_BOLD;
-            //text.setGravity(Gravity.CENTER);
             StackLayout.LayoutConfig config=new StackLayout.LayoutConfig();
             config.alignment= LayoutAlignment.CENTER;
             text.setTextAlignment(TextAlignment.CENTER);
@@ -137,7 +136,6 @@ public class MonthView extends ComponentContainer implements Component.EstimateS
             text.setFont(font_bold);
             text.setTextColor(Color.WHITE);
             text.setTextSize( dpToPx(getContext(),12));
-            //text.setAllCaps(true);
             addComponent(text);
             i++;
         }

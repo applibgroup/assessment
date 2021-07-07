@@ -18,7 +18,6 @@ public class CanvasHelper {
     }
 
     public static int pxToDp(Context context, int size) {
-       return size*5;
-        // return size / (context.getResourceManager().getDeviceCapability().screenDensity / 160);
+         return size / (context.getResourceManager().getDeviceCapability().screenDensity / 160);
     }
 }
