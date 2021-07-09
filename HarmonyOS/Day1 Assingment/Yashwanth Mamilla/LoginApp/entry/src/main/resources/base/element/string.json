@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "myAPP"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "entry_MainAbility",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "signup",
+      "value": "SIGN UP"
+    },
+    {
+      "name": "login",
+      "value": "LOGIN"
+    },
+    {
+      "name": "login_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "login_details",
+      "value": "Login page"
+    },
+    {
+      "name": "signup_details",
+      "value": "Signup page"
+    },
+    {
+      "name": "login_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "signup_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "signup_HelloWorld",
+      "value": "Hello World"
+    }
+  ]
+}

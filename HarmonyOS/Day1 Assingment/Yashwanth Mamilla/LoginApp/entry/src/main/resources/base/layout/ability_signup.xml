@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:text_helloworld"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_signup"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="$string:signup_description"
+        ohos:text_size="50px"
+        />
+    <Text
+        ohos:height="match_parent"
+        ohos:width="match_content"
+        ohos:layout_alignment="center"
+        ohos:text_size="$float:main_page_text_size"
+        ohos:text="$string:signup_details"/>
+
+
+</DirectionalLayout>

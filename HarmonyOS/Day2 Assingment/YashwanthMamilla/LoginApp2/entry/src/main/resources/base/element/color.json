@@ -1,0 +1,16 @@
+{
+  "color": [
+    {
+      "name": "gray",
+      "value": "#FF98A2A2"
+    },
+    {
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "name": "white",
+      "value": "#FFFFFF"
+    }
+  ]
+}
