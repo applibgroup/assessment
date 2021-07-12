@@ -1,0 +1,10 @@
+com/example/problem1/ThirdActivity.java
+ com.example.problem1.ThirdActivity
+com/example/problem1/BuildConfig.java
+ com.example.problem1.BuildConfig
+com/example/problem1/fourthActivity.java
+ com.example.problem1.fourthActivity
+com/example/problem1/MainActivity.java
+ com.example.problem1.MainActivity
+com/example/problem1/SecondActivity.java
+ com.example.problem1.SecondActivity
