@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:id="$+id:image_main"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:start_padding="20vp"
+        ohos:margin="20vp"
+        ohos:image_src="$media:cat"
+        />
+
+    <TextField
+        ohos:id="$+id:text_login_email"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:hint="Email Id"
+        ohos:hint_color="$ohos:color:id_color_background"
+        ohos:text_size="30vp"
+        ohos:start_margin="30vp"
+        ohos:end_margin="30vp"
+        ohos:top_margin="50vp"
+        ohos:bottom_margin="30vp"
+        ohos:start_padding="5vp"
+        ohos:background_element="$graphic:background_ability_signup"
+        />
+
+    <TextField
+        ohos:id="$+id:text_login_password"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:hint="Password"
+        ohos:hint_color="$ohos:color:id_color_background"
+        ohos:text_size="30vp"
+        ohos:start_margin="30vp"
+        ohos:end_margin="30vp"
+        ohos:bottom_margin="30vp"
+        ohos:start_padding="5vp"
+        ohos:background_element="$graphic:background_ability_signup"
+        />
+
+    <Button
+        ohos:id="$+id:button_login"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:top_margin="40vp"
+        ohos:padding="10vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:background_element="$graphic:background_ability_signup"
+        ohos:text="Login"
+        ohos:text_size="30vp"
+        />
+</DirectionalLayout>
