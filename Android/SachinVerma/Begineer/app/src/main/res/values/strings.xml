@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="editText_second">Write Your Name</string>
+    <string name="button_second">Add</string>
+    <string name="button_main">Create</string>
+    <string name="editText2_second">Write Your Phone No</string>
+    <string name="editText4_second">Link to Profile Pic</string>
+    <string name="editText3_second">Write Your Email ID</string>
+</resources>

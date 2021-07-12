@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#A9BCF5"
+    ohos:orientation="vertical">
+
+
+    <TextField
+        ohos:top_margin="225vp"
+        ohos:id="$+id:email_textField_login"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Username" />
+
+    <Text
+        ohos:id="$+id:error_tip_text_login"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Incorrect Format"
+        ohos:text_size="18fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <TextField
+        ohos:id="$+id:password_textField_login"
+        ohos:width="300vp"
+        ohos:height="match_content"
+        ohos:multiple_lines="false"
+        ohos:left_padding="24vp"
+        ohos:right_padding="24vp"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:min_height="44vp"
+        ohos:text_size="18fp"
+        ohos:layout_alignment="center"
+        ohos:text_alignment="vertical_center"
+        ohos:text_input_type="pattern_password"
+        ohos:background_element="$graphic:background_text_field"
+        ohos:hint="Password" />
+
+    <Text
+        ohos:id="$+id:error_tip_text2_login"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:top_padding="8vp"
+        ohos:bottom_padding="8vp"
+        ohos:text="Weak Password : it must contain atleast 5 characters"
+        ohos:text_size="14fp"
+        ohos:text_color="#A9BCF5"
+        ohos:layout_alignment="center"/>
+
+    <Button
+        ohos:top_margin="20vp"
+        ohos:id="$+id:button_login"
+        ohos:width="120vp"
+        ohos:height="35vp"
+        ohos:background_element="$graphic:background_btn"
+        ohos:text="Log In"
+        ohos:text_size="20fp"
+        ohos:layout_alignment="horizontal_center"/>
+
+</DirectionalLayout>
