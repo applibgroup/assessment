@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="27dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/newsItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/newsItemAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/newsItemDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/newsItemImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/image_relevant_to_corresponding_news_article" />
+    <TextView
+        android:id="@+id/newsItemDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        />
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/detailsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/read_in_detail"
+        android:background="#7cedff"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>
