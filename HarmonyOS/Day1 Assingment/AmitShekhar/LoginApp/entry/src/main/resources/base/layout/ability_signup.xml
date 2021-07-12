@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:test_signup"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_login"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="25fp"
+        ohos:text="MYAPP"
+        ohos:text_size="25fp"
+        />
+
+    <TextField
+        ohos:id="$+id:first_name"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:text_size="20fp"
+        ohos:hint="First Name"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+    ></TextField>
+
+    <Text
+        ohos:id="$+id:first_name_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="left"
+        ohos:top_margin="10fp"
+        ohos:text="Only alphabetic letters allowed"
+        ohos:text_size="15fp"
+        ohos:text_color="$ohos:color:id_color_badge_red"
+        ohos:visibility="hide"
+        ohos:left_margin="20fp"
+        />
+
+    <TextField
+        ohos:id="$+id:last_name"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:text_size="20fp"
+        ohos:hint="Last Name"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ></TextField>
+
+    <Text
+        ohos:id="$+id:last_name_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="left"
+        ohos:top_margin="10fp"
+        ohos:text="Only alphabetic letters allowed"
+        ohos:text_size="15fp"
+        ohos:text_color="$ohos:color:id_color_badge_red"
+        ohos:visibility="hide"
+        ohos:left_margin="20fp"
+        />
+
+    <TextField
+        ohos:id="$+id:email"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:text_size="20fp"
+        ohos:hint="Email"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ></TextField>
+
+    <Text
+        ohos:id="$+id:email_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="left"
+        ohos:top_margin="10fp"
+        ohos:text="Incorrect email format"
+        ohos:text_size="15fp"
+        ohos:text_color="$ohos:color:id_color_badge_red"
+        ohos:visibility="hide"
+        ohos:left_margin="20fp"
+        />
+
+    <TextField
+        ohos:id="$+id:password"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:text_size="20fp"
+        ohos:hint="Password"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ></TextField>
+
+    <Text
+        ohos:id="$+id:password_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="left"
+        ohos:top_margin="10fp"
+        ohos:text="Weak password - must be atleast 6 characters"
+        ohos:text_size="15fp"
+        ohos:text_color="$ohos:color:id_color_badge_red"
+        ohos:visibility="hide"
+        ohos:left_margin="20fp"
+        />
+
+    <TextField
+        ohos:id="$+id:phone"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:text_size="20fp"
+        ohos:hint="Mobile"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ></TextField>
+
+    <Text
+        ohos:id="$+id:phone_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="left"
+        ohos:top_margin="10fp"
+        ohos:text="Invalid phone number"
+        ohos:text_size="15fp"
+        ohos:text_color="$ohos:color:id_color_badge_red"
+        ohos:visibility="hide"
+        ohos:left_margin="20fp"
+        />
+
+    <Text
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="Gender"
+        ohos:text_size="20fp"/>
+
+
+    <RadioContainer
+        ohos:top_margin="10fp"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:alignment="center">
+        <RadioButton
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text_size="20fp"
+            ohos:selection_color="#70676DF1"
+            ohos:text="Male"/>
+        <RadioButton
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:selection_color="#70676DF1"
+            ohos:text_size="20fp"
+            ohos:text="Female"/>
+    </RadioContainer>
+
+    <Button
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:layout_alignment="center"
+        ohos:top_margin="30fp"
+        ohos:left_padding="20fp"
+        ohos:right_padding="20fp"
+        ohos:top_padding="10fp"
+        ohos:bottom_padding="10fp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="20fp"
+        ohos:text="SIGN UP"/>
+
+
+</DirectionalLayout>

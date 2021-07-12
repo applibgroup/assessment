@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:layout_alignment="center">
+
+    <Text
+        ohos:id="$+id:test_login"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_login"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="150fp"
+        ohos:text="MYAPP"
+        ohos:text_size="25fp"
+        />
+
+    <TextField
+        ohos:id="$+id:email_login"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:text_size="20fp"
+        ohos:hint="Email"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ></TextField>
+
+    <TextField
+        ohos:id="$+id:password_login"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:text_size="20fp"
+        ohos:hint="Password"
+        ohos:layout_alignment="horizontal_center"
+        ohos:top_margin="30fp"
+        ohos:left_margin="20fp"
+        ohos:right_margin="20fp"
+        ohos:padding="10fp"
+        ohos:text_input_type="pattern_password"
+        ></TextField>
+
+    <Button
+        ohos:id = "$+id:login_btn"
+        ohos:background_element="$graphic:bg_text_view"
+        ohos:layout_alignment="center"
+        ohos:top_margin="30fp"
+        ohos:left_padding="20fp"
+        ohos:right_padding="20fp"
+        ohos:top_padding="10fp"
+        ohos:bottom_padding="10fp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="20fp"
+        ohos:text="LOGIN"/>
+
+
+</DirectionalLayout>
