@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        app:cardCornerRadius="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Title"
+                android:id="@+id/tasktitle"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:fontFamily="serif-monospace"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/tasktitle"
+                android:textStyle="italic"
+                android:text="Date"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="200dp"
+                android:layout_marginEnd="200dp"
+                android:id="@+id/date"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/tasktitle"
+                android:layout_marginLeft="200dp"
+                android:textStyle="italic"
+                android:text="Time"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>
