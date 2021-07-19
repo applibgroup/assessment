@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="center">
+    <Text
+        ohos:id="$+id:text_signUp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="$string:signup_button_text"
+        ohos:text_size="40fp"
+        ohos:text_color="$ohos:color:id_color_activated_dark"
+        />
+
+    <com.applib.loginsignupapp.component.TextFieldValidated
+        ohos:id="$+id:textField_firstName"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:padding="5fp"
+        ohos:text_input_type="pattern_text"
+        ohos:background_element="$graphic:border_background"
+        ohos:text_size="20fp"
+        ohos:textType="name"
+        ohos:errorText="* Name can only contain alphabets and '-'"
+        ohos:errorTextSize = "12fp"
+        ohos:errorTextColor = "$ohos:color:id_color_alert_dark"
+        ohos:top_margin="20vp"
+        ohos:hint="First Name"
+        />
+
+    <com.applib.loginsignupapp.component.TextFieldValidated
+        ohos:id="$+id:textField_lastName"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:text_size="20fp"
+        ohos:textType="name"
+        ohos:text_input_type="pattern_text"
+        ohos:errorText="Name can only contain alphabets and '-'"
+        ohos:errorTextSize = "12fp"
+        ohos:errorTextColor = "$ohos:color:id_color_alert_dark"
+        ohos:padding="5fp"
+        ohos:background_element="$graphic:border_background"
+        ohos:top_margin="20vp"
+        ohos:hint="Last Name"
+        />
+
+    <com.applib.loginsignupapp.component.TextFieldValidated
+        ohos:id="$+id:textField_email"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:text_size="20fp"
+        ohos:textType="email"
+        ohos:errorText="Invalid Email ID"
+        ohos:text_input_type="pattern_text"
+        ohos:errorTextSize = "12fp"
+        ohos:errorTextColor = "$ohos:color:id_color_alert_dark"
+        ohos:padding="5fp"
+        ohos:background_element="$graphic:border_background"
+        ohos:top_margin="20vp"
+        ohos:hint="Email Id"
+        />
+
+    <com.applib.loginsignupapp.component.TextFieldValidated
+        ohos:id="$+id:textField_phone"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:text_size="20fp"
+        ohos:textType="phone"
+        ohos:input_enter_key_type="enter_key_type_go"
+        ohos:text_input_type="pattern_number"
+        ohos:errorText="Invalid phone Number"
+        ohos:errorTextSize = "12fp"
+        ohos:errorTextColor = "$ohos:color:id_color_alert_dark"
+        ohos:padding="5fp"
+        ohos:background_element="$graphic:border_background"
+        ohos:top_margin="20vp"
+        ohos:hint="Phone Number"
+        />
+
+    <com.applib.loginsignupapp.component.TextFieldValidated
+        ohos:id="$+id:textField_password"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:text_size="20fp"
+        ohos:textType="password"
+        ohos:text_input_type="pattern_password"
+        ohos:errorText="Minimum 5 characters"
+        ohos:errorTextSize = "12fp"
+        ohos:errorTextColor = "$ohos:color:id_color_alert_dark"
+        ohos:padding="5fp"
+        ohos:background_element="$graphic:border_background"
+        ohos:top_margin="20vp"
+        ohos:hint="Password"
+        />
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Gender:"
+        ohos:text_size="18vp"
+        ohos:layout_alignment="left"
+        ohos:start_margin="20vp"
+        ohos:top_margin="15vp"
+        />
+
+    <RadioContainer
+        ohos:id="$+id:radio_container"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:top_margin="10vp"
+        ohos:orientation="horizontal"
+        ohos:marked_button="$id:radio_button_male"
+        ohos:layout_alignment="left">
+        <RadioButton
+            ohos:id="$+id:radio_button_male"
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:text="Male"
+            ohos:text_color_on="$ohos:color:id_color_activated_dark"
+            ohos:text_color_off="#FF5A6670"
+            ohos:text_size="18fp"
+            ohos:padding="10vp"
+            ohos:start_margin="20vp"/>
+        <RadioButton
+            ohos:id="$+id:radio_button_female"
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:text="Female"
+            ohos:text_size="18fp"
+            ohos:text_color_on="$ohos:color:id_color_activated_dark"
+            ohos:text_color_off="#FF5A6670"
+            ohos:start_margin="20vp"
+            ohos:padding="10vp"
+            />
+    </RadioContainer>
+    <Text
+        ohos:id="$+id:text_radioGroup_unselected_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Select a Gender"
+        ohos:text_size="16fp"
+        ohos:text_color="$ohos:color:id_color_alert_dark"
+        ohos:layout_alignment="left"
+        ohos:start_margin="30vp"
+        ohos:visibility="hide"
+        />
+
+    <Button
+        ohos:id="$+id:button_signup_signup_slice"
+        ohos:layout_alignment="horizontal_center"
+        ohos:height="match_content"
+        ohos:width="120vp"
+        ohos:text="$string:signup_button_text"
+        ohos:text_size="20fp"
+        ohos:text_color="#FFFFFF"
+        ohos:background_element="#000000"
+        ohos:left_padding="20vp"
+        ohos:right_padding="20vp"
+        ohos:bottom_padding="10vp"
+        ohos:top_padding="10vp"
+        ohos:margin="20vp"
+        />
+
+</DirectionalLayout>

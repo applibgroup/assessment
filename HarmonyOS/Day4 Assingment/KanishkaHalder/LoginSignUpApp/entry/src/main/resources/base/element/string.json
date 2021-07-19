@@ -1,0 +1,52 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "LoginSignUpApp"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "login_button_text",
+      "value": "Login"
+    },
+    {
+      "name": "signup_button_text",
+      "value": "SignUp"
+    },
+    {
+      "name": "firstName_field",
+      "value": "firstName"
+    },
+    {
+      "name": "lastName_field",
+      "value": "lastName"
+    },
+    {
+      "name": "email_field",
+      "value": "emailID"
+    },
+    {
+      "name": "phoneNumber_field",
+      "value": "phoneNumber"
+    },
+    {
+      "name": "password_field",
+      "value": "password"
+    },
+    {
+      "name": "gender_field",
+      "value": "gender"
+    },
+    {
+      "name": "dataability_description",
+      "value": "hap sample empty provider"
+    }
+  ]
+}
