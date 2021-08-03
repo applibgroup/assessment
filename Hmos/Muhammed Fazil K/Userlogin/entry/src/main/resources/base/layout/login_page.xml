@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Component
+        ohos:height="$float:main_image_size"
+        ohos:width="match_content"
+        />
+
+    <TextField
+        ohos:top_margin="$float:big_margin"
+        ohos:id="$+id:login_email"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:background_element="$color:brown"
+        ohos:hint="$string:email"
+        ohos:text_size="$float:text_size"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        />
+    <Text
+        ohos:id="$+id:loginerror_email"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:text="$string:email_error"
+        ohos:text_size="$float:error_text_size"
+        ohos:text_color="$color:red"
+        ohos:layout_alignment="center"
+        ohos:top_margin="$float:margin_top"
+        ohos:bottom_margin="$float:margin_bottom"
+
+        />
+
+    <TextField
+        ohos:id="$+id:login_password"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:background_element="$color:brown"
+        ohos:hint="$string:password"
+        ohos:layout_alignment="center"
+        ohos:padding="$float:padding"
+        ohos:text_size="$float:text_size"
+        ohos:text_input_type="pattern_password"
+        />
+    <Text
+        ohos:id="$+id:loginerror_password"
+        ohos:height="match_content"
+        ohos:width="$float:field_size"
+        ohos:bottom_margin="$float:margin_bottom"
+        ohos:layout_alignment="center"
+        ohos:text="$string:password_error"
+        ohos:text_color="$color:red"
+        ohos:text_size="$float:error_text_size"
+        ohos:top_margin="$float:margin_top"
+
+        />
+
+    <Button
+        ohos:id="$+id:final_loginbtn"
+        ohos:height="match_content"
+        ohos:width="$float:button_width"
+        ohos:text="$string:mainpage_loginbutton"
+        ohos:layout_alignment="center"
+        ohos:background_element="$color:blue"
+        ohos:text_size="$float:text_size"
+        ohos:top_margin="$float:margin_top"
+        ohos:padding="$float:padding"
+        />
+
+</DirectionalLayout>
