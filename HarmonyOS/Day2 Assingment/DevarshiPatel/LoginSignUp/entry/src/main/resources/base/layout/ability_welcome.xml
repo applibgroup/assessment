@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="vertical_center">
+    <Text
+        ohos:id="$+id:heading"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="WELCOME!"
+        ohos:top_margin="100"
+        ohos:layout_alignment="center"
+        ohos:text_size="50fp"
+        ohos:text_alignment="center"
+        />
+
+</DependentLayout>

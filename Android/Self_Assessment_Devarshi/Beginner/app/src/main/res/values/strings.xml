@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Beginner</string>
+    <string name="text_title">Title</string>
+    <string name="empty_description">Description</string>
+    <string name="heading1">Problem Identification</string>
+    <string name="heading2">Thorough analysis</string>
+    <string name="heading3">Break a LEG!</string>
+    <string name="description2">The systematic computational analysis of data or statistics used for the discovery, interpretation, and communication of meaningful patterns in data. It also entails applying data patterns towards effective decision-making. </string>
+    <string name="description3">The achieving of desired results, or someone or something that achieves positive results</string>
+    <string name="description1">It is part of the larger problem process that includes problem shaping and problem solving. Problem finding requires intellectual vision and insight into what is missing. </string>
+</resources>

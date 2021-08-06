@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "LoginSignUp"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "emailTaken",
+      "value": "Email already exists"
+    },
+    {
+      "name": "firstNameInvalid",
+      "value": "First Name Invalid"
+    },
+    {
+      "name": "lastNameInvalid",
+      "value": "Last Name Invalid"
+    },
+    {
+      "name": "emailInvalid",
+      "value": "Error Try Format : abc@xyz.pqr"
+    },
+    {
+      "name": "passwordInvalid",
+      "value": "Password should be greater than 4 char"
+    },
+    {
+      "name": "mobileInvalid",
+      "value": "Error Try Format : 9876543210"
+    },
+    {
+      "name": "emptyFirstName",
+      "value": "Please enter NON EMPTY First Name"
+    },
+    {
+      "name": "emptyLastName",
+      "value": "Please enter NON EMPTY Last Name"
+    },
+    {
+      "name": "emptyEmail",
+      "value": "Please enter non empty Email ID"
+    },
+    {
+      "name": "emptyPassword",
+      "value": "Please enter NON EMPTY Password"
+    },
+    {
+      "name": "emptyMobile",
+      "value": "Please enter NON EMPTY Mobile Number"
+    },
+    {
+      "name": "welcomeability_description",
+      "value": "hap sample empty provider"
+    }
+  ]
+}

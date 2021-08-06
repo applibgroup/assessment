@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
+        "source": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_second.xml",
+        "source": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\src\\main\\res\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\map_list_item.xml",
+        "source": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\src\\main\\res\\layout\\map_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_home.xml",
+        "source": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\src\\main\\res\\layout\\content_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first.xml",
+        "source": "C:\\Users\\Devarshi\\AndroidStudioProjects\\GravityView\\app\\src\\main\\res\\layout\\fragment_first.xml"
+    }
+]

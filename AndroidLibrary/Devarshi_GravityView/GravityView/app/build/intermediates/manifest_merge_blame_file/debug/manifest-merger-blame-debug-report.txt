@@ -1,0 +1,68 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.gravityview"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:6:5-24:19
+14        android:allowBackup="true"
+14-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:7:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.5.0] C:\Users\Devarshi\.gradle\caches\transforms-2\files-2.1\07adfc08fe16d3453ab9291511ec05fe\core-1.5.0\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:8:9-43
+18        android:label="@string/app_name"
+18-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:9:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:10:9-54
+20        android:supportsRtl="true"
+20-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:11:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.GravityView" >
+22-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:12:9-49
+23        <activity
+23-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:13:9-16:77
+24            android:name="com.example.gravityview.HomeActivity"
+24-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:14:13-41
+25            android:label="HomeActivity"
+25-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:15:13-41
+26            android:theme="@style/Theme.GravityView.NoActionBar" />
+26-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:16:13-65
+27        <activity android:name="com.example.gravityview.MainActivity" >
+27-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:17:9-23:20
+27-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:17:19-47
+28            <intent-filter>
+28-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:18:13-22:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:19:17-69
+29-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:19:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:21:17-77
+31-->C:\Users\Devarshi\AndroidStudioProjects\GravityView\app\src\main\AndroidManifest.xml:21:27-74
+32            </intent-filter>
+33        </activity>
+34
+35        <provider
+35-->[com.squareup.picasso:picasso:2.71828] C:\Users\Devarshi\.gradle\caches\transforms-2\files-2.1\1cc073b85ffa837f7e29d700f4524060\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+36            android:name="com.squareup.picasso.PicassoProvider"
+36-->[com.squareup.picasso:picasso:2.71828] C:\Users\Devarshi\.gradle\caches\transforms-2\files-2.1\1cc073b85ffa837f7e29d700f4524060\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+37            android:authorities="com.example.gravityview.com.squareup.picasso"
+37-->[com.squareup.picasso:picasso:2.71828] C:\Users\Devarshi\.gradle\caches\transforms-2\files-2.1\1cc073b85ffa837f7e29d700f4524060\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+38            android:exported="false" />
+38-->[com.squareup.picasso:picasso:2.71828] C:\Users\Devarshi\.gradle\caches\transforms-2\files-2.1\1cc073b85ffa837f7e29d700f4524060\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+39    </application>
+40
+41</manifest>
