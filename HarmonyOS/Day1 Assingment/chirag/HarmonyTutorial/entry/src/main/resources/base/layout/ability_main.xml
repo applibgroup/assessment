@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+    <Image
+        ohos:id="$+id:image"
+        ohos:height="125fp"
+        ohos:width="300fp"
+        ohos:image_src="$media:huawei_logo"
+        ohos:top_margin="180fp"
+        ohos:layout_alignment="center"></Image>
+    <Button
+        ohos:id="$+id:login_button"
+        ohos:text="Login"
+        ohos:height="match_content"
+        ohos:width="150fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:element_top="$id:image"
+        ohos:top_margin="80fp"
+        ohos:text_size="27fp"
+        ohos:padding="9fp"
+        ohos:background_element="#F5F5F5"
+        ></Button>
+    <Button
+        ohos:id="$+id:signup_button"
+        ohos:text="Sign Up"
+        ohos:height="match_content"
+        ohos:width="150fp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:element_top="$id:login_button"
+        ohos:top_margin="30fp"
+        ohos:text_size="27fp"
+        ohos:padding="9fp"
+        ohos:background_element="#F5F5F5"
+        ></Button>
+
+
+</DirectionalLayout>

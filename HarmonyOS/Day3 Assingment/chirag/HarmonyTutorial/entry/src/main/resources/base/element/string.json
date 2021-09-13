@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "HarmonyTutorial"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "loginabilityslice_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "loginabilityslice_HelloWorld",
+      "value": "Hello World"
+    }
+  ]
+}

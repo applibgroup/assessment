@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:id="$+id:welcome_text"
+        ohos:text = "Logged In Successfully!!"
+        ohos:layout_alignment="center"
+        ohos:element_top="$id:welcome_image"
+        ohos:top_margin="250fp"
+        ohos:text_size="30fp"></Text>
+    <Image
+        ohos:id="$+id:welcome_image"
+        ohos:height="125fp"
+        ohos:width="300fp"
+        ohos:image_src="$media:huawei_logo"
+        ohos:top_margin="180fp"
+        ohos:layout_alignment="center"></Image>
+
+
+</DirectionalLayout>
