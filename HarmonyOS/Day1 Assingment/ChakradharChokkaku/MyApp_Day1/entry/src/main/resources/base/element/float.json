@@ -1,0 +1,32 @@
+{
+  "float": [
+    {
+      "name": "main_page_field_width",
+      "value": "200vp"
+    },
+    {
+      "name": "main_page_field_height",
+      "value": "200vp"
+    },
+    {
+      "name": "main_page_field_padding",
+      "value": "5vp"
+    },
+    {
+      "name": "main_page_login_top_margin",
+      "value": "70vp"
+    },
+    {
+      "name": "main_page_text_size",
+      "value": "20vp"
+    },
+    {
+      "name": "main_page_signup_top_margin",
+      "value": "40vp"
+    },
+    {
+      "name": "main_page_image_top_margin",
+      "value": "100vp"
+    }
+  ]
+}
