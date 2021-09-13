@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    android:orientation="horizontal"
+    android:theme="@style/Theme.Contacts">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="74dp"
+        android:layout_height="86dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:rotationX="-4"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

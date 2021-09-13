@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "FirstApp"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "siup",
+      "value": "Sign Up"
+    },
+    {
+      "name": "lgin",
+      "value": "Login"
+    },
+    {
+      "name": "myapp",
+      "value": "My App"
+    },
+    {
+      "name": "fname",
+      "value": "First Name"
+    },
+    {
+      "name": "lname",
+      "value": "Last Name"
+    },
+    {
+      "name": "email",
+      "value": "Email"
+    },
+    {
+      "name": "password",
+      "value": "Password"
+    },
+    {
+      "name": "mobile",
+      "value": "Mobile"
+    },
+    {
+      "name": "gender",
+      "value": "Gender"
+    },
+    {
+      "name": "male",
+      "value": "Male"
+    },
+    {
+      "name": "female",
+      "value": "Female"
+    },
+    {
+      "name": "welcome",
+      "value": "Wecome"
+    }
+  ]
+}
