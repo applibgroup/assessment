@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:image_src="$media:icon"
+        ohos:align_parent_right="true"
+        ohos:align_parent_left="true"
+        ohos:center_in_parent="true"
+        ohos:above="$+id:log"
+        ohos:bottom_margin="100fp"
+        ohos:scale_x="3"
+        ohos:scale_y="3"></Image>
+    <Button
+        ohos:id="$+id:log"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Log In"
+        ohos:text_size="20fp"
+        ohos:background_element="#947fff"
+        ohos:align_parent_left="true"
+        ohos:align_parent_right="true"
+        ohos:center_in_parent="true"
+        ohos:bottom_margin="50"
+        ohos:bottom_padding="20"
+        ohos:right_padding="20"
+        ohos:top_padding="20"
+        ohos:left_padding="20"></Button>
+    <Button
+        ohos:id="$+id:sign"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="Sign Up"
+        ohos:text_size="20fp"
+        ohos:background_element="#ff4947"
+        ohos:align_parent_left="true"
+        ohos:align_parent_right="true"
+        ohos:center_in_parent="true"
+        ohos:below="$+id:log"
+        ohos:bottom_padding="20"
+        ohos:left_padding="20"
+        ohos:right_padding="20"
+        ohos:top_padding="20"
+        ></Button>
+
+</DependentLayout>
