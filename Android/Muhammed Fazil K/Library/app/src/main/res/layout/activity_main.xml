@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/img1"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="230dp"
+            tools:srcCompat="@tools:sample/avatars"
+             />
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/img2"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="230dp"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/img3"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="230dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </LinearLayout>
+</ScrollView>
