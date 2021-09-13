@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">NewsFeed</string>
+    <string name="back_drop">back drop</string>
+    <string name="top_shadow">top shadow</string>
+    <string name="bottom_shadow">bottom shadow</string>
+    <string name="news_for_you">News for you</string>
+    <string name="subtitle">Subtitle</string>
+    <string name="title_of_news">Title of News</string>
+    <string name="a_time_ago">a time ago</string>
+    <string name="_01_january_1990">01 January 1990</string>
+    <string name="date">date</string>
+    <string name="news_headlines">News Headlines</string>
+    <string name="image">image</string>
+    <string name="author">Author</string>
+    <string name="_02_july_2000">02 July 2000</string>
+    <string name="title">Title</string>
+    <string name="desc">Desc</string>
+    <string name="source">Source</string>
+    <string name="time">Time</string>
+</resources>

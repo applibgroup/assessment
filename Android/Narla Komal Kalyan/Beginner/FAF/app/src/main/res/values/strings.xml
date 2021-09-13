@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FAF</string>
+    <string name="skip">SKIP</string>
+    <string name="tv1_text">Ready to serve more than a million drop points across India</string>
+    <string name="around_the_nation">Around the Nation</string>
+    <string name="next">NEXT</string>
+    <string name="coverage_around_the_nation">Coverage Around the Nation</string>
+    <string name="order_tracking">Order Tracking</string>
+    <string name="realtime_order_tracking">Realtime Order Tracking</string>
+    <string name="tv2_text">Facilitates users with tracking system for real time delivery anywhere anytime</string>
+    <string name="fast_delivery_service">Fast Delivery Service</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="tv3_text">We guarantee your service delivery will be done by one business day</string>
+</resources>

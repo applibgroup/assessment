@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Login_Signup"
+    },
+    {
+      "name": "Login_text",
+      "value": "Login"
+    },
+    {
+      "name": "Signup_text",
+      "value": "Signup"
+    },
+    {
+      "name": "First_Name",
+      "value": "First Name"
+    },
+    {
+      "name": "Last_Name",
+      "value": "Last Name"
+    },
+    {
+      "name": "Email",
+      "value": "Email"
+    },
+    {
+      "name": "Password",
+      "value": "Password"
+    },
+    {
+      "name": "Mobile_Number",
+      "value": "Mobile Number"
+    },
+    {
+      "name": "Gender",
+      "value": "Gender"
+    },
+    {
+      "name": "Male",
+      "value": " Male"
+    },
+    {
+      "name": "Female",
+      "value": " Female"
+    },
+    {
+      "name": "Create_Account",
+      "value": "Create Account"
+    },
+    {
+      "name": "No_Account",
+      "value": "Click below to create a new account!"
+    },
+    {
+      "name": "Welcome_text",
+      "value": "Welcome"
+    },
+    {
+      "name": "None",
+      "value": "None"
+    }
+  ]
+}
