@@ -1,0 +1,104 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "assignment_app"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "YOLO"
+    },
+    {
+      "name": "persondataability_description",
+      "value": "hap sample empty provider"
+    },
+    {
+      "name": "pass_regex",
+      "value": "^.{5,}$"
+    },
+    {
+      "name": "name_regex",
+      "value":"^[a-zA-Z]+$"
+    },
+    {
+      "name": "email_regex",
+      "value": "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+    },
+    {
+      "name": "mobile_regex",
+      "value": "^[0-9]{10}$"
+    },
+    {
+      "name": "alias",
+      "value": "Data"
+    },
+    {
+      "name": "db_name",
+      "value": "Data.db"
+    },
+    {
+      "name": "male",
+      "value": "Male"
+    },
+    {
+      "name": "female",
+      "value": "Female"
+    },
+    {
+      "name": "yes",
+      "value": "Yes"
+    },
+    {
+      "name": "no",
+      "value": "No"
+    },
+    {
+      "name": "error_toast",
+      "value": "Email or Password did not matched"
+    },
+    {
+      "name": "em",
+      "value": "em"
+    },
+    {
+      "name": "pas",
+      "value": "pas"
+    },
+    {
+      "name": "feild",
+      "value": "Enter All feilds"
+    },
+    {
+      "name": "not_registered",
+      "value": "Email not registred"
+    },
+    {
+      "name": "dialog_text",
+      "value": "Go to Login page to enter the app?"
+    },
+    {
+      "name": "dialog_title",
+      "value": "Please Verify"
+    },
+    {
+      "name": "dialog_no_click",
+      "value":"Clicked No button"
+    },
+    {
+      "name": "correct_data",
+      "value": "Enter Correct data and gender"
+    },
+    {
+      "name": "wrong_pass",
+      "value": "Wrong password"
+    },
+    {
+      "name": "wrong_email_pass",
+      "value": "Wrong email/password"
+    }
+  ]
+}

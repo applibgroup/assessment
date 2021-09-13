@@ -1,0 +1,52 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "assignment_app"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "persondataability_description",
+      "value": "hap sample empty provider"
+    },
+    {
+      "name": "pass_regex",
+      "value": "^.{5,}$"
+    },
+    {
+      "name": "name_regex",
+      "value":"^[a-zA-Z]+$"
+    },
+    {
+      "name": "email_regex",
+      "value": "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+    },
+    {
+      "name": "mobile_regex",
+      "value": "^[0-9]{10}$"
+    },
+    {
+      "name": "alias",
+      "value": "Data"
+    },
+    {
+      "name": "db_name",
+      "value": "Data.db"
+    },
+    {
+      "name": "male",
+      "value": "Male"
+    },
+    {
+      "name": "female",
+      "value": "Female"
+    }
+  ]
+}
