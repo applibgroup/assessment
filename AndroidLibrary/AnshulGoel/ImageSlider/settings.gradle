@@ -1,0 +1,2 @@
+rootProject.name = "ImageSlider"
+include ':app'

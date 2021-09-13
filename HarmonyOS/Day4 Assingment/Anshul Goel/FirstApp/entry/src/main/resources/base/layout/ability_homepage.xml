@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_size="40fp"
+        ohos:top_margin="20fp"
+        ohos:left_margin="100fp"
+        ohos:text="$string:My_APP"/>
+
+    <Text
+        ohos:id="$+id:welcome"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:left_margin="25fp"
+        ohos:text_size="30fp"
+        ohos:text_color="$ohos:color:id_color_activated_end_dark"
+        ohos:vertical_center="true"
+        ohos:text="$string:Welcome"/>
+
+</DependentLayout>

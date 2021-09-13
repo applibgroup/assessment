@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1DCEA"
+    android:padding="10sp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTask"
+        android:layout_width="265dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="2sp"
+        android:layout_marginTop="20sp"
+        android:hint="  Add New Task"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/addTaskBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/addTaskBtn"
+        android:layout_width="71dp"
+        android:layout_height="42dp"
+        android:text="add"
+        app:layout_constraintBottom_toBottomOf="@id/editTextTask"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextTask" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/taskRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginTop="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextTask"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
