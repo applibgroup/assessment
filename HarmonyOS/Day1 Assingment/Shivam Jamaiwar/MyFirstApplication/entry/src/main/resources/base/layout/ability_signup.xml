@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent">
+
+    <DirectionalLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:padding="16vp">
+
+        <Text
+            ohos:id="$+id:text_title"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:background_element="$graphic:background_ability_signup"
+            ohos:layout_alignment="horizontal_center"
+            ohos:text="$string:signupability_SignupAbility"
+            ohos:text_size="32fp"
+            ohos:text_weight="800"
+            />
+
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:top_margin="40vp"
+            ohos:orientation="vertical">
+
+            <TextField
+                ohos:id="$+id:input_first_name"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:hint="Enter First Name"
+                ohos:top_margin="8vp"
+                ohos:text_size="16fp"
+                ohos:padding="16vp"
+                ohos:background_element="$graphic:background_text_field"
+                ohos:text_input_type="pattern_text"
+                />
+
+            <Text
+                ohos:id="$+id:txt_err_first_name"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Please enter first name!"
+                ohos:start_padding="8vp"
+                ohos:text_color="red"
+                ohos:text_size="12fp"
+                ohos:visibility="invisible"
+                />
+
+            <TextField
+                ohos:id="$+id:input_last_name"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:hint="Enter Last Name"
+                ohos:top_margin="8vp"
+                ohos:text_size="16fp"
+                ohos:padding="16vp"
+                ohos:background_element="$graphic:background_text_field"
+                ohos:text_input_type="pattern_text"
+                />
+
+            <Text
+                ohos:id="$+id:txt_err_last_name"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Please enter last name!"
+                ohos:start_padding="8vp"
+                ohos:text_color="red"
+                ohos:text_size="12fp"
+                ohos:visibility="invisible"
+                />
+
+            <TextField
+                ohos:id="$+id:input_email"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:hint="Enter Email"
+                ohos:top_margin="8vp"
+                ohos:text_size="16fp"
+                ohos:padding="16vp"
+                ohos:background_element="$graphic:background_text_field"
+                ohos:text_input_type="pattern_text"
+                />
+
+            <Text
+                ohos:id="$+id:txt_err_email"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Please enter email!"
+                ohos:start_padding="8vp"
+                ohos:text_color="red"
+                ohos:text_size="12fp"
+                ohos:visibility="invisible"
+                />
+
+            <TextField
+                ohos:id="$+id:input_password"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:hint="Enter Password"
+                ohos:top_margin="8vp"
+                ohos:text_size="16fp"
+                ohos:padding="16vp"
+                ohos:background_element="$graphic:background_text_field"
+                ohos:text_input_type="pattern_password"
+                />
+
+            <Text
+                ohos:id="$+id:txt_err_password"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Please enter password!"
+                ohos:start_padding="8vp"
+                ohos:text_color="red"
+                ohos:text_size="12fp"
+                ohos:visibility="invisible"
+                />
+
+            <!--email-->
+            <TextField
+                ohos:id="$+id:input_mobile"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:hint="Enter Mobile"
+                ohos:top_margin="8vp"
+                ohos:text_size="16fp"
+                ohos:padding="16vp"
+                ohos:background_element="$graphic:background_text_field"
+                ohos:text_input_type="pattern_number"
+                />
+
+            <Text
+                ohos:id="$+id:txt_err_mobile"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="Please enter mobile!"
+                ohos:start_padding="8vp"
+                ohos:text_color="red"
+                ohos:text_size="12fp"
+                ohos:visibility="invisible"
+                />
+
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:top_margin="8vp"
+                ohos:text="Gender"
+                ohos:text_size="16fp"
+                />
+
+            <RadioContainer
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:top_margin="8vp"
+                ohos:total_weight="3"
+                ohos:orientation="horizontal">
+
+                <RadioButton
+                    ohos:height="match_parent"
+                    ohos:width="match_parent"
+                    ohos:weight="1"
+                    ohos:text="Male"
+                    ohos:text_size="16fp"
+                    ohos:padding_for_text="true"
+                    ohos:element_padding="8vp"
+                    />
+
+                <RadioButton
+                    ohos:height="match_parent"
+                    ohos:width="match_parent"
+                    ohos:weight="1"
+                    ohos:text="Female"
+                    ohos:text_size="16fp"
+                    ohos:padding_for_text="true"
+                    ohos:element_padding="8vp"
+                    />
+
+                <RadioButton
+                    ohos:height="match_parent"
+                    ohos:width="match_parent"
+                    ohos:weight="1"
+                    ohos:text="Other"
+                    ohos:text_size="16fp"
+                    ohos:padding_for_text="true"
+                    ohos:element_padding="8vp"
+                    />
+
+            </RadioContainer>
+
+            <Button
+                ohos:id="$+id:btn_signup"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:top_margin="28vp"
+                ohos:text="SignUp"
+                ohos:layout_alignment="horizontal_center"
+                ohos:text_size="18fp"
+                ohos:background_element="$ohos:color:id_color_activated_start_dark"
+                ohos:start_padding="60px"
+                ohos:end_padding="60px"
+                ohos:top_padding="30px"
+                ohos:bottom_padding="30px"
+                />
+
+        </DirectionalLayout>
+
+    </DirectionalLayout>
+
+</ScrollView>
